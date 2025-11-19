@@ -1,3 +1,52 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "product-oil",
+      "description": "A tanker truck driving through a sunny landscape, representing oil transport.",
+      "imageUrl": "https://images.unsplash.com/photo-1528458538087-f58e9ad895da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx0YW5rZXIlMjB0cnVja3xlbnwwfHx8fDE3NjM1MzAxMzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tanker truck"
+    },
+    {
+      "id": "product-chemical",
+      "description": "Close-up of a chemical laboratory with flasks, suggesting chemical transport.",
+      "imageUrl": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaGVtaWNhbCUyMGxhYnxlbnwwfHx8fDE3NjM1ODA0MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "chemical lab"
+    },
+    {
+      "id": "product-wine",
+      "description": "A vineyard with rows of grapes, representing wine transport.",
+      "imageUrl": "https://images.unsplash.com/photo-1721395807754-7f378b6fbbad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHx2aW5leWFyZCUyMHdpbmV8ZW58MHx8fHwxNzYzNTgwNDE0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "vineyard wine"
+    },
+    {
+      "id": "product-milk",
+      "description": "A dairy farm with cows in a pasture, for milk transport.",
+      "imageUrl": "https://images.unsplash.com/photo-1636998980792-63f27ddea4e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxkYWlyeSUyMGZhcm18ZW58MHx8fHwxNzYzNDgzNDY4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dairy farm"
+    },
+    {
+      "id": "truck-standard",
+      "description": "A standard tanker truck on a highway.",
+      "imageUrl": "https://images.unsplash.com/photo-1654452519639-a77d0fb31025?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx0YW5rZXIlMjB0cnVja3xlbnwwfHx8fDE3NjM1MzAxMzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tanker truck"
+    },
+    {
+      "id": "truck-large",
+      "description": "A large capacity tanker truck at a depot.",
+      "imageUrl": "https://images.unsplash.com/photo-1758549834256-6a6ac8e2724b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxsYXJnZSUyMHRydWNrfGVufDB8fHx8MTc2MzU4MDQxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "large truck"
+    },
+    {
+      "id": "truck-specialized",
+      "description": "A specialized chemical transport truck with safety labels.",
+      "imageUrl": "https://images.unsplash.com/photo-1708008914410-fc368c747e87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjaGVtaWNhbCUyMHRydWNrfGVufDB8fHx8MTc2MzU4MDQxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "chemical truck"
+    },
+    {
+      "id": "hero-image",
+      "description": "A hero image of a tanker truck driving on a scenic road at sunset.",
+      "imageUrl": "https://images.unsplash.com/photo-1745956983820-6e960f7e8472?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx0cnVjayUyMHN1bnNldHxlbnwwfHx8fDE3NjM1ODA0MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "truck sunset"
+    }
+  ]
 }
