@@ -18,11 +18,11 @@ function findImage(id: string): ImagePlaceholder {
 export const products = [
   {
     id: 1,
-    name: 'Aceite de Oliva',
-    type: 'Grado Alimenticio',
-    origin: 'Andalucía, España',
-    specs: 'Extra Virgen, Prensado en frío, para uso culinario.',
-    image: findImage('product-oil'),
+    name: 'Alcohol Isopropanol',
+    type: 'Químico',
+    origin: 'Leverkusen, Alemania',
+    specs: '99.9% de pureza, para uso industrial y desinfectante.',
+    image: findImage('product-chemical'),
   },
   {
     id: 2,
@@ -88,7 +88,7 @@ export const trucks = [
 export const orders = [
   {
     id: 'ORD-001',
-    product: 'Aceite de Oliva',
+    product: 'Alcohol Isopropanol',
     destination: 'Berlín, Alemania',
     status: 'Entregado',
     cost: 4500,
@@ -120,7 +120,7 @@ export const orders = [
   },
   {
     id: 'ORD-005',
-    product: 'Aceite de Oliva',
+    product: 'Alcohol Isopropanol',
     destination: 'Múnich, Alemania',
     status: 'Entregado',
     cost: 4800,
