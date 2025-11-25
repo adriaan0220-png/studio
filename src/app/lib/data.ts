@@ -34,11 +34,11 @@ export const products = [
   },
   {
     id: 3,
-    name: 'Vino Tinto de Burdeos',
-    type: 'Bebida',
-    origin: 'Burdeos, Francia',
-    specs: 'A granel, Cosecha 2022, perfecto para embotellar.',
-    image: findImage('product-wine'),
+    name: 'Glicerina',
+    type: 'Grado Alimenticio',
+    origin: 'Hamburgo, Alemania',
+    specs: 'Glicerina vegetal USP, 99.7% de pureza, para uso alimentario y farmacéutico.',
+    image: findImage('product-glycerin'),
   },
   {
     id: 4,
