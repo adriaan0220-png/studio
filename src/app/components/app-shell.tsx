@@ -9,10 +9,10 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Logo } from '@/app/components/logo';
 
 const navItems = [
-  { href: '/', label: 'Estimator', icon: Calculator },
-  { href: '/products', label: 'Products', icon: Droplets },
-  { href: '/fleet', label: 'Our Fleet', icon: Truck },
-  { href: '/orders', label: 'My Orders', icon: ClipboardList },
+  { href: '/', label: 'Estimador', icon: Calculator },
+  { href: '/products', label: 'Productos', icon: Droplets },
+  { href: '/fleet', label: 'Nuestra Flota', icon: Truck },
+  { href: '/orders', label: 'Mis Pedidos', icon: ClipboardList },
 ];
 
 export function AppShell({ children }: { children: React.ReactNode }) {
@@ -56,7 +56,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             <SheetTrigger asChild>
               <Button variant="outline" size="icon" className="shrink-0">
                 <Menu className="h-5 w-5" />
-                <span className="sr-only">Toggle navigation menu</span>
+                <span className="sr-only">Alternar menú de navegación</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="flex flex-col p-0 w-[280px] bg-card">

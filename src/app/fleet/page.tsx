@@ -7,11 +7,11 @@ import { cn } from '@/lib/utils';
 export default function FleetPage() {
   const getStatusClass = (status: string) => {
     switch (status) {
-      case 'Available':
+      case 'Disponible':
         return 'bg-status-available';
-      case 'In Transit':
+      case 'En Tránsito':
         return 'bg-status-transit';
-      case 'Maintenance':
+      case 'Mantenimiento':
         return 'bg-status-maintenance';
       default:
         return 'bg-muted';
@@ -21,8 +21,8 @@ export default function FleetPage() {
   return (
     <>
       <PageHeader
-        title="Our Truck Fleet"
-        description="Modern, reliable, and specialized trucks to meet your transport needs."
+        title="Nuestra Flota de Camiones"
+        description="Camiones modernos, confiables y especializados para satisfacer sus necesidades de transporte."
       />
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {trucks.map((truck) => (
@@ -47,7 +47,7 @@ export default function FleetPage() {
                 <CardDescription>{truck.specs}</CardDescription>
             </CardHeader>
             <CardContent>
-                <p className="text-sm font-semibold text-foreground">Capacity: {truck.capacity}</p>
+                <p className="text-sm font-semibold text-foreground">Capacidad: {truck.capacity}</p>
             </CardContent>
           </Card>
         ))}

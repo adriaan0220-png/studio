@@ -22,10 +22,10 @@ export default function NewOrderPage() {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // Here you would typically send the data to your backend
+    // Aquí normalmente enviarías los datos a tu backend
     toast({
-      title: 'Order Placed!',
-      description: 'Your order has been successfully submitted. We will contact you shortly.',
+      title: '¡Pedido Realizado!',
+      description: 'Su pedido ha sido enviado con éxito. Nos pondremos en contacto con usted en breve.',
     });
     router.push('/orders');
   };
@@ -33,57 +33,57 @@ export default function NewOrderPage() {
   return (
     <>
       <PageHeader
-        title="Confirm Your Order"
-        description="Please review your transport request and provide contact information."
+        title="Confirme Su Pedido"
+        description="Por favor, revise su solicitud de transporte y proporcione la información de contacto."
       />
       <div className="grid md:grid-cols-2 gap-8 items-start">
         <Card>
           <CardHeader>
-            <CardTitle>Order Summary</CardTitle>
-            <CardDescription>Details of your shipment.</CardDescription>
+            <CardTitle>Resumen del Pedido</CardTitle>
+            <CardDescription>Detalles de su envío.</CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="flex justify-between items-center">
-              <span className="text-muted-foreground">Product</span>
+              <span className="text-muted-foreground">Producto</span>
               <span className="font-medium text-right">{productType || 'N/A'}</span>
             </div>
             <div className="flex justify-between items-center">
-              <span className="text-muted-foreground">Quantity</span>
-              <span className="font-medium text-right">{quantity ? `${Number(quantity).toLocaleString()} Liters` : 'N/A'}</span>
+              <span className="text-muted-foreground">Cantidad</span>
+              <span className="font-medium text-right">{quantity ? `${Number(quantity).toLocaleString()} Litros` : 'N/A'}</span>
             </div>
             <div className="flex justify-between items-center">
-              <span className="text-muted-foreground">Delivery Location</span>
+              <span className="text-muted-foreground">Lugar de Entrega</span>
               <span className="font-medium text-right">{deliveryLocation || 'N/A'}</span>
             </div>
             <Separator />
             <div className="flex justify-between items-center text-lg">
-              <span className="font-semibold">Estimated Cost</span>
+              <span className="font-semibold">Costo Estimado</span>
               <span className="font-bold text-primary">€{estimatedCost ? Number(estimatedCost).toLocaleString() : 'N/A'}</span>
             </div>
           </CardContent>
         </Card>
         <Card>
           <CardHeader>
-            <CardTitle>Contact Information</CardTitle>
-            <CardDescription>We'll use this to get in touch about your order.</CardDescription>
+            <CardTitle>Información de Contacto</CardTitle>
+            <CardDescription>Usaremos esto para ponernos en contacto sobre su pedido.</CardDescription>
           </CardHeader>
           <form onSubmit={handleSubmit}>
             <CardContent className="space-y-4">
               <div className="space-y-2">
-                <Label htmlFor="name">Full Name</Label>
-                <Input id="name" placeholder="John Doe" required />
+                <Label htmlFor="name">Nombre Completo</Label>
+                <Input id="name" placeholder="Juan Pérez" required />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="email">Email Address</Label>
-                <Input id="email" type="email" placeholder="john.doe@example.com" required />
+                <Label htmlFor="email">Dirección de Correo Electrónico</Label>
+                <Input id="email" type="email" placeholder="juan.perez@example.com" required />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="company">Company Name (Optional)</Label>
-                <Input id="company" placeholder="Doe Industries" />
+                <Label htmlFor="company">Nombre de la Empresa (Opcional)</Label>
+                <Input id="company" placeholder="Industrias Pérez" />
               </div>
             </CardContent>
             <CardFooter>
-              <Button type="submit" className="w-full">Confirm Order</Button>
+              <Button type="submit" className="w-full">Confirmar Pedido</Button>
             </CardFooter>
           </form>
         </Card>

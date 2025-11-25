@@ -8,8 +8,8 @@ export default function ProductsPage() {
   return (
     <>
       <PageHeader
-        title="Our Liquid Products"
-        description="We offer a variety of high-quality liquid products for bulk transport."
+        title="Nuestros Productos Líquidos"
+        description="Ofrecemos una variedad de productos líquidos de alta calidad para transporte a granel."
       />
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {products.map((product) => (

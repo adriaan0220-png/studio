@@ -8,11 +8,11 @@ export default function OrdersPage() {
 
   const getStatusBadge = (status: string) => {
     switch (status) {
-      case 'Delivered':
+      case 'Entregado':
         return <Badge variant="secondary">{status}</Badge>;
-      case 'In Transit':
+      case 'En Tránsito':
         return <Badge variant="default" className="bg-status-transit hover:bg-status-transit/80 text-white">{status}</Badge>;
-      case 'Pending':
+      case 'Pendiente':
         return <Badge variant="outline">{status}</Badge>;
       default:
         return <Badge>{status}</Badge>;
@@ -22,20 +22,20 @@ export default function OrdersPage() {
   return (
     <>
       <PageHeader
-        title="My Orders"
-        description="Track the status of your recent orders for liquid product deliveries."
+        title="Mis Pedidos"
+        description="Rastree el estado de sus pedidos recientes de entregas de productos líquidos."
       />
       <Card>
         <CardContent className="pt-6">
           <Table>
             <TableHeader>
               <TableRow>
-                <TableHead className="hidden sm:table-cell">Order ID</TableHead>
-                <TableHead>Product</TableHead>
-                <TableHead>Destination</TableHead>
-                <TableHead className="text-center">Status</TableHead>
-                <TableHead className="text-right hidden md:table-cell">Date</TableHead>
-                <TableHead className="text-right">Cost</TableHead>
+                <TableHead className="hidden sm:table-cell">ID de Pedido</TableHead>
+                <TableHead>Producto</TableHead>
+                <TableHead>Destino</TableHead>
+                <TableHead className="text-center">Estado</TableHead>
+                <TableHead className="text-right hidden md:table-cell">Fecha</TableHead>
+                <TableHead className="text-right">Costo</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>

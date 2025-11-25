@@ -18,11 +18,11 @@ import type { SuggestDeliveryOptimizationsOutput } from '@/ai/flows/suggest-deli
 import { useToast } from '@/hooks/use-toast';
 
 const formSchema = z.object({
-  deliveryLocation: z.string().min(3, 'Please enter a valid location (min. 3 characters)'),
-  productType: z.string().min(1, 'Please select a product type'),
+  deliveryLocation: z.string().min(3, 'Por favor, ingrese una ubicación válida (mín. 3 caracteres)'),
+  productType: z.string().min(1, 'Por favor, seleccione un tipo de producto'),
   quantity: z.preprocess(
     (a) => parseInt(z.string().parse(a), 10),
-    z.number().min(100, 'Minimum quantity is 100 liters')
+    z.number().min(100, 'La cantidad mínima es de 100 litros')
   ),
 });
 
@@ -58,7 +58,7 @@ export default function CostEstimator({ productTypes }: CostEstimatorProps) {
 
     const result = await estimateTransportCost(values);
     if (result.error) {
-      toast({ variant: 'destructive', title: 'Estimation Error', description: result.error });
+      toast({ variant: 'destructive', title: 'Error de Estimación', description: result.error });
     } else if (result.data) {
       setEstimate(result.data);
       setOptimizationParams({ ...values, currentCost: result.data.estimatedCost });
@@ -75,12 +75,12 @@ export default function CostEstimator({ productTypes }: CostEstimatorProps) {
     const result = await suggestDeliveryOptimizations({
         deliveryLocation: optimizationParams.deliveryLocation,
         productType: optimizationParams.productType,
-        truckType: "Standard Tanker", // A default value, could be another form field
+        truckType: "Cisterna Estándar", // Un valor por defecto, podría ser otro campo de formulario
         currentCost: optimizationParams.currentCost,
     });
     
     if (result.error) {
-        toast({ variant: 'destructive', title: 'Optimization Error', description: result.error });
+        toast({ variant: 'destructive', title: 'Error de Optimización', description: result.error });
     } else if (result.data) {
         setOptimizations(result.data);
     }
@@ -91,8 +91,8 @@ export default function CostEstimator({ productTypes }: CostEstimatorProps) {
     <div className="grid gap-8 md:grid-cols-2 items-start">
       <Card className="shadow-lg">
         <CardHeader>
-          <CardTitle>Transport Cost Estimator</CardTitle>
-          <CardDescription>Fill in the details to get an instant price quote.</CardDescription>
+          <CardTitle>Estimador de Costos de Transporte</CardTitle>
+          <CardDescription>Complete los detalles para obtener una cotización instantánea.</CardDescription>
         </CardHeader>
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)}>
@@ -102,9 +102,9 @@ export default function CostEstimator({ productTypes }: CostEstimatorProps) {
                 name="deliveryLocation"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Delivery Location</FormLabel>
+                    <FormLabel>Lugar de Entrega</FormLabel>
                     <FormControl>
-                      <Input placeholder="e.g., Paris, France" {...field} />
+                      <Input placeholder="ej., París, Francia" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -115,11 +115,11 @@ export default function CostEstimator({ productTypes }: CostEstimatorProps) {
                 name="productType"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Product Type</FormLabel>
+                    <FormLabel>Tipo de Producto</FormLabel>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                       <FormControl>
                         <SelectTrigger>
-                          <SelectValue placeholder="Select a product" />
+                          <SelectValue placeholder="Seleccione un producto" />
                         </SelectTrigger>
                       </FormControl>
                       <SelectContent>
@@ -139,9 +139,9 @@ export default function CostEstimator({ productTypes }: CostEstimatorProps) {
                 name="quantity"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Quantity (in Liters)</FormLabel>
+                    <FormLabel>Cantidad (en Litros)</FormLabel>
                     <FormControl>
-                      <Input type="number" placeholder="e.g., 10000" {...field} />
+                      <Input type="number" placeholder="ej., 10000" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -151,7 +151,7 @@ export default function CostEstimator({ productTypes }: CostEstimatorProps) {
             <CardFooter>
               <Button type="submit" disabled={isLoading} className="w-full">
                 {isLoading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : null}
-                {isLoading ? 'Calculating...' : 'Estimate Cost'}
+                {isLoading ? 'Calculando...' : 'Estimar Costo'}
               </Button>
             </CardFooter>
           </form>
@@ -162,8 +162,8 @@ export default function CostEstimator({ productTypes }: CostEstimatorProps) {
         {!estimate && !isLoading && (
             <Card className="flex items-center justify-center h-full min-h-[300px] border-dashed">
                 <div className="text-center text-muted-foreground p-8">
-                    <p className="font-semibold">Your estimate will appear here.</p>
-                    <p className="text-sm">Complete the form to see your delivery costs.</p>
+                    <p className="font-semibold">Su estimación aparecerá aquí.</p>
+                    <p className="text-sm">Complete el formulario para ver sus costos de envío.</p>
                 </div>
             </Card>
         )}
@@ -171,8 +171,8 @@ export default function CostEstimator({ productTypes }: CostEstimatorProps) {
           <Card className="flex items-center justify-center h-full min-h-[300px]">
             <div className="text-center text-muted-foreground p-8">
               <Loader2 className="mx-auto h-12 w-12 animate-spin text-primary" />
-              <p className="mt-4 font-semibold">Our AI is crunching the numbers...</p>
-              <p className="text-sm">This may take a moment.</p>
+              <p className="mt-4 font-semibold">Nuestra IA está calculando los números...</p>
+              <p className="text-sm">Esto puede tomar un momento.</p>
             </div>
           </Card>
         )}
@@ -180,23 +180,23 @@ export default function CostEstimator({ productTypes }: CostEstimatorProps) {
         {estimate && (
           <Card className="animate-in fade-in-50">
             <CardHeader>
-              <CardTitle>Your Estimate</CardTitle>
-              <CardDescription>Based on the details provided for your shipment.</CardDescription>
+              <CardTitle>Su Estimación</CardTitle>
+              <CardDescription>Basado en los detalles proporcionados para su envío.</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="text-center py-4 border rounded-lg bg-muted/50">
-                <p className="text-sm text-muted-foreground">Estimated Cost</p>
+                <p className="text-sm text-muted-foreground">Costo Estimado</p>
                 <p className="text-5xl font-bold font-headline text-primary">€{estimate.estimatedCost.toLocaleString()}</p>
               </div>
               <div>
-                <h4 className="font-semibold mb-2">Cost Breakdown</h4>
+                <h4 className="font-semibold mb-2">Desglose de Costos</h4>
                 <p className="text-sm text-muted-foreground whitespace-pre-wrap">{estimate.breakdown}</p>
               </div>
             </CardContent>
             <CardFooter className="flex-col items-stretch gap-2">
               <Button onClick={handleGetOptimizations} disabled={isOptimizing}>
                 {isOptimizing ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Zap className="mr-2 h-4 w-4" />}
-                {isOptimizing ? 'Optimizing...' : 'Suggest Optimizations'}
+                {isOptimizing ? 'Optimizando...' : 'Sugerir Optimizaciones'}
               </Button>
               <Link href={{
                 pathname: '/order/new',
@@ -207,7 +207,7 @@ export default function CostEstimator({ productTypes }: CostEstimatorProps) {
                   estimatedCost: estimate.estimatedCost,
                 }
               }} className="w-full">
-                <Button variant="outline" className="w-full">Proceed to Order</Button>
+                <Button variant="outline" className="w-full">Proceder al Pedido</Button>
               </Link>
             </CardFooter>
           </Card>
@@ -215,8 +215,8 @@ export default function CostEstimator({ productTypes }: CostEstimatorProps) {
         {optimizations && (
             <Card className="animate-in fade-in-50">
                 <CardHeader>
-                    <CardTitle className="flex items-center gap-2"><Zap className="text-primary"/>AI-Powered Suggestions</CardTitle>
-                    <CardDescription>Here are some ways you might be able to lower your costs.</CardDescription>
+                    <CardTitle className="flex items-center gap-2"><Zap className="text-primary"/>Sugerencias de IA</CardTitle>
+                    <CardDescription>Aquí hay algunas formas en que podría reducir sus costos.</CardDescription>
                 </CardHeader>
                 <CardContent>
                     <p className="text-sm text-muted-foreground whitespace-pre-wrap">{optimizations.optimizations}</p>
