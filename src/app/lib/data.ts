@@ -22,7 +22,7 @@ export const products = [
     type: 'Químico',
     origin: 'Leverkusen, Alemania',
     specs: '99.9% de pureza, para uso industrial y desinfectante.',
-    image: findImage('product-chemical'),
+    image: findImage('product-isopropanol'),
   },
   {
     id: 2,

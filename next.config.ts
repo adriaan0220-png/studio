@@ -33,6 +33,12 @@ const nextConfig: NextConfig = {
         hostname: 'media-exp1.licdn.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'alcoholdelimpieza.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
