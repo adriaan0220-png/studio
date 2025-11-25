@@ -39,6 +39,12 @@ const nextConfig: NextConfig = {
         hostname: 'alcoholdelimpieza.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'ibassets.com.br',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
