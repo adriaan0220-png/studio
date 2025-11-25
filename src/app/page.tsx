@@ -21,7 +21,6 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-transparent" />
           <div className="absolute top-0 p-6 md:p-8">
             <h1 className="text-3xl md:text-5xl font-bold text-white font-headline">Transporte de Líquidos Confiable</h1>
-            <p className="mt-2 text-lg text-primary-foreground/90">Obtenga una estimación de costos instantánea para su entrega.</p>
           </div>
         </div>
       )}
