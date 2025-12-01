@@ -53,6 +53,12 @@
       "description": "Camión cisterna de acero inoxidable en una instalación de procesamiento de alimentos.",
       "imageUrl": "https://images.unsplash.com/photo-1628136437618-842c676949c2?q=80&w=2070&auto=format&fit=crop",
       "imageHint": "stainless tanker"
+    },
+    {
+      "id": "stainless-tanker-new",
+      "description": "Un moderno camión cisterna de acero inoxidable en un polígono industrial.",
+      "imageUrl": "https://images.unsplash.com/photo-1603564933939-70a9b649d0cd?q=80&w=2070&auto=format&fit=crop",
+      "imageHint": "modern tanker"
     }
   ]
 }

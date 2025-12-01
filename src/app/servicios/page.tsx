@@ -73,7 +73,7 @@ export default function ServiciosPage() {
         'Temperatura controlada (OPCIONAL)',
       ],
       idealFor: 'Aceites, vinos, leche, jarabes, glucosas.',
-      imageId: 'food-grade-tanker',
+      imageId: 'stainless-tanker-new',
     },
   ];
 
