@@ -44,9 +44,9 @@
     },
     {
       "id": "hero-image",
-      "description": "Una imagen de un camión cisterna en la carretera.",
-      "imageUrl": "https://media-exp1.licdn.com/dms/image/C4D1BAQEcSpV8XgADzA/company-background_10000/0/1627547694019?e=2159024400&v=beta&t=wPcXm9dlTF5ZMPn785dY41kpQdOhWmt94pUS6ZNJGMM",
-      "imageHint": "tanker truck"
+      "description": "Un camión cisterna blanco en una carretera al atardecer.",
+      "imageUrl": "https://images.unsplash.com/photo-1571708343135-c57656a81d13?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "imageHint": "tanker highway"
     }
   ]
 }
