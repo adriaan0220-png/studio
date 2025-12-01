@@ -1,24 +1,33 @@
 import { Mail, MapPin, Phone } from 'lucide-react';
 import { PageHeader } from '@/app/components/page-header';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import Image from 'next/image';
 
 export default function ContactoPage() {
   return (
-    <>
-      <PageHeader
-        title="Contacto"
-        description="Póngase en contacto con nosotros para cualquier consulta."
+    <div className="relative min-h-[calc(100vh-10rem)] flex flex-col items-center justify-center p-4">
+      <Image
+        src="https://images.unsplash.com/photo-1654452519639-a77d0fb31025?q=80&w=2070&auto=format&fit=crop"
+        alt="Camión cisterna"
+        fill
+        className="object-cover -z-10 rounded-lg"
+        data-ai-hint="tanker truck road"
       />
-      <div className="max-w-2xl mx-auto">
-        <Card>
+      <div className="absolute inset-0 bg-black/50 -z-10 rounded-lg" />
+      <div className="w-full max-w-2xl text-white">
+        <PageHeader
+          title="Contacto"
+          description="Póngase en contacto con nosotros para cualquier consulta."
+        />
+        <Card className="bg-card/80 backdrop-blur-sm border-white/20">
           <CardHeader>
-            <CardTitle>Información de Contacto</CardTitle>
+            <CardTitle className="text-card-foreground">Información de Contacto</CardTitle>
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="flex items-start gap-4">
               <Mail className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
               <div>
-                <h3 className="font-semibold">Correo Electrónico</h3>
+                <h3 className="font-semibold text-card-foreground">Correo Electrónico</h3>
                 <p className="text-muted-foreground">
                   Para consultas generales, presupuestos o soporte, no dude en
                   enviarnos un correo.
@@ -34,7 +43,7 @@ export default function ContactoPage() {
             <div className="flex items-start gap-4">
               <Phone className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
               <div>
-                <h3 className="font-semibold">Teléfono</h3>
+                <h3 className="font-semibold text-card-foreground">Teléfono</h3>
                 <p className="text-muted-foreground">
                   Llámenos para una atención más directa.
                 </p>
@@ -49,7 +58,7 @@ export default function ContactoPage() {
             <div className="flex items-start gap-4">
               <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
               <div>
-                <h3 className="font-semibold">Dirección física</h3>
+                <h3 className="font-semibold text-card-foreground">Dirección física</h3>
                 <address className="text-muted-foreground not-italic">
                   EB TRANS IBÉRICA<br />
                   Polígono Industrial Logístic Sud<br />
@@ -61,6 +70,6 @@ export default function ContactoPage() {
           </CardContent>
         </Card>
       </div>
-    </>
+    </div>
   );
 }
