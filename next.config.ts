@@ -51,6 +51,12 @@ const nextConfig: NextConfig = {
         hostname: 'd2q79iu7y748jz.cloudfront.net',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'static.wixstatic.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
