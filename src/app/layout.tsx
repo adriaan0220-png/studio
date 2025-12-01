@@ -4,8 +4,8 @@ import { Toaster } from '@/components/ui/toaster';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Dorado Soluciones de Transporte',
-  description: 'Transportando líquidos con excelencia.',
+  title: 'EB Trans Ibérica',
+  description: 'Líderes en transporte de cisternas con máxima seguridad.',
 };
 
 export default function RootLayout({

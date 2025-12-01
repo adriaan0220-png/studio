@@ -4,8 +4,8 @@ export default function InicioPage() {
   return (
     <>
       <PageHeader
-        title="Página de Inicio"
-        description="Bienvenido al panel de Dorado Soluciones de Transporte."
+        title="Bienvenido a EB Trans Ibérica"
+        description="Líderes en transporte de cisternas con máxima seguridad."
       />
       <div className="p-4">
         <p>Aquí puedes encontrar un resumen de tu actividad y accesos directos a las principales funciones.</p>
