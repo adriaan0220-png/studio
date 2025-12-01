@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Logo } from '@/app/components/logo';
 import { cn } from '@/lib/utils';
+import { Footer } from './footer';
 
 const navItems = [
   { href: '/inicio', label: 'Inicio', icon: Home },
@@ -85,6 +86,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
       <main className="flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-8 bg-background">
         {children}
       </main>
+      <Footer />
     </div>
   );
 }
