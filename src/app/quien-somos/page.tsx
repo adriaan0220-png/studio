@@ -10,11 +10,11 @@ export default function QuienSomosPage() {
       />
       <div className="relative h-[500px] w-full overflow-hidden rounded-lg shadow-lg">
         <Image
-          src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1932&auto=format&fit=crop"
-          alt="Oficina moderna de EB Trans"
+          src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2070&auto=format&fit=crop"
+          alt="Equipo de EB Trans trabajando en la oficina"
           fill
           className="object-cover"
-          data-ai-hint="modern office"
+          data-ai-hint="modern office team"
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white p-8">
