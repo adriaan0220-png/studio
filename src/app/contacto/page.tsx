@@ -1,4 +1,4 @@
-import { Mail, MapPin } from 'lucide-react';
+import { Mail, MapPin, Phone } from 'lucide-react';
 import { PageHeader } from '@/app/components/page-header';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -28,6 +28,21 @@ export default function ContactoPage() {
                   className="text-primary font-medium hover:underline"
                 >
                   EBTRANS@GMAIL.COM
+                </a>
+              </div>
+            </div>
+            <div className="flex items-start gap-4">
+              <Phone className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
+              <div>
+                <h3 className="font-semibold">Teléfono</h3>
+                <p className="text-muted-foreground">
+                  Llámenos para una atención más directa.
+                </p>
+                <a
+                  href="tel:+34647000000"
+                  className="text-primary font-medium hover:underline"
+                >
+                  +34 647 000 000
                 </a>
               </div>
             </div>
