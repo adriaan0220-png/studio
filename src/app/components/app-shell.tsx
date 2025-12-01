@@ -3,13 +3,14 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Calculator, ClipboardList, Droplets, Menu, Truck } from 'lucide-react';
+import { Home, Calculator, ClipboardList, Droplets, Menu, Truck } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Logo } from '@/app/components/logo';
 import { cn } from '@/lib/utils';
 
 const navItems = [
+  { href: '/inicio', label: 'Inicio', icon: Home },
   { href: '/', label: 'Estimador', icon: Calculator },
   { href: '/products', label: 'Productos', icon: Droplets },
   { href: '/fleet', label: 'Nuestra Flota', icon: Truck },
