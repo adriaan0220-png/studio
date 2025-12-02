@@ -38,6 +38,7 @@ export const products = [
     type: 'Internacional',
     origin: 'EB Trans',
     specs: 'Servicio integral para exportación e importación de líquidos a granel dentro de la UE, con planificación multimodal (road + rail + maritime) y gestión documental internacional. Incoterms: FCA, CPT, DAP, DDP. Documentos: DUA, T1/T2, CMR digital, EUR.1. Seguimiento en tiempo real vía API GPS, POD digital y alertas de evento. Nodos operativos en Tarragona, Barcelona, Valencia, Bilbao y Lyon.',
+    image: findImage('truck-standard'),
   },
 ];
 
@@ -78,3 +79,4 @@ export const trucks = [
 
 export const orders = [
 ];
+
