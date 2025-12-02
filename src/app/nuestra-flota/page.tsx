@@ -17,7 +17,7 @@ const tankerTypes = [
   },
   {
     title: 'ADR Químicas Clase 3 y 8',
-    imageUrl: 'https://www.kitsadronline.com/wp-content/uploads/2015/05/etiqueta-adr-clase-8.jpg',
+    imageUrl: 'https://www.cisternashnosfajardo.com/wp-content/uploads/2018/11/SLIDE-1-800x400.jpg',
     imageHint: 'ADR label',
     icons: [
       { icon: ShieldCheck, label: 'ADR' },
