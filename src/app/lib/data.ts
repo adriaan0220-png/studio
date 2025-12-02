@@ -16,6 +16,14 @@ function findImage(id: string): ImagePlaceholder {
 }
 
 export const products = [
+  {
+    id: 1,
+    name: 'Cisternas Alimentarias Inox AISI-316L',
+    type: 'Alimentario',
+    origin: 'EB Trans',
+    specs: 'Transporte a granel con cumplimiento del Reglamento (CE) 852/2004 y protocolos de limpieza CIP certificados. Capacidad: 28.500-32.000L.',
+    image: findImage('stainless-tanker-new'),
+  },
 ];
 
 export const trucks = [
@@ -54,12 +62,4 @@ export const trucks = [
 ];
 
 export const orders = [
-  {
-    id: 'ORD-004',
-    product: 'Vino Tinto de Burdeos',
-    destination: 'Roma, Italia',
-    status: 'En Tránsito',
-    cost: 6200,
-    date: '2024-05-30',
-  },
 ];
