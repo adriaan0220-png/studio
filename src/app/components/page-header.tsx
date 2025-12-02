@@ -1,3 +1,6 @@
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+
 type PageHeaderProps = {
   title: string;
   description?: string;
@@ -15,7 +18,15 @@ export function PageHeader({ title, description, children }: PageHeaderProps) {
           <p className="mt-2 text-lg text-muted-foreground">{description}</p>
         )}
       </div>
-      {children && <div className="flex-shrink-0">{children}</div>}
+      <div className="flex gap-2 flex-shrink-0">
+        <Button asChild>
+          <Link href="/order/new">Demanar Pressupost</Link>
+        </Button>
+        <Button asChild variant="outline">
+          <Link href="/order/new">Cotizar</Link>
+        </Button>
+        {children}
+      </div>
     </div>
   );
 }
