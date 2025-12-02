@@ -16,14 +16,6 @@ function findImage(id: string): ImagePlaceholder {
 }
 
 export const products = [
-  {
-    id: 4,
-    name: 'Leche Fresca de Vaca',
-    type: 'Grado Alimenticio',
-    origin: 'Normandía, Francia',
-    specs: 'Cruda, sin pasteurizar, de granjas locales.',
-    image: findImage('product-milk'),
-  },
 ];
 
 export const trucks = [
@@ -62,14 +54,6 @@ export const trucks = [
 ];
 
 export const orders = [
-  {
-    id: 'ORD-003',
-    product: 'Leche Fresca de Vaca',
-    destination: 'Barcelona, España',
-    status: 'Pendiente',
-    cost: 1500,
-    date: '2024-06-05',
-  },
   {
     id: 'ORD-004',
     product: 'Vino Tinto de Burdeos',

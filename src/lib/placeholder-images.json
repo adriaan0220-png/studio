@@ -19,12 +19,6 @@
       "imageHint": "glycerin bottle"
     },
     {
-      "id": "product-milk",
-      "description": "A dairy farm with cows in a pasture, for milk transport.",
-      "imageUrl": "https://images.unsplash.com/photo-1636998980792-63f27ddea4e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxkYWlyeSUyMGZhcm18ZW58MHx8fHwxNzYzNDgzNDY4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "dairy farm"
-    },
-    {
       "id": "truck-standard",
       "description": "A standard tanker truck on a highway.",
       "imageUrl": "https://images.unsplash.com/photo-1654452519639-a77d0fb31025?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx0YW5rZXIlMjB0cnVja3xlbnwwfHx8fDE3NjM1MzAxMzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
