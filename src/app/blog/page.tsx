@@ -5,7 +5,9 @@ import Image from 'next/image';
 const blogPosts = [
   {
     title: 'Tendencias en el transporte de cisternas 2025',
-    content: 'El sector evoluciona hacia vehículos más eficientes, sistemas de seguimiento avanzados y normativas más estrictas para garantizar la seguridad en el transporte de líquidos.'
+    content: 'El sector evoluciona hacia vehículos más eficientes, sistemas de seguimiento avanzados y normativas más estrictas para garantizar la seguridad en el transporte de líquidos.',
+    imageUrl: 'https://www.kitsadronline.com/wp-content/uploads/2021/04/ADR-para-el-transporte-de-mercancias-peligrosas.jpg',
+    imageHint: 'tanker truck road'
   },
   {
     title: 'La importancia de las cisternas certificadas en el transporte ADR',
@@ -32,7 +34,18 @@ export default function BlogPage() {
           />
           <div className="grid gap-8 md:grid-cols-2">
             {blogPosts.map((post) => (
-              <Card key={post.title} className="shadow-lg bg-card/80">
+              <Card key={post.title} className="shadow-lg bg-card/80 overflow-hidden">
+                {post.imageUrl && (
+                  <div className="relative h-48 w-full">
+                    <Image
+                      src={post.imageUrl}
+                      alt={post.title}
+                      fill
+                      className="object-cover"
+                      data-ai-hint={post.imageHint}
+                    />
+                  </div>
+                )}
                 <CardHeader>
                   <CardTitle>{post.title}</CardTitle>
                 </CardHeader>
