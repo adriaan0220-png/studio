@@ -30,13 +30,14 @@ export const products = [
     type: 'Químico',
     origin: 'EB Trans',
     specs: 'Servicio especializado en mercancías peligrosas líquidas (ADR). Cisterna L4BH/LGBF con capacidad de 26.000-34.000L. Equipamiento ADR completo. Cumple con ADR 2025, REACH y UNE-EN 14025. Ideal para líquidos corrosivos (Clase 8), inflamables (Clase 3) y sustancias tóxicas (Clase 6.1).',
+    image: findImage('truck-specialized'),
   },
   {
     id: 3,
     name: 'Logística Multimodal Internacional – Líquidos a Granel',
     type: 'Internacional',
     origin: 'EB Trans',
-    specs: 'REF: EB-MULTI/INT-07. Gestión completa de transporte en la UE combinando carretera + ferrocarril + marítimo, optimizando tiempos, costes y documentación aduanera. Modalidades: Road Tanker | Isotank | Flexitank. Tiempo medio de tránsito UE: ES → FR: 24–36 h, ES → DE / BE / NL: 48–72 h. Rutas más frecuentes: Lyon, Marsella, Burdeos, Róterdam, Amberes, Fráncfort. Documentos habituales: DUA | EUR.1 | T1 | Packing list | Factura proforma. Incoterms habituales: DAP, CPT, FCA, DDP. Sistemas digitales: POD electrónico | Tracking API | Telematics 3.0.',
+    specs: 'Gestión completa de transporte en la UE combinando carretera + ferrocarril + marítimo, optimizando tiempos, costes y documentación aduanera.\n\nModalidades: Road Tanker | Isotank | Flexitank\n\nTiempo medio tránsito UE:\nES → FR: 24–36 h\nES → DE / BE / NL: 48–72 h\n\nRutas más frecuentes: Lyon, Marsella, Burdeos, Rotterdam, Amberes, Frankfurt\n\nDocumentos habituales: DUA | EUR.1 | T1 | Packing list | Factura proforma\n\nIncoterms habituales: DAP, CPT, FCA, DDP\n\nSistemas digitales: POD electrónico | Tracking API | Telematics 3.0',
     image: findImage('product-multimodal'),
   },
 ];
