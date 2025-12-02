@@ -7,19 +7,8 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
-import { useToast } from '@/hooks/use-toast';
 
 export default function FormularioPage() {
-    const { toast } = useToast();
-
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault();
-        toast({
-          title: '¡Formulario Enviado!',
-          description: 'Gracias por contactar con nosotros. Nos pondremos en contacto con usted en breve.',
-        });
-        (event.target as HTMLFormElement).reset();
-      };
 
   return (
     <div className="p-8 flex-1 bg-pink-50">
@@ -29,7 +18,7 @@ export default function FormularioPage() {
       />
       <div className="flex justify-center">
         <Card className="w-full max-w-2xl">
-            <form onSubmit={handleSubmit}>
+            <form action="https://formspree.io/f/mvgerbja" method="POST">
                 <CardHeader>
                     <CardTitle>Envíenos un mensaje</CardTitle>
                     <CardDescription>
@@ -40,20 +29,20 @@ export default function FormularioPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="space-y-2">
                             <Label htmlFor="name">Nombre</Label>
-                            <Input id="name" placeholder="Su nombre" required />
+                            <Input id="name" name="name" placeholder="Su nombre" required />
                         </div>
                         <div className="space-y-2">
                             <Label htmlFor="email">Correo electrónico</Label>
-                            <Input id="email" type="email" placeholder="su@email.com" required />
+                            <Input id="email" type="email" name="email" placeholder="su@email.com" required />
                         </div>
                     </div>
                     <div className="space-y-2">
                         <Label htmlFor="subject">Asunto</Label>
-                        <Input id="subject" placeholder="Asunto de su mensaje" required />
+                        <Input id="subject" name="subject" placeholder="Asunto de su mensaje" required />
                     </div>
                     <div className="space-y-2">
                         <Label htmlFor="message">Mensaje</Label>
-                        <Textarea id="message" placeholder="Escriba su mensaje aquí..." required rows={5} />
+                        <Textarea id="message" name="message" placeholder="Escriba su mensaje aquí..." required rows={5} />
                     </div>
                 </CardContent>
                 <CardFooter>
