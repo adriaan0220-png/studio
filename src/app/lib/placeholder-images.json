@@ -59,13 +59,13 @@
       "id": "product-adr-chemical",
       "description": "Un camión cisterna para productos químicos en una carretera.",
       "imageUrl": "https://www.cisternashnosfajardo.com/wp-content/uploads/2018/11/SLIDE-1-800x400.jpg",
-      "imageHint": "ADR truck"
+      "imageHint": "chemical tanker"
     },
     {
       "id": "product-multimodal",
-      "description": "Un camión en un muelle de carga, representando la logística multimodal",
-      "imageUrl": "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?q=80&w=2070&auto=format&fit=crop",
-      "imageHint": "truck dock"
+      "description": "Una imagen para la logística multimodal.",
+      "imageUrl": "https://lexlatin.com/sites/default/files/2023-08/boletin_gestion_290823-2.jpg",
+      "imageHint": "logistics management"
     },
     {
       "id": "ship-container",

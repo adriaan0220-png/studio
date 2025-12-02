@@ -93,6 +93,12 @@ const nextConfig: NextConfig = {
         hostname: 'www.cisternashnosfajardo.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'lexlatin.com',
+        port: '',
+        pathname: '/**',
       }
     ],
   },
