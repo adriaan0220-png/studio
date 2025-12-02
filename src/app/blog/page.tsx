@@ -18,11 +18,11 @@ export default function BlogPage() {
     <div className="bg-purple-100 -m-8 p-8 flex-1">
       <div className="relative py-8 px-4 md:px-6">
         <Image
-          src="https://images.unsplash.com/photo-1583327497931-72f1a911a34a?q=80&w=2070&auto=format&fit=crop"
-          alt="Revista abierta"
+          src="https://www.cisternashnosfajardo.com/wp-content/uploads/2018/11/SLIDE-1-800x400.jpg"
+          alt="Camión cisterna en carretera"
           fill
           className="object-cover absolute inset-0 z-0"
-          data-ai-hint="open magazine"
+          data-ai-hint="tanker truck road"
         />
         <div className="absolute inset-0 z-10 bg-background/80 backdrop-blur-sm" />
         <div className="relative z-20">
