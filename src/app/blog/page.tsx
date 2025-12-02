@@ -19,9 +19,8 @@ export default function BlogPage() {
       <Image
         src="https://images.unsplash.com/photo-1583327497931-72f1a911a34a?q=80&w=2070&auto=format&fit=crop"
         alt="Revista abierta"
-        layout="fill"
-        objectFit="cover"
-        className="absolute inset-0 z-0"
+        fill
+        className="object-cover absolute inset-0 z-0"
         data-ai-hint="open magazine"
       />
       <div className="absolute inset-0 z-10 bg-background/80 backdrop-blur-sm" />
@@ -32,7 +31,7 @@ export default function BlogPage() {
         />
         <div className="grid gap-8 md:grid-cols-2">
           {blogPosts.map((post) => (
-            <Card key={post.title} className="shadow-lg">
+            <Card key={post.title} className="shadow-lg bg-card/80">
               <CardHeader>
                 <CardTitle>{post.title}</CardTitle>
               </CardHeader>
