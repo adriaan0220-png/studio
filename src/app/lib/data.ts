@@ -17,14 +17,6 @@ function findImage(id: string): ImagePlaceholder {
 
 export const products = [
   {
-    id: 3,
-    name: 'Glicerina',
-    type: 'Grado Alimenticio',
-    origin: 'Hamburgo, Alemania',
-    specs: 'Glicerina vegetal USP, 99.7% de pureza, para uso alimentario y farmacéutico.',
-    image: findImage('product-glycerin'),
-  },
-  {
     id: 4,
     name: 'Leche Fresca de Vaca',
     type: 'Grado Alimenticio',
