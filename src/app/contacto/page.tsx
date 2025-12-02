@@ -4,7 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function ContactoPage() {
   return (
-    <div className="bg-background -m-8 p-8 flex-1">
+    <div className="p-8 flex-1">
       <PageHeader
         title="Contacto"
         description="Póngase en contacto con nosotros para cualquier consulta."

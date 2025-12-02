@@ -22,7 +22,7 @@ export default function FormularioPage() {
       };
 
   return (
-    <div className="bg-background -m-8 p-8 flex-1">
+    <div className="p-8 flex-1">
       <PageHeader
         title="Formulario de Contacto"
         description="Rellene el siguiente formulario para enviarnos un mensaje."

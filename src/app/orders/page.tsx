@@ -51,7 +51,7 @@ export default function OrdersPage() {
     }
   
     return (
-        <div className="bg-background -m-8 p-8 flex-1">
+        <div className="p-8 flex-1">
             <PageHeader
                 title="Mis Pedidos"
                 description="Consulte el estado y la documentación de sus envíos en tiempo real."
