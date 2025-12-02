@@ -17,14 +17,6 @@ function findImage(id: string): ImagePlaceholder {
 
 export const products = [
   {
-    id: 2,
-    name: 'Etanol Industrial',
-    type: 'Químico',
-    origin: 'Róterdam, Países Bajos',
-    specs: '99.8% de Pureza, Desnaturalizado, para aplicaciones industriales.',
-    image: findImage('product-chemical'),
-  },
-  {
     id: 3,
     name: 'Glicerina',
     type: 'Grado Alimenticio',
@@ -78,14 +70,6 @@ export const trucks = [
 ];
 
 export const orders = [
-  {
-    id: 'ORD-002',
-    product: 'Etanol Industrial',
-    destination: 'Lyon, Francia',
-    status: 'En Tránsito',
-    cost: 2800,
-    date: '2024-05-28',
-  },
   {
     id: 'ORD-003',
     product: 'Leche Fresca de Vaca',
