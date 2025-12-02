@@ -11,12 +11,11 @@ import { cn } from '@/lib/utils';
 import { Footer } from './footer';
 
 const navItems = [
-  { href: '/inicio', label: 'Inicio', icon: Home },
+  { href: '/', label: 'Inicio', icon: Home },
   { href: '/servicios', label: 'Servicios', icon: Settings },
   { href: '/quien-somos', label: 'Quiénes Somos', icon: Users },
   { href: '/contacto', label: 'Contacto', icon: Mail },
   { href: '/blog', label: 'Blog', icon: Newspaper },
-  { href: '/', label: 'Estimador', icon: Calculator },
   { href: '/products', label: 'Productos', icon: Droplets },
   { href: '/fleet', label: 'Nuestra Flota', icon: Truck },
   { href: '/orders', label: 'Mis Pedidos', icon: ClipboardList },
@@ -84,7 +83,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         </Sheet>
         <div className="w-8 md:hidden" />
       </header>
-      <main className="flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-8">
+      <main className="flex-1 flex-col">
         {children}
       </main>
       <Footer />
