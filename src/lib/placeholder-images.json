@@ -33,7 +33,7 @@
     {
       "id": "truck-specialized",
       "description": "A specialized chemical transport truck with safety labels.",
-      "imageUrl": "https://images.unsplash.com/photo-1708008914410-fc368c747e87?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxjaGVtaWNhbCUyMHRydWNrfGVufDB8fHx8MTc2MzU4MDQxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1589002771170-9692b81b05da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjaGVtaWNhbCUyMHRhbmtlcnxlbnwwfHx8fDE3NjQ2NjIyNDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "chemical truck"
     },
     {
@@ -62,9 +62,9 @@
     },
     {
       "id": "product-multimodal",
-      "description": "Imagen de logística multimodal, mostrando un camión, tren y barco.",
-      "imageUrl": "https://images.unsplash.com/photo-1613686386377-518683526154?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxtdWx0aW1vZGFsJTIwbG9naXN0aWNzfGVufDB8fHx8MTc2NDY2MjI0OHww&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "multimodal logistics"
+      "description": "Un mapa del mundo para representar la logística internacional.",
+      "imageUrl": "https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=2070&auto=format&fit=crop",
+      "imageHint": "world map"
     }
   ]
 }
