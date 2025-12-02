@@ -84,7 +84,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
         </Sheet>
         <div className="w-8 md:hidden" />
       </header>
-      <main className="flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-8 bg-background">
+      <main className="flex flex-1 flex-col gap-4 p-4 lg:gap-6 lg:p-8">
         {children}
       </main>
       <Footer />

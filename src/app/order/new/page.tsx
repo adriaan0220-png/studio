@@ -31,7 +31,7 @@ export default function NewOrderPage() {
   };
 
   return (
-    <>
+    <div className="bg-teal-100 -m-8 p-8 flex-1">
       <PageHeader
         title="Confirme Su Pedido"
         description="Por favor, revise su solicitud de transporte y proporcione la información de contacto."
@@ -88,6 +88,6 @@ export default function NewOrderPage() {
           </form>
         </Card>
       </div>
-    </>
+    </div>
   );
 }

@@ -6,7 +6,7 @@ import { PageHeader } from '@/app/components/page-header';
 
 export default function ProductsPage() {
   return (
-    <>
+    <div className="bg-pink-100 -m-8 p-8 flex-1">
       <PageHeader
         title="Nuestros Productos Líquidos"
         description="Ofrecemos una variedad de productos líquidos de alta calidad para transporte a granel."
@@ -36,6 +36,6 @@ export default function ProductsPage() {
           </Card>
         ))}
       </div>
-    </>
+    </div>
   );
 }

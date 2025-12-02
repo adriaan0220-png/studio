@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function QuienSomosPage() {
   return (
-    <>
+    <div className="bg-yellow-100 -m-8 p-8 flex-1">
       <PageHeader
         title="Quiénes Somos"
         description="Conozca más sobre nuestra empresa, misión y valores."
@@ -24,6 +24,6 @@ export default function QuienSomosPage() {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 }

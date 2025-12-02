@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function InicioPage() {
   return (
-    <>
+    <div className="bg-green-100 -m-8 p-8 flex-1">
         <div className="relative w-full h-80 md:h-[500px] rounded-lg overflow-hidden shadow-lg group mb-8">
            <Image
               src="https://static.wixstatic.com/media/187b42_cbeb2dfc53954ad6979c0dc88ac2271d~mv2.jpg"
@@ -22,6 +22,6 @@ export default function InicioPage() {
       <div className="p-4">
         <p>Aquí puedes encontrar un resumen de tu actividad y accesos directos a las principales funciones.</p>
       </div>
-    </>
+    </div>
   );
 }

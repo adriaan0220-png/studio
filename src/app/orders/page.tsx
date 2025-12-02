@@ -20,7 +20,7 @@ export default function OrdersPage() {
   };
 
   return (
-    <>
+    <div className="bg-orange-100 -m-8 p-8 flex-1">
       <PageHeader
         title="Mis Pedidos"
         description="Rastree el estado de sus pedidos recientes de entregas de productos líquidos."
@@ -53,6 +53,6 @@ export default function OrdersPage() {
           </Table>
         </CardContent>
       </Card>
-    </>
+    </div>
   );
 }

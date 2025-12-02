@@ -19,7 +19,7 @@ export default function FleetPage() {
   };
 
   return (
-    <>
+    <div className="bg-gray-100 -m-8 p-8 flex-1">
       <PageHeader
         title="Nuestra Flota de Camiones"
         description="Camiones modernos, confiables y especializados para satisfacer sus necesidades de transporte."
@@ -52,6 +52,6 @@ export default function FleetPage() {
           </Card>
         ))}
       </div>
-    </>
+    </div>
   );
 }

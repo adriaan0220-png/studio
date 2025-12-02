@@ -15,31 +15,33 @@ const blogPosts = [
 
 export default function BlogPage() {
   return (
-    <div className="relative py-8 px-4 md:px-6 -m-4 lg:-m-8">
-      <Image
-        src="https://images.unsplash.com/photo-1583327497931-72f1a911a34a?q=80&w=2070&auto=format&fit=crop"
-        alt="Revista abierta"
-        fill
-        className="object-cover absolute inset-0 z-0"
-        data-ai-hint="open magazine"
-      />
-      <div className="absolute inset-0 z-10 bg-background/80 backdrop-blur-sm" />
-      <div className="relative z-20">
-        <PageHeader
-          title="Blog"
-          description="Noticias, artículos y actualizaciones de la industria del transporte."
+    <div className="bg-purple-100 -m-8 p-8 flex-1">
+      <div className="relative py-8 px-4 md:px-6">
+        <Image
+          src="https://images.unsplash.com/photo-1583327497931-72f1a911a34a?q=80&w=2070&auto=format&fit=crop"
+          alt="Revista abierta"
+          fill
+          className="object-cover absolute inset-0 z-0"
+          data-ai-hint="open magazine"
         />
-        <div className="grid gap-8 md:grid-cols-2">
-          {blogPosts.map((post) => (
-            <Card key={post.title} className="shadow-lg bg-card/80">
-              <CardHeader>
-                <CardTitle>{post.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">{post.content}</p>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="absolute inset-0 z-10 bg-background/80 backdrop-blur-sm" />
+        <div className="relative z-20">
+          <PageHeader
+            title="Blog"
+            description="Noticias, artículos y actualizaciones de la industria del transporte."
+          />
+          <div className="grid gap-8 md:grid-cols-2">
+            {blogPosts.map((post) => (
+              <Card key={post.title} className="shadow-lg bg-card/80">
+                <CardHeader>
+                  <CardTitle>{post.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">{post.content}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
     </div>
