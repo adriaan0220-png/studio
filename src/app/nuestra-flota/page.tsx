@@ -25,7 +25,8 @@ const tankerTypes = [
   },
   {
     title: 'Multimodales Isotank',
-    imageId: 'ship-container',
+    imageUrl: 'https://eng.spectransgarant.ru/services/tank-containers-02.jpg',
+    imageHint: 'isotank container',
     icons: [
       { icon: Anchor, label: 'Marítimo' },
       { icon: Route, label: 'Carretera' },
