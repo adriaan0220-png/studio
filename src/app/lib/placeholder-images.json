@@ -1,3 +1,4 @@
+
 {
   "placeholderImages": [
     {
@@ -55,10 +56,22 @@
       "imageHint": "modern tanker"
     },
     {
+      "id": "product-adr-chemical",
+      "description": "Un camión cisterna para productos químicos en una carretera.",
+      "imageUrl": "https://images.unsplash.com/photo-1589002771170-9692b81b05da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjaGVtaWNhbCUyMHRhbmtlcnxlbnwwfHx8fDE3NjQ2NjIyNDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "chemical tanker"
+    },
+    {
       "id": "product-multimodal",
-      "description": "Un camión cisterna estándar en una carretera.",
-      "imageUrl": "https://images.unsplash.com/photo-1654452519639-a77d0fb31025?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx0YW5rZXIlMjB0cnVja3xlbnwwfHx8fDE3NjM1MzAxMzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "tanker truck"
+      "description": "Un camión en un muelle de carga, representando la logística multimodal",
+      "imageUrl": "https://images.unsplash.com/photo-1616401784845-180882ba9ba8?q=80&w=2070&auto=format&fit=crop",
+      "imageHint": "truck dock"
+    },
+    {
+      "id": "ship-container",
+      "description": "Un buque portacontenedores en el mar, representando el transporte marítimo.",
+      "imageUrl": "https://images.unsplash.com/photo-1611252372293-1a3b51197176?q=80&w=2070&auto=format&fit=crop",
+      "imageHint": "container ship"
     }
   ]
 }

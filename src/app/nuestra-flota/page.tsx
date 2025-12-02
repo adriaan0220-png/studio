@@ -1,7 +1,6 @@
 import { PageHeader } from '@/app/components/page-header';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 import Image from 'next/image';
 import { ShieldCheck, Thermometer, Droplets, Anchor, Route, Zap, FileText } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -25,7 +24,7 @@ const tankerTypes = [
   },
   {
     title: 'Multimodales Isotank',
-    imageId: 'product-multimodal',
+    imageId: 'ship-container',
     icons: [
       { icon: Anchor, label: 'Marítimo' },
       { icon: Route, label: 'Carretera' },
