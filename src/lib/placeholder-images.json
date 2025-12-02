@@ -27,7 +27,7 @@
     {
       "id": "truck-large",
       "description": "A large capacity tanker truck at a depot.",
-      "imageUrl": "https://images.unsplash.com/photo-1758549834256-6a6ac8e2724b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxsYXJnZSUyMHRydWNrfGVufDB8fHx8MTc2MzU4MDQxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1758549834256-6a6ac8e2724b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxsYXJnZSUyMHRydWNrfGVufDB8fHx8MTc2MzU4MDQxNHww&ixlibrb-4.1.0&q=80&w=1080",
       "imageHint": "large truck"
     },
     {
@@ -57,14 +57,20 @@
     {
       "id": "product-adr-chemical",
       "description": "Un camión cisterna para productos químicos en una carretera.",
-      "imageUrl": "https://images.unsplash.com/photo-1589002771170-9692b81b05da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjaGVtaWNhbCUyMHRhbmtlcnxlbnwwfHx8fDE3NjQ2NjIyNDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://www.cisternashnosfajardo.com/wp-content/uploads/2018/11/SLIDE-1-800x400.jpg",
       "imageHint": "chemical tanker"
     },
     {
       "id": "product-multimodal",
-      "description": "Un mapa del mundo para representar la logística internacional.",
-      "imageUrl": "https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=2070&auto=format&fit=crop",
-      "imageHint": "world map"
+      "description": "Una imagen para la logística multimodal.",
+      "imageUrl": "https://tse1.mm.bing.net/th/id/OIP.o53EOK1niZOM5uxaapRXpAHaDt?pid=Api&P=0&h=180",
+      "imageHint": "container ship"
+    },
+    {
+      "id": "ship-container",
+      "description": "Un buque portacontenedores en el mar, representando el transporte marítimo.",
+      "imageUrl": "https://images.unsplash.com/photo-1611252372293-1a3b51197176?q=80&w=2070&auto=format&fit=crop",
+      "imageHint": "container ship"
     }
   ]
 }
