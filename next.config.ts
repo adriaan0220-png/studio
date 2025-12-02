@@ -82,6 +82,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.kitsadronline.com',
+        port: '',
+        pathname: '/**',
+      }
     ],
   },
 };
