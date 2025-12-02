@@ -10,13 +10,13 @@ const ServiceCard = ({
   title,
   description,
   features,
-  idealFor,
+  logistics,
   imageId,
 }: {
   title: string;
   description: string;
   features: string[];
-  idealFor: string;
+  logistics: string[];
   imageId: string;
 }) => {
   const image = PlaceHolderImages.find((img) => img.id === imageId);
@@ -51,8 +51,15 @@ const ServiceCard = ({
           </ul>
         </div>
         <div>
-          <h4 className="font-semibold mb-2 text-card-foreground">Ideal para:</h4>
-          <p className="text-muted-foreground">{idealFor}</p>
+          <h4 className="font-semibold mb-2 text-card-foreground">Operativa logística:</h4>
+           <ul className="space-y-2">
+            {logistics.map((item, index) => (
+              <li key={index} className="flex items-start gap-2">
+                <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                <span className="text-muted-foreground">{item}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </CardContent>
     </Card>
@@ -62,17 +69,22 @@ const ServiceCard = ({
 export default function ServiciosPage() {
   const servicios = [
     {
-      title: 'Transporte Alimentario',
+      title: 'Cisternas Alimentarias Inox AISI-316L (REF: EB-ALM/316-1)',
       description:
-        'Transporte seguro de líquidos de consumo mediante cisternas aptas para alimentación, con limpieza certificada y control de temperatura cuando se requiere.',
+        'Servicio de transporte en cisterna de productos líquidos alimentarios a granel, con cumplimiento Reglamento (CE) 852/2004 y protocolos de limpieza CIP certificado.',
       features: [
-        'Acero inoxidable AISI 316',
-        'Capacidades entre 28.000 – 32.000 L',
-        'Limpiezas CIP certificadas',
-        'Rutas nacionales e internacionales',
-        'Temperatura controlada (OPCIONAL)',
+        'Material: Acero inoxidable sanitario AISI 316L (resistente a ácidos alimentarios).',
+        'Capacidad: Entre 28.500 y 32.000 litros.',
+        'Divisiones: 1–3 compartimentos herméticos.',
+        'Sistema de sellado: Válvulas DN80 y DN100 certificadas.',
+        'Control temperatura: +5ºC / +65ºC (según producto).',
+        'Certificaciones: ATP, ISO 22000, HACCP.',
       ],
-      idealFor: 'Aceites, vinos, leche, jarabes, glucosas.',
+      logistics: [
+        'Limpieza CIP documental (certificado descargable PDF).',
+        'Trazabilidad lote / cisterna / cliente.',
+        'Gestión POD digital y seguimiento GPS 24/7.',
+      ],
       imageId: 'stainless-tanker-new',
     },
   ];
