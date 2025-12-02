@@ -6,7 +6,7 @@ const blogPosts = [
   {
     title: 'Tendencias en el transporte de cisternas 2025',
     content: 'El sector evoluciona hacia vehículos más eficientes, sistemas de seguimiento avanzados y normativas más estrictas para garantizar la seguridad en el transporte de líquidos.',
-    imageUrl: 'https://www.kitsadronline.com/wp-content/uploads/2019/12/transporte-por-carretera.jpg',
+    imageUrl: 'https://logweb.com.br/wp-content/uploads/2024/11/Foto-Artigo-Luis-Soria-Novembro-2024-1024x585.webp',
     imageHint: 'tanker truck technology'
   },
   {
