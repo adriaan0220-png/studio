@@ -90,7 +90,7 @@ export default function ServiciosPage() {
   ];
 
   return (
-    <div className="bg-blue-100 -m-8 p-8 flex-1">
+    <div className="bg-background -m-8 p-8 flex-1">
       <PageHeader
         title="Nuestros Servicios"
         description="Descubra la gama de servicios de transporte especializado que ofrecemos."

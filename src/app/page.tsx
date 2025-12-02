@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function HomePage() {
   return (
-    <div className="bg-green-100 -m-8 p-8 flex-1">
+    <div className="bg-background -m-8 p-8 flex-1">
         <div className="relative w-full h-80 md:h-[500px] rounded-lg overflow-hidden shadow-lg group mb-8">
            <Image
               src="https://i0.wp.com/cisternascidegainox.com/wp-content/uploads/2019/06/todo-lo-que-debes-saber-sobre-la-conduccion-de-un-camion-cisterna-1920.jpg?fit=1920%2C1080&ssl=1"

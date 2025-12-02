@@ -6,7 +6,7 @@ const blogPosts = [
   {
     title: 'Tendencias en el transporte de cisternas 2025',
     content: 'El sector evoluciona hacia vehículos más eficientes, sistemas de seguimiento avanzados y normativas más estrictas para garantizar la seguridad en el transporte de líquidos.',
-    imageUrl: 'https://lexlatin.com/sites/default/files/2023-08/boletin_gestion_290823-2.jpg',
+    imageUrl: 'https://www.kitsadronline.com/wp-content/uploads/2019/12/transporte-por-carretera.jpg',
     imageHint: 'tanker truck technology'
   },
   {
@@ -19,7 +19,7 @@ const blogPosts = [
 
 export default function BlogPage() {
   return (
-    <div className="bg-purple-100 -m-8 p-8 flex-1">
+    <div className="bg-background -m-8 p-8 flex-1">
       <div className="relative py-8 px-4 md:px-6">
         <Image
           src="https://www.cisternashnosfajardo.com/wp-content/uploads/2018/11/SLIDE-1-800x400.jpg"
