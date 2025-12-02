@@ -99,6 +99,12 @@ const nextConfig: NextConfig = {
         hostname: 'lexlatin.com',
         port: '',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'tse2.mm.bing.net',
+        port: '',
+        pathname: '/**',
       }
     ],
   },

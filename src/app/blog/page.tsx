@@ -11,7 +11,9 @@ const blogPosts = [
   },
   {
     title: 'La importancia de las cisternas certificadas en el transporte ADR',
-    content: 'Un repaso a los requisitos y estándares que deben cumplir los vehículos para transportar sustancias químicas peligrosas.'
+    content: 'Un repaso a los requisitos y estándares que deben cumplir los vehículos para transportar sustancias químicas peligrosas.',
+    imageUrl: 'https://tse2.mm.bing.net/th/id/OIP.M1SpenjNXWE-GmxfsS9u6wHaGy?pid=Api&P=0&h=180',
+    imageHint: 'ADR certified tanker'
   }
 ];
 
