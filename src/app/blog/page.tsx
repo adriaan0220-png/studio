@@ -1,4 +1,16 @@
 import { PageHeader } from '@/app/components/page-header';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+
+const blogPosts = [
+  {
+    title: 'Tendencias en el transporte de cisternas 2025',
+    content: 'El sector evoluciona hacia vehículos más eficientes, sistemas de seguimiento avanzados y normativas más estrictas para garantizar la seguridad en el transporte de líquidos.'
+  },
+  {
+    title: 'La importancia de las cisternas certificadas en el transporte ADR',
+    content: 'Un repaso a los requisitos y estándares que deben cumplir los vehículos para transportar sustancias químicas peligrosas.'
+  }
+];
 
 export default function BlogPage() {
   return (
@@ -7,11 +19,17 @@ export default function BlogPage() {
         title="Blog"
         description="Noticias, artículos y actualizaciones de la industria del transporte."
       />
-      <div className="flex items-center justify-center h-full min-h-[400px] border-dashed border-2 rounded-lg">
-        <div className="text-center text-muted-foreground">
-          <h2 className="text-2xl font-semibold">Próximamente</h2>
-          <p>Nuestro blog se lanzará pronto. ¡Vuelve a consultar las últimas noticias!</p>
-        </div>
+      <div className="grid gap-8 md:grid-cols-2">
+        {blogPosts.map((post) => (
+          <Card key={post.title}>
+            <CardHeader>
+              <CardTitle>{post.title}</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground">{post.content}</p>
+            </CardContent>
+          </Card>
+        ))}
       </div>
     </>
   );
