@@ -33,11 +33,11 @@ export const products = [
   },
   {
     id: 3,
-    name: 'Logística Internacional y Carga Líquida Multimodal',
+    name: 'Logística Multimodal Internacional – Líquids a Granel (REF: EB-MULTI/INT-07)',
     type: 'Internacional',
     origin: 'EB Trans',
-    specs: 'Servicio integral para exportación e importación de líquidos a granel dentro de la UE, con planificación multimodal (road + rail + maritime) y gestión documental internacional. Incoterms: FCA, CPT, DAP, DDP. Documentos: DUA, T1/T2, CMR digital, EUR.1. Seguimiento en tiempo real vía API GPS, POD digital y alertas de evento. Nodos operativos en Tarragona, Barcelona, Valencia, Bilbao y Lyon.',
-    image: findImage('truck-standard'),
+    specs: 'Gestió completa de transport a la UE combinant carretera + ferrocarril + marítim, optimitzant temps, costos i documentació duanera. Modalitats: Road Tanker | Isotank | Flexitank. Temps mitjà transit UE: ES → FR: 24–36 h, ES → DE / BE / NL: 48–72 h. Rutes més freqüents: Lió, Marsella, Bordeus, Rotterdam, Anvers, Frankfurt. Documents habituals: DUA | EUR.1 | T1 | Packing list | Factura proforma. Incoterms habituals: DAP, CPT, FCA, DDP. Sistemes digitals: POD electrònic | Tracking API | Telematics 3.0.',
+    image: findImage('product-multimodal'),
   },
 ];
 
