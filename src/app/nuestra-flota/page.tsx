@@ -18,7 +18,7 @@ const tankerTypes = [
   {
     title: 'ADR Químicas Clase 3 y 8',
     imageUrl: 'https://www.cisternashnosfajardo.com/wp-content/uploads/2018/11/SLIDE-1-800x400.jpg',
-    imageHint: 'ADR label',
+    imageHint: 'ADR truck',
     icons: [
       { icon: ShieldCheck, label: 'ADR' },
       { icon: Zap, label: 'Clase 3 y 8' },

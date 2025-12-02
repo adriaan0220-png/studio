@@ -58,8 +58,8 @@
     {
       "id": "product-adr-chemical",
       "description": "Un camión cisterna para productos químicos en una carretera.",
-      "imageUrl": "https://images.unsplash.com/photo-1589002771170-9692b81b05da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjaGVtaWNhbCUyMHRhbmtlcnxlbnwwfHx8fDE3NjQ2NjIyNDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "chemical tanker"
+      "imageUrl": "https://www.cisternashnosfajardo.com/wp-content/uploads/2018/11/SLIDE-1-800x400.jpg",
+      "imageHint": "ADR truck"
     },
     {
       "id": "product-multimodal",
