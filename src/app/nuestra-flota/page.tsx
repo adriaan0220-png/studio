@@ -8,7 +8,8 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 const tankerTypes = [
   {
     title: 'Alimentarias AISI 316L',
-    imageId: 'food-grade-tanker',
+    imageUrl: 'https://tse1.mm.bing.net/th/id/OIP.thmWS8Km2_zlZimGhClpvgHaFL?pid=Api&P=0&h=180',
+    imageHint: 'stainless tanker',
     icons: [
       { icon: Thermometer, label: 'Control de Temperatura' },
       { icon: Droplets, label: 'Certificado CIP' },
@@ -89,7 +90,7 @@ export default function NuestraFlotaPage() {
           <h2 className="text-3xl font-bold font-headline mb-6">Tipos de Cisternas</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {tankerTypes.map((tanker) => {
-              const image = PlaceHolderImages.find(img => img.id === tanker.imageId);
+              const image = tanker.imageUrl ? { imageUrl: tanker.imageUrl, imageHint: tanker.imageHint } : PlaceHolderImages.find(img => img.id === (tanker as any).imageId);
               return (
                 <Card key={tanker.title} className="overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 group flex flex-col">
                    {image && (
