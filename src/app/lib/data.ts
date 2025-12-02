@@ -33,10 +33,10 @@ export const products = [
   },
   {
     id: 3,
-    name: 'Logística Multimodal Internacional – Líquids a Granel',
+    name: 'Logística Multimodal Internacional – Líquidos a Granel',
     type: 'Internacional',
     origin: 'EB Trans',
-    specs: 'REF: EB-MULTI/INT-07. Gestió completa de transport a la UE combinant carretera + ferrocarril + marítim. Modalitats: Road Tanker | Isotank | Flexitank. Temps mitjà transit UE: ES → FR: 24–36 h, ES → DE / BE / NL: 48–72 h. Rutes: Lió, Marsella, Bordeus, Rotterdam, Anvers, Frankfurt. Documents: DUA | EUR.1 | T1 | Packing list | Factura proforma. Incoterms: DAP, CPT, FCA, DDP. Sistemes digitals: POD electrònic | Tracking API | Telematics 3.0.',
+    specs: 'REF: EB-MULTI/INT-07. Gestión completa de transporte en la UE combinando carretera + ferrocarril + marítimo, optimizando tiempos, costes y documentación aduanera. Modalidades: Road Tanker | Isotank | Flexitank. Tiempo medio de tránsito UE: ES → FR: 24–36 h, ES → DE / BE / NL: 48–72 h. Rutas más frecuentes: Lyon, Marsella, Burdeos, Róterdam, Amberes, Fráncfort. Documentos habituales: DUA | EUR.1 | T1 | Packing list | Factura proforma. Incoterms habituales: DAP, CPT, FCA, DDP. Sistemas digitales: POD electrónico | Tracking API | Telematics 3.0.',
     image: findImage('product-multimodal'),
   },
 ];
