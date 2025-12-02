@@ -6,8 +6,8 @@ const blogPosts = [
   {
     title: 'Tendencias en el transporte de cisternas 2025',
     content: 'El sector evoluciona hacia vehículos más eficientes, sistemas de seguimiento avanzados y normativas más estrictas para garantizar la seguridad en el transporte de líquidos.',
-    imageUrl: 'https://www.kitsadronline.com/wp-content/uploads/2021/04/ADR-para-el-transporte-de-mercancias-peligrosas.jpg',
-    imageHint: 'tanker truck road'
+    imageUrl: 'https://lexlatin.com/sites/default/files/2023-08/boletin_gestion_290823-2.jpg',
+    imageHint: 'tanker truck technology'
   },
   {
     title: 'La importancia de las cisternas certificadas en el transporte ADR',
