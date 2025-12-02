@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Home, Calculator, ClipboardList, Droplets, Menu, Truck, Settings, Users, Mail, Newspaper, FileText } from 'lucide-react';
+import { Home, Calculator, ClipboardList, Droplets, Menu, Truck, Settings, Users, Mail, Newspaper, FileText, FileKey } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Logo } from '@/app/components/logo';
@@ -18,6 +18,7 @@ const navItems = [
   { href: '/blog', label: 'Blog', icon: Newspaper },
   { href: '/formulario', label: 'Formulario', icon: FileText },
   { href: '/products', label: 'Productos', icon: Droplets },
+  { href: '/referencia-interna', label: 'Referencia Interna', icon: FileKey },
   { href: '/nuestra-flota', label: 'Nuestra Flota', icon: Truck },
   { href: '/orders', label: 'Mis Pedidos', icon: ClipboardList },
 ];
