@@ -18,7 +18,6 @@ const navItems = [
   { href: '/blog', label: 'Blog', icon: Newspaper },
   { href: '/formulario', label: 'Formulario', icon: FileText },
   { href: '/products', label: 'Productos', icon: Droplets },
-  { href: '/referencia-interna', label: 'Referencia Interna', icon: FileKey },
   { href: '/nuestra-flota', label: 'Nuestra Flota', icon: Truck },
   { href: '/orders', label: 'Mis Pedidos', icon: ClipboardList },
 ];
