@@ -21,8 +21,16 @@ export const products = [
     name: 'Cisternas Alimentarias Inox AISI-316L',
     type: 'Alimentario',
     origin: 'EB Trans',
-    specs: 'Transporte a granel con cumplimiento del Reglamento (CE) 852/2004 y protocolos de limpieza CIP certificados. Capacidad: 28.500-32.000L.',
+    specs: 'Servicio de transporte en cisterna de productos líquidos alimentarios a granel, con cumplimiento Reglamento (CE) 852/2004 y protocolos de limpieza CIP certificado. Material: Acero inoxidable sanitario AISI 316L. Capacidad: 28.500-32.000L. Divisiones: 1–3 compartimentos. Válvulas DN80 y DN100. Control temperatura: +5ºC/+65ºC. Certificaciones: ATP, ISO 22000, HACCP. Limpieza CIP, Trazabilidad y seguimiento GPS 24/7.',
     image: findImage('stainless-tanker-new'),
+  },
+  {
+    id: 2,
+    name: 'Transporte ADR de Líquidos Químicos',
+    type: 'Químico',
+    origin: 'EB Trans',
+    specs: 'Servicio especializado en mercancías peligrosas líquidas (ADR). Cisterna L4BH/LGBF con capacidad de 26.000-34.000L. Equipamiento ADR completo. Cumple con ADR 2025, REACH y UNE-EN 14025. Ideal para líquidos corrosivos (Clase 8), inflamables (Clase 3) y sustancias tóxicas (Clase 6.1).',
+    image: findImage('product-adr-chemical'),
   },
 ];
 
