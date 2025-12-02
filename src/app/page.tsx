@@ -6,7 +6,7 @@ export default function HomePage() {
     <div className="bg-green-100 -m-8 p-8 flex-1">
         <div className="relative w-full h-80 md:h-[500px] rounded-lg overflow-hidden shadow-lg group mb-8">
            <Image
-              src="https://images.unsplash.com/photo-1571708343135-c57656a81d13?q=80&w=2070&auto=format&fit=crop"
+              src="https://i0.wp.com/cisternascidegainox.com/wp-content/uploads/2019/06/todo-lo-que-debes-saber-sobre-la-conduccion-de-un-camion-cisterna-1920.jpg?fit=1920%2C1080&ssl=1"
               alt="Camión cisterna en la carretera"
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-500"
