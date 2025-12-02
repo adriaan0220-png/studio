@@ -17,14 +17,6 @@ function findImage(id: string): ImagePlaceholder {
 
 export const products = [
   {
-    id: 1,
-    name: 'Alcohol Isopropanol',
-    type: 'Químico',
-    origin: 'Leverkusen, Alemania',
-    specs: '99.9% de pureza, para uso industrial y desinfectante.',
-    image: findImage('product-isopropanol'),
-  },
-  {
     id: 2,
     name: 'Etanol Industrial',
     type: 'Químico',
@@ -87,14 +79,6 @@ export const trucks = [
 
 export const orders = [
   {
-    id: 'ORD-001',
-    product: 'Alcohol Isopropanol',
-    destination: 'Berlín, Alemania',
-    status: 'Entregado',
-    cost: 4500,
-    date: '2024-05-15',
-  },
-  {
     id: 'ORD-002',
     product: 'Etanol Industrial',
     destination: 'Lyon, Francia',
@@ -117,13 +101,5 @@ export const orders = [
     status: 'En Tránsito',
     cost: 6200,
     date: '2024-05-30',
-  },
-  {
-    id: 'ORD-005',
-    product: 'Alcohol Isopropanol',
-    destination: 'Múnich, Alemania',
-    status: 'Entregado',
-    cost: 4800,
-    date: '2024-05-10',
   },
 ];
