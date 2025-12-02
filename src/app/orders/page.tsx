@@ -8,7 +8,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
 import { Separator } from '@/components/ui/separator';
-import { CheckCircle, Clock, Download, FileText, Gps, HelpCircle, List, Locate, Anchor, Phone, Mail, Truck, ChevronRight } from 'lucide-react';
+import { CheckCircle, Clock, Download, FileText, HelpCircle, List, Locate, Anchor, Phone, Mail, Truck, ChevronRight } from 'lucide-react';
 
 const OrderStatus = ({ status }: { status: string }) => {
     const statuses = [
@@ -115,7 +115,7 @@ export default function OrdersPage() {
                                 </CardHeader>
                                 <CardContent>
                                     <ul className="space-y-3">
-                                        <li className="flex items-center gap-3"><Gps className="h-5 w-5 text-primary" /> GPS 24/7</li>
+                                        <li className="flex items-center gap-3"><Locate className="h-5 w-5 text-primary" /> GPS 24/7</li>
                                         <li className="flex items-center gap-3"><Clock className="h-5 w-5 text-primary" /> Actualización automática de estado</li>
                                         <li className="flex items-center gap-3"><List className="h-5 w-5 text-primary" /> Historial de pedidos</li>
                                     </ul>
