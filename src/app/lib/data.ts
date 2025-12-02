@@ -30,15 +30,6 @@ export const products = [
     type: 'Químico',
     origin: 'EB Trans',
     specs: 'Servicio especializado en mercancías peligrosas líquidas (ADR). Cisterna L4BH/LGBF con capacidad de 26.000-34.000L. Equipamiento ADR completo. Cumple con ADR 2025, REACH y UNE-EN 14025. Ideal para líquidos corrosivos (Clase 8), inflamables (Clase 3) y sustancias tóxicas (Clase 6.1).',
-    image: findImage('product-adr-chemical'),
-  },
-  {
-    id: 3,
-    name: 'Logística Internacional y Carga Líquida Multimodal',
-    type: 'Internacional',
-    origin: 'EB Trans',
-    specs: 'Servicio integral para exportación e importación de líquidos a granel dentro de la UE, con planificación multimodal (road + rail + maritime) y gestión documental internacional. Incoterms: FCA, CPT, DAP, DDP. Documentos: DUA, T1/T2, CMR digital, EUR.1. Seguimiento en tiempo real vía API GPS, POD digital y alertas de evento. Nodos operativos en Tarragona, Barcelona, Valencia, Bilbao y Lyon.',
-    image: findImage('product-multimodal'),
   },
 ];
 
