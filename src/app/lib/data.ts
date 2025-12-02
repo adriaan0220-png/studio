@@ -31,6 +31,14 @@ export const products = [
     origin: 'EB Trans',
     specs: 'Servicio especializado en mercancías peligrosas líquidas (ADR). Cisterna L4BH/LGBF con capacidad de 26.000-34.000L. Equipamiento ADR completo. Cumple con ADR 2025, REACH y UNE-EN 14025. Ideal para líquidos corrosivos (Clase 8), inflamables (Clase 3) y sustancias tóxicas (Clase 6.1).',
   },
+  {
+    id: 3,
+    name: 'Logística Multimodal Internacional – Líquids a Granel',
+    type: 'Internacional',
+    origin: 'EB Trans',
+    specs: 'REF: EB-MULTI/INT-07. Gestió completa de transport a la UE combinant carretera + ferrocarril + marítim. Modalitats: Road Tanker | Isotank | Flexitank. Temps mitjà transit UE: ES → FR: 24–36 h, ES → DE / BE / NL: 48–72 h. Rutes: Lió, Marsella, Bordeus, Rotterdam, Anvers, Frankfurt. Documents: DUA | EUR.1 | T1 | Packing list | Factura proforma. Incoterms: DAP, CPT, FCA, DDP. Sistemes digitals: POD electrònic | Tracking API | Telematics 3.0.',
+    image: findImage('product-multimodal'),
+  },
 ];
 
 export const trucks = [
