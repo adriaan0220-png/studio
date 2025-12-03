@@ -1,21 +1,8 @@
 import { PageHeader } from '@/app/components/page-header';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
-
-const blogPosts = [
-  {
-    title: 'Tendencias en el transporte de cisternas 2025',
-    content: 'El sector evoluciona hacia vehículos más eficientes, sistemas de seguimiento avanzados y normativas más estrictas para garantizar la seguridad en el transporte de líquidos.',
-    imageUrl: 'https://logweb.com.br/wp-content/uploads/2024/11/Foto-Artigo-Luis-Soria-Novembro-2024-1024x585.webp',
-    imageHint: 'tanker truck technology'
-  },
-  {
-    title: 'La importancia de las cisternas certificadas en el transporte ADR',
-    content: 'Un repaso a los requisitos y estándares que deben cumplir los vehículos para transportar sustancias químicas peligrosas.',
-    imageUrl: 'https://tse2.mm.bing.net/th/id/OIP.M1SpenjNXWE-GmxfsS9u6wHaGy?pid=Api&P=0&h=180',
-    imageHint: 'ADR certified tanker'
-  }
-];
+import Link from 'next/link';
+import { blogPosts } from '@/app/lib/blog-data';
 
 export default function BlogPage() {
   return (
@@ -36,23 +23,29 @@ export default function BlogPage() {
           />
           <div className="grid gap-8 md:grid-cols-2">
             {blogPosts.map((post) => (
-              <Card key={post.title} className="shadow-lg bg-card/80 overflow-hidden">
+              <Card key={post.id} className="shadow-lg bg-card/80 overflow-hidden">
                 {post.imageUrl && (
-                  <div className="relative h-48 w-full">
-                    <Image
-                      src={post.imageUrl}
-                      alt={post.title}
-                      fill
-                      className="object-cover"
-                      data-ai-hint={post.imageHint}
-                    />
-                  </div>
+                  <Link href={`/blog/${post.id}`}>
+                    <div className="relative h-48 w-full cursor-pointer">
+                      <Image
+                        src={post.imageUrl}
+                        alt={post.title}
+                        fill
+                        className="object-cover"
+                        data-ai-hint={post.imageHint}
+                      />
+                    </div>
+                  </Link>
                 )}
                 <CardHeader>
-                  <CardTitle>{post.title}</CardTitle>
+                  <CardTitle>
+                    <Link href={`/blog/${post.id}`} className="hover:underline">
+                      {post.title}
+                    </Link>
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">{post.content}</p>
+                  <p className="text-muted-foreground line-clamp-3">{post.content}</p>
                 </CardContent>
               </Card>
             ))}
