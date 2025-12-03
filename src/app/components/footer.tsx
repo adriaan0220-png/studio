@@ -1,9 +1,21 @@
+
+'use client';
+
 import Link from 'next/link';
 import { Separator } from '@/components/ui/separator';
+import { useEffect, useState } from 'react';
 
 export function Footer() {
+  const [currentDate, setCurrentDate] = useState('');
+
+  useEffect(() => {
+    const date = new Date();
+    const formattedDate = `${date.getDate()} de ${date.toLocaleString('ca-ES', { month: 'long' })} de ${date.getFullYear()}`;
+    setCurrentDate(formattedDate);
+  }, []);
+
   return (
-    <footer className="bg-muted/50 text-card-foreground border-t">
+    <footer className="bg-muted text-card-foreground border-t">
       <div className="container mx-auto py-8 px-4 md:px-6 text-center">
         <p className="font-semibold text-lg">EB TRANS IBÉRICA</p>
         <p className="text-muted-foreground text-sm mb-4">Transporte profesional en cisternas</p>
@@ -29,6 +41,11 @@ export function Footer() {
         </div>
         
         <p className="text-xs text-muted-foreground">&copy; {new Date().getFullYear()} EB TRANS IBÉRICA</p>
+        {currentDate && (
+          <p className="text-xs text-muted-foreground mt-1">
+            ver. 1.0 | {currentDate}
+          </p>
+        )}
       </div>
     </footer>
   );
