@@ -54,7 +54,7 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
       {
-        protocol: 'httpshttps',
+        protocol: 'https',
         hostname: 'static.wixstatic.com',
         port: '',
         pathname: '/**',
