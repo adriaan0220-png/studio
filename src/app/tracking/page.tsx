@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -9,36 +10,37 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Terminal } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 
-// Define la interfaz para los datos del envío
+// Define la interfaz para los datos del envío para que coincida con el Excel
 interface ShipmentData {
   tracking_code: string;
-  origen: string;
-  desti: string;
+  origin: string;
+  destination: string;
   eta: string;
-  ubicacio_actual: string;
-  estat: 'En magatzem' | 'En trànsit' | 'Lliurat';
+  location: string;
+  status: 'EN CIRCULACIÓ' | 'MAGATZEM' | 'LLIURAT' | 'EN CIRCULACIO';
 }
 
-const StatusBar = ({ status }: { status: ShipmentData['estat'] }) => {
+const StatusBar = ({ status }: { status: ShipmentData['status'] }) => {
   const statusConfig = {
-    'En magatzem': {
+    'MAGATZEM': {
       progress: 10,
-      color: 'bg-yellow-500',
       label: 'En Almacén',
     },
-    'En trànsit': {
+    'EN CIRCULACIÓ': {
       progress: 50,
-      color: 'bg-blue-500',
       label: 'En Tránsito',
     },
-    'Lliurat': {
+    'EN CIRCULACIO': { // Handle potential typo from sheet
+      progress: 50,
+      label: 'En Tránsito',
+    },
+    'LLIURAT': {
       progress: 100,
-      color: 'bg-green-500',
       label: 'Entregado',
     },
   };
 
-  const currentStatus = statusConfig[status] || statusConfig['En magatzem'];
+  const currentStatus = statusConfig[status] || statusConfig['MAGATZEM'];
 
   return (
     <div className="w-full space-y-2">
@@ -71,7 +73,6 @@ export default function TrackingPage() {
     setShipmentData(null);
 
     try {
-      // IMPORTANT: Reemplaça amb la teva URL real de SheetDB
       const apiUrl = `https://sheetdb.io/api/v1/cj07wia9xgfo2/search?tracking_code=${trackingCode}`;
       
       const response = await fetch(apiUrl);
@@ -106,7 +107,7 @@ export default function TrackingPage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Input
                 type="text"
-                placeholder="Ex: EB-123456789"
+                placeholder="Ex: EBT-123"
                 value={trackingCode}
                 onChange={(e) => setTrackingCode(e.target.value)}
                 className="flex-grow text-base"
@@ -134,16 +135,16 @@ export default function TrackingPage() {
                 <CardContent className="space-y-6">
                     <div>
                         <h3 className="font-semibold mb-4">Estat de l'enviament</h3>
-                        <StatusBar status={shipmentData.estat} />
+                        <StatusBar status={shipmentData.status} />
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
                         <div className="space-y-1">
                             <p className="text-sm font-medium text-muted-foreground">Origen</p>
-                            <p className="text-lg font-semibold">{shipmentData.origen}</p>
+                            <p className="text-lg font-semibold">{shipmentData.origin}</p>
                         </div>
                         <div className="space-y-1">
                             <p className="text-sm font-medium text-muted-foreground">Destí</p>
-                            <p className="text-lg font-semibold">{shipmentData.desti}</p>
+                            <p className="text-lg font-semibold">{shipmentData.destination}</p>
                         </div>
                         <div className="space-y-1">
                             <p className="text-sm font-medium text-muted-foreground">Data prevista (ETA)</p>
@@ -151,7 +152,7 @@ export default function TrackingPage() {
                         </div>
                          <div className="space-y-1">
                             <p className="text-sm font-medium text-muted-foreground">Ubicació Actual</p>
-                            <p className="text-lg font-semibold">{shipmentData.ubicacio_actual}</p>
+                            <p className="text-lg font-semibold">{shipmentData.location}</p>
                         </div>
                     </div>
                 </CardContent>
