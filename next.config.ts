@@ -112,7 +112,7 @@ const nextConfig: NextConfig = {
         hostname: 'logweb.com.br',
         port: '',
         pathname: '/**',
-      }
+      },
     ],
   },
 };
