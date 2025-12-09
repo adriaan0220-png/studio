@@ -72,7 +72,7 @@ export default function TrackingPage() {
 
     try {
       // IMPORTANT: Reemplaça amb la teva URL real de SheetDB
-      const apiUrl = `https://sheetdb.io/api/v1/teva_url_aqui/search?tracking_code=${trackingCode}`;
+      const apiUrl = `https://sheetdb.io/api/v1/cj07wia9xgfo2/search?tracking_code=${trackingCode}`;
       
       const response = await fetch(apiUrl);
       if (!response.ok) {
