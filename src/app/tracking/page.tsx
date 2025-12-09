@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Input } from '@/components/ui/input';
 import { PageHeader } from '@/app/components/page-header';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { Terminal } from 'lucide-react';
+import { Terminal, User } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 
 // Define la interfaz para los datos del envío para que coincida con el Excel
@@ -18,6 +18,7 @@ interface ShipmentData {
   eta: string;
   location: string;
   status: 'EN CIRCULACIÓ' | 'MAGATZEM' | 'LLIURAT' | 'EN CIRCULACIO';
+  client: string;
 }
 
 const StatusBar = ({ status }: { status: ShipmentData['status'] }) => {
@@ -138,6 +139,10 @@ export default function TrackingPage() {
                         <StatusBar status={shipmentData.status} />
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
+                        <div className="space-y-1">
+                            <p className="text-sm font-medium text-muted-foreground">Client</p>
+                            <p className="text-lg font-semibold flex items-center gap-2"><User className="h-5 w-5 text-muted-foreground" />{shipmentData.client}</p>
+                        </div>
                         <div className="space-y-1">
                             <p className="text-sm font-medium text-muted-foreground">Origen</p>
                             <p className="text-lg font-semibold">{shipmentData.origin}</p>
