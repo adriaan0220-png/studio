@@ -10,7 +10,6 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Terminal, User } from 'lucide-react';
 import { Progress } from '@/components/ui/progress';
 
-// Define la interfaz para los datos del envío para que coincida con el Excel
 interface ShipmentData {
   tracking_code: string;
   origin: string;
@@ -31,7 +30,7 @@ const StatusBar = ({ status }: { status: ShipmentData['status'] }) => {
       progress: 50,
       label: 'En Tránsito',
     },
-    'EN CIRCULACIO': { // Handle potential typo from sheet
+    'EN CIRCULACIO': { 
       progress: 50,
       label: 'En Tránsito',
     },
