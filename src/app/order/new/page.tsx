@@ -1,9 +1,8 @@
 
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
-import { Separator } from '@/components/ui/separator';
 import { PageHeader } from '@/app/components/page-header';
 import { Skeleton } from '@/components/ui/skeleton';
+import { Card, CardHeader, CardContent, CardFooter, Separator } from '@/components/ui/card';
 import OrderFormComponent from './OrderFormComponent';
 
 function OrderFormSkeleton() {
