@@ -65,7 +65,7 @@ export default function TrackingPage() {
 
   const handleSearch = async () => {
     if (!trackingCode) {
-      setError('Si us plau, introdueix un codi de seguiment.');
+      setError('Por favor, introduzca un código de seguimiento.');
       return;
     }
     
@@ -78,17 +78,17 @@ export default function TrackingPage() {
       
       const response = await fetch(apiUrl);
       if (!response.ok) {
-        throw new Error('No s\'ha pogut connectar amb el servidor.');
+        throw new Error('No se ha podido conectar con el servidor.');
       }
       const data: ShipmentData[] = await response.json();
 
       if (data.length > 0) {
         setShipmentData(data[0]);
       } else {
-        setError('Codi no trobat. Si us plau, verifica el codi i torna a intentar-ho.');
+        setError('Código no encontrado. Por favor, verifique el código y vuelva a intentarlo.');
       }
     } catch (err) {
-      setError('Hi ha hagut un problema amb la teva sol·licitud.');
+      setError('Ha habido un problema con su solicitud.');
       console.error(err);
     } finally {
       setIsLoading(false);
@@ -98,8 +98,8 @@ export default function TrackingPage() {
   return (
     <div className="p-8 flex-1 bg-gray-50">
       <PageHeader
-        title="Localitza el teu enviament"
-        description="Introdueix el teu codi de seguiment per veure l'estat actual del teu enviament."
+        title="Localiza tu envío"
+        description="Introduce tu código de seguimiento para ver el estado actual de tu envío."
       />
 
       <div className="flex justify-center">
@@ -108,13 +108,13 @@ export default function TrackingPage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Input
                 type="text"
-                placeholder="Ex: EBT-123"
+                placeholder="Ej: EBT-123"
                 value={trackingCode}
                 onChange={(e) => setTrackingCode(e.target.value)}
                 className="flex-grow text-base"
               />
               <Button onClick={handleSearch} disabled={isLoading} className="w-full sm:w-auto">
-                {isLoading ? 'Cercant...' : 'Cercar'}
+                {isLoading ? 'Buscando...' : 'Buscar'}
               </Button>
             </div>
           </CardHeader>
@@ -130,17 +130,17 @@ export default function TrackingPage() {
             {shipmentData && (
               <Card className="mt-6 shadow-md">
                 <CardHeader>
-                  <CardTitle>Resultats de l'Enviament</CardTitle>
-                  <CardDescription>Codi: {shipmentData.tracking_code}</CardDescription>
+                  <CardTitle>Resultados del Envío</CardTitle>
+                  <CardDescription>Código: {shipmentData.tracking_code}</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
                     <div>
-                        <h3 className="font-semibold mb-4">Estat de l'enviament</h3>
+                        <h3 className="font-semibold mb-4">Estado del envío</h3>
                         <StatusBar status={shipmentData.status} />
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
                         <div className="space-y-1">
-                            <p className="text-sm font-medium text-muted-foreground">Client</p>
+                            <p className="text-sm font-medium text-muted-foreground">Cliente</p>
                             <p className="text-lg font-semibold flex items-center gap-2"><User className="h-5 w-5 text-muted-foreground" />{shipmentData.client}</p>
                         </div>
                         <div className="space-y-1">
@@ -148,15 +148,15 @@ export default function TrackingPage() {
                             <p className="text-lg font-semibold">{shipmentData.origin}</p>
                         </div>
                         <div className="space-y-1">
-                            <p className="text-sm font-medium text-muted-foreground">Destí</p>
+                            <p className="text-sm font-medium text-muted-foreground">Destino</p>
                             <p className="text-lg font-semibold">{shipmentData.destination}</p>
                         </div>
                         <div className="space-y-1">
-                            <p className="text-sm font-medium text-muted-foreground">Data prevista (ETA)</p>
+                            <p className="text-sm font-medium text-muted-foreground">Fecha prevista (ETA)</p>
                             <p className="text-lg font-semibold">{shipmentData.eta}</p>
                         </div>
                          <div className="space-y-1">
-                            <p className="text-sm font-medium text-muted-foreground">Ubicació Actual</p>
+                            <p className="text-sm font-medium text-muted-foreground">Ubicación Actual</p>
                             <p className="text-lg font-semibold">{shipmentData.location}</p>
                         </div>
                     </div>

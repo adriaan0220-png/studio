@@ -34,7 +34,7 @@ export const products = [
   },
   {
     id: 3,
-    name: 'Logística Multimodal Internacional – Líquidos a Granel',
+    name: 'Logística Multimodal Internacional',
     type: 'Internacional',
     origin: 'EB Trans',
     specs: 'Gestión completa de transporte en la UE combinando carretera, ferrocarril y marítimo, optimizando tiempos, costes y documentación aduanera.\n\nModalidades: Road Tanker | Isotank | Flexitank\n\nTiempo medio tránsito UE:\nES → FR: 24–36 h\nES → DE / BE / NL: 48–72 h\n\nRutas más frecuentes: Lyon, Marsella, Burdeos, Rotterdam, Amberes, Frankfurt\n\nDocumentos habituales: DUA | EUR.1 | T1 | Packing list | Factura proforma\n\nIncoterms habituales: DAP, CPT, FCA, DDP\n\nSistemas digitales: POD electrónico | Tracking API | Telematics 3.0',
