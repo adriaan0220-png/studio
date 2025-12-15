@@ -24,10 +24,10 @@ export default function ContactoPage() {
                   enviarnos un correo.
                 </p>
                 <a
-                  href="mailto:EBTRANS@GMAIL.COM"
+                  href="mailto:info@ttikotrans.com"
                   className="text-primary font-medium hover:underline"
                 >
-                  EBTRANS@GMAIL.COM
+                  info@ttikotrans.com
                 </a>
               </div>
             </div>
@@ -51,7 +51,7 @@ export default function ContactoPage() {
               <div>
                 <h3 className="font-semibold text-card-foreground">Dirección física</h3>
                 <address className="text-muted-foreground not-italic">
-                  EB TRANS IBÉRICA<br />
+                  Ttiko trans, S.L.<br />
                   Polígono Industrial Logístic Sud<br />
                   C/ de la Indústria, Nave 14<br />
                   43006 Tarragona

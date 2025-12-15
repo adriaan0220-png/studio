@@ -4,7 +4,7 @@ import { Toaster } from '@/components/ui/toaster';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'EB Trans Ibérica',
+  title: 'Ttiko trans, S.L.',
   description: 'Líderes en transporte de cisternas con máxima seguridad.',
 };
 

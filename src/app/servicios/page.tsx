@@ -69,7 +69,7 @@ const ServiceCard = ({
 export default function ServiciosPage() {
   const servicios = [
     {
-      title: 'Cisternas Alimentarias Inox AISI-316L (REF: EB-ALM/316-1)',
+      title: 'Cisternas Alimentarias Inox AISI-316L (REF: TTI-ALM/316-1)',
       description:
         'Servicio de transporte en cisterna de productos líquidos alimentarios a granel, con cumplimiento Reglamento (CE) 852/2004 y protocolos de limpieza CIP certificado.',
       features: [

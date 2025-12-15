@@ -16,31 +16,27 @@ interface ShipmentData {
   destination: string;
   eta: string;
   location: string;
-  status: 'EN CIRCULACIÓ' | 'MAGATZEM' | 'LLIURAT' | 'EN CIRCULACIO';
+  status: 'EN ALMACEN' | 'EN TRANSITO' | 'ENTREGADO';
   client: string;
 }
 
 const StatusBar = ({ status }: { status: ShipmentData['status'] }) => {
-  const statusConfig = {
-    'MAGATZEM': {
+    const statusConfig: Record<ShipmentData['status'], { progress: number; label: string }> = {
+    'EN ALMACEN': {
       progress: 10,
       label: 'En Almacén',
     },
-    'EN CIRCULACIÓ': {
+    'EN TRANSITO': {
       progress: 50,
       label: 'En Tránsito',
     },
-    'EN CIRCULACIO': { 
-      progress: 50,
-      label: 'En Tránsito',
-    },
-    'LLIURAT': {
+    'ENTREGADO': {
       progress: 100,
       label: 'Entregado',
     },
   };
 
-  const currentStatus = statusConfig[status] || statusConfig['MAGATZEM'];
+  const currentStatus = statusConfig[status] || statusConfig['EN ALMACEN'];
 
   return (
     <div className="w-full space-y-2">
@@ -79,10 +75,24 @@ export default function TrackingPage() {
       if (!response.ok) {
         throw new Error('No se ha podido conectar con el servidor.');
       }
-      const data: ShipmentData[] = await response.json();
+      const data: any[] = await response.json();
 
       if (data.length > 0) {
-        setShipmentData(data[0]);
+        const rawStatus = data[0].status.toUpperCase().trim();
+        let normalizedStatus: ShipmentData['status'];
+
+        if (rawStatus.includes('CIRCULA') || rawStatus.includes('TRANSITO')) {
+          normalizedStatus = 'EN TRANSITO';
+        } else if (rawStatus.includes('LLIURAT') || rawStatus.includes('ENTREGADO')) {
+          normalizedStatus = 'ENTREGADO';
+        } else {
+          normalizedStatus = 'EN ALMACEN';
+        }
+
+        setShipmentData({
+            ...data[0],
+            status: normalizedStatus
+        });
       } else {
         setError('Código no encontrado. Por favor, verifique el código y vuelva a intentarlo.');
       }
@@ -107,7 +117,7 @@ export default function TrackingPage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Input
                 type="text"
-                placeholder="Ej: EBT-123"
+                placeholder="Ej: TTI-123"
                 value={trackingCode}
                 onChange={(e) => setTrackingCode(e.target.value)}
                 className="flex-grow text-base"
