@@ -24,7 +24,7 @@ export default function LoginPage() {
     setError(null);
 
     try {
-      const response = await fetch(`https://sheetdb.io/api/v1/cj07wia9xgfo2/search?usuario=${usuario}&sheet=usuaris`);
+      const response = await fetch(`https://sheetdb.io/api/v1/64gi8fmqcbxx4/search?usuario=${usuario}&sheet=usuaris`);
       if (!response.ok) {
         throw new Error('No se pudo conectar con el servidor.');
       }

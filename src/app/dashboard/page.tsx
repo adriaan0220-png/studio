@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -13,7 +14,7 @@ export default function DashboardPage() {
   const router = useRouter();
 
   useEffect(() => {
-    // Aquesta comprovació s'executa només al client
+    // This check only runs on the client
     const name = localStorage.getItem('userName');
     const company = localStorage.getItem('userCompany');
 
@@ -21,7 +22,7 @@ export default function DashboardPage() {
       setUserName(name);
       setUserCompany(company);
     } else {
-      // Si no hi ha dades d'usuari, redirigeix a login
+      // If there's no user data, redirect to login
       router.push('/login');
     }
   }, [router]);
@@ -32,7 +33,7 @@ export default function DashboardPage() {
     router.push('/login');
   };
 
-  // Mentre es comprova l'estat d'autenticació, no mostrem res per evitar un flaix de contingut incorrecte.
+  // While checking auth state, show nothing to prevent incorrect content flash
   if (!userName) {
     return null;
   }
