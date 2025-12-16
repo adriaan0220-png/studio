@@ -18,15 +18,7 @@ export function PageHeader({ title, description, children }: PageHeaderProps) {
           <p className="mt-2 text-lg text-muted-foreground">{description}</p>
         )}
       </div>
-      <div className="flex gap-2 flex-shrink-0">
-        <Button asChild>
-          <Link href="/order/new">PEDIR PRESUPUESTO</Link>
-        </Button>
-        <Button asChild variant="outline">
-          <Link href="/order/new">Cotizar</Link>
-        </Button>
-        {children}
-      </div>
+      {children && <div className="flex gap-2 flex-shrink-0">{children}</div>}
     </div>
   );
 }
