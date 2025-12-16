@@ -35,7 +35,7 @@ export default function LoginPage() {
         // Correct credentials
         localStorage.setItem('userName', data[0].nom);
         localStorage.setItem('userCompany', data[0].empresa);
-        router.push('/dashboard');
+        router.push('/area-privada');
       } else {
         // Incorrect credentials
         setError('Dades incorrectes. Verifiqui el seu usuari i contrasenya.');
