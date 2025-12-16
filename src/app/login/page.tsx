@@ -24,16 +24,16 @@ export default function LoginPage() {
     setError(null);
 
     try {
-      const response = await fetch(`https://sheetdb.io/api/v1/64gi8fmqcbxx4/search?usuario=${usuario}&sheet=usuaris`);
+      const response = await fetch(`https://sheetdb.io/api/v1/64gi8fmqcbxx4/search?usuari=${usuario}&sheet=usuaris`);
       if (!response.ok) {
         throw new Error('No se pudo conectar con el servidor.');
       }
       
       const data: any[] = await response.json();
 
-      if (data.length > 0 && data[0].password === password) {
+      if (data.length > 0 && data[0].pasword === password) {
         // Correct credentials
-        localStorage.setItem('userName', data[0].nombre);
+        localStorage.setItem('userName', data[0].nom);
         localStorage.setItem('userCompany', data[0].empresa);
         router.push('/dashboard');
       } else {
