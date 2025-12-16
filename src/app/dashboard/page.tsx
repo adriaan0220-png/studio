@@ -21,7 +21,7 @@ export default function DashboardPage() {
       setUserName(name);
       setUserCompany(company);
     } else {
-      // If no user data, redirect to login
+      // Si no hi ha dades d'usuari, redirigeix a login
       router.push('/login');
     }
   }, [router]);
@@ -33,20 +33,20 @@ export default function DashboardPage() {
   };
 
   if (!userName) {
-    // Or a loading spinner
+    // Mostra un component de càrrega o res mentre es verifica la sessió
     return null;
   }
 
   return (
     <div className="p-8 flex-1 bg-blue-50">
-      <div className="flex justify-between items-center mb-4">
+      <div className="flex justify-between items-start mb-4">
         <PageHeader
-          title={`Benvingut, ${userName}`}
+          title={`Benvingut a la teva zona privada, ${userName}`}
           description="Aquí pot veure un resum del seu compte."
         />
-        <Button variant="outline" onClick={handleLogout}>
+        <Button variant="outline" onClick={handleLogout} className="ml-4 flex-shrink-0">
           <LogOut className="mr-2 h-4 w-4" />
-          Tancar Sessió
+          Sortir
         </Button>
       </div>
       <Card>
