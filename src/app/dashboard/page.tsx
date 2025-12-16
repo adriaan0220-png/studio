@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -14,6 +13,7 @@ export default function DashboardPage() {
   const router = useRouter();
 
   useEffect(() => {
+    // Aquesta comprovació s'executa només al client
     const name = localStorage.getItem('userName');
     const company = localStorage.getItem('userCompany');
 
@@ -32,8 +32,8 @@ export default function DashboardPage() {
     router.push('/login');
   };
 
+  // Mentre es comprova l'estat d'autenticació, no mostrem res per evitar un flaix de contingut incorrecte.
   if (!userName) {
-    // Mostra un component de càrrega o res mentre es verifica la sessió
     return null;
   }
 
