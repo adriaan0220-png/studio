@@ -22,7 +22,6 @@ const navItems = [
   { href: '/orders', label: 'Mis Pedidos', icon: ClipboardList },
   { href: '/tracking', label: 'Seguimiento', icon: Search },
   { href: '/login', label: 'Área Clients', icon: UserCircle },
-  { href: '/area-privada', label: 'Àrea Privada', icon: Lock },
 ];
 
 export function AppShell({ children }: { children: React.ReactNode }) {
