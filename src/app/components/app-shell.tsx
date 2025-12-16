@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Home, ClipboardList, Droplets, Menu, Truck, Settings, Users, Mail, Newspaper, FileText, Search, UserCircle } from 'lucide-react';
+import { Home, ClipboardList, Droplets, Menu, Truck, Settings, Users, Mail, Newspaper, FileText, Search, UserCircle, Lock } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Logo } from '@/app/components/logo';
@@ -22,6 +22,7 @@ const navItems = [
   { href: '/orders', label: 'Mis Pedidos', icon: ClipboardList },
   { href: '/tracking', label: 'Seguimiento', icon: Search },
   { href: '/login', label: 'Área Clients', icon: UserCircle },
+  { href: '/area-privada', label: 'Àrea Privada', icon: Lock },
 ];
 
 export function AppShell({ children }: { children: React.ReactNode }) {
