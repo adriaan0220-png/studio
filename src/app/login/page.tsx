@@ -31,7 +31,7 @@ export default function LoginPage() {
       
       const data: any[] = await response.json();
 
-      if (data.length > 0 && data[0].pasword === password) {
+      if (data.length > 0 && String(data[0].pasword) === password) {
         // Correct credentials
         localStorage.setItem('userName', data[0].nom);
         localStorage.setItem('userCompany', data[0].empresa);
