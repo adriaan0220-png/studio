@@ -37,7 +37,7 @@ export default function AreaPrivadaPage() {
     <div className="p-4 md:p-8 flex-1 bg-muted/20">
         <div className="flex justify-between items-start mb-6">
             <PageHeader
-                title={`Benvingut ${userName}`}
+                title={`Benvingut Adrián`}
             />
             <Button variant="outline" onClick={handleLogout} className="ml-4 flex-shrink-0">
                 <LogOut className="mr-2 h-4 w-4" />
