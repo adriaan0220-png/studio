@@ -4,7 +4,7 @@ import { Toaster } from '@/components/ui/toaster';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Ttiko trans, S.L.',
+  title: 'Tetiko Trans',
   description: 'Líderes en transporte de cisternas con máxima seguridad.',
 };
 

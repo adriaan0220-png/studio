@@ -15,7 +15,7 @@ export default function HomePage() {
             />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
           <div className="absolute bottom-0 p-6 md:p-12">
-            <h1 className="text-4xl md:text-6xl font-bold text-white font-headline drop-shadow-lg">Bienvenido a Ttiko trans, S.L.</h1>
+            <h1 className="text-4xl md:text-6xl font-bold text-white font-headline drop-shadow-lg">Bienvenido a Tetiko Trans</h1>
             <p className="mt-2 text-lg text-white/90 drop-shadow-md">Líderes en transporte de cisternas con máxima seguridad.</p>
           </div>
         </div>
