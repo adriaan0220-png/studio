@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function HomePage() {
   return (
-    <div className="p-8 flex-1 bg-blue-50">
+    <div className="p-8 flex-1">
         <div className="relative w-full h-80 md:h-[500px] rounded-lg overflow-hidden shadow-lg group mb-8">
            <Image
               src="https://i0.wp.com/cisternascidegainox.com/wp-content/uploads/2019/06/todo-lo-que-debes-saber-sobre-la-conduccion-de-un-camion-cisterna-1920.jpg?fit=1920%2C1080&ssl=1"
@@ -19,7 +19,7 @@ export default function HomePage() {
             <p className="mt-2 text-lg text-white/90 drop-shadow-md">Líderes en transporte de cisternas con máxima seguridad.</p>
           </div>
         </div>
-      <div className="p-4">
+      <div className="p-4 rounded-lg bg-card text-card-foreground">
         <p>Aquí puedes encontrar un resumen de tu actividad y accesos directos a las principales funciones.</p>
       </div>
     </div>
