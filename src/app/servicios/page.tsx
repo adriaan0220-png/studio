@@ -93,7 +93,7 @@ export default function ServiciosPage() {
   return (
     <div className="p-8 flex-1 bg-green-50">
       <PageHeader
-        title={<span className="text-secondary">Nuestros Servicios</span>}
+        title="Nuestros Servicios"
         description="Descubra la gama de servicios de transporte especializado que ofrecemos."
       />
       <div className="space-y-8">
