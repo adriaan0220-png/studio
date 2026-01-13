@@ -5,7 +5,7 @@ export default function QuienSomosPage() {
   return (
     <div className="p-8 flex-1 bg-indigo-50">
       <PageHeader
-        title="Quiénes Somos"
+        title={<span className="text-secondary">Quiénes Somos</span>}
         description="Conozca más sobre nuestra empresa, misión y valores."
       />
       <div className="relative h-[500px] w-full overflow-hidden rounded-lg shadow-lg">
