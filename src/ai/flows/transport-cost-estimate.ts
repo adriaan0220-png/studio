@@ -40,7 +40,7 @@ const estimateTransportCostPrompt = ai.definePrompt({
   name: 'estimateTransportCostPrompt',
   input: {schema: EstimateTransportCostInputSchema},
   output: {schema: EstimateTransportCostOutputSchema},
-  prompt: `You are a transportation cost estimator for Logitrans, a liquid product transportation company.
+  prompt: `You are a transportation cost estimator for Tetiko Trans, a liquid product transportation company.
 
   Given the delivery location, product type, and quantity, estimate the transportation cost in Euros.
   Consider factors such as distance, fuel costs, truck availability, and any other relevant factors.

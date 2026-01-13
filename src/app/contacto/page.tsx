@@ -25,10 +25,10 @@ export default function ContactoPage() {
                   enviarnos un correo.
                 </p>
                 <a
-                  href="mailto:info@logitrans.cat"
+                  href="mailto:info@tetikotrans.com"
                   className="text-primary font-medium hover:underline"
                 >
-                  info@logitrans.cat
+                  info@tetikotrans.com
                 </a>
               </div>
             </div>
@@ -52,7 +52,7 @@ export default function ContactoPage() {
               <div>
                 <h3 className="font-semibold text-card-foreground">Dirección física</h3>
                 <address className="text-muted-foreground not-italic">
-                  Logitrans<br />
+                  Tetiko Trans<br />
                   Polígono Industrial Logístic Sud<br />
                   C/ de la Indústria, Nave 14<br />
                   43006 Tarragona
