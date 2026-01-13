@@ -6,7 +6,7 @@ export default function ContactoPage() {
   return (
     <div className="p-8 flex-1 bg-purple-50">
       <PageHeader
-        title="Contacto"
+        title={<span className="text-secondary">Contacto</span>}
         description="Póngase en contacto con nosotros para cualquier consulta."
       />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

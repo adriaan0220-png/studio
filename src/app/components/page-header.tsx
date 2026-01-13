@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
 type PageHeaderProps = {
-  title: string;
+  title: string | React.ReactNode;
   description?: string;
   children?: React.ReactNode;
 };
