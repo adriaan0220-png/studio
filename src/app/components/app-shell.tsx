@@ -37,8 +37,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           onClick={closeSheet}
           className={cn(
             'transition-colors hover:text-primary',
-            pathname === href ? 'text-primary' : 'text-muted-foreground',
-            href === '/contacto' && 'text-secondary'
+            pathname === href ? 'text-primary' : 'text-muted-foreground'
           )}
         >
           {label}
@@ -76,8 +75,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
                     `flex items-center gap-3 rounded-lg px-3 py-2 transition-all`,
                     pathname === href
                       ? 'bg-muted text-primary'
-                      : 'text-muted-foreground hover:text-primary',
-                    href === '/contacto' && 'text-secondary'
+                      : 'text-muted-foreground hover:text-primary'
                   )}
                 >
                   <Icon className="h-4 w-4" />
