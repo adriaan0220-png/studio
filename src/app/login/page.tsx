@@ -51,7 +51,7 @@ export default function LoginPage() {
   return (
     <div className="p-8 flex-1 bg-gray-50">
       <PageHeader
-        title="Àrea de Clients"
+        title={<span className="text-secondary">Àrea de Clients</span>}
         description="Accedeixi al seu panell per a gestionar els seus enviaments."
       />
       <div className="flex justify-center">
