@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -8,7 +9,7 @@ export default function ProductsPage() {
   return (
     <div className="p-8 flex-1 bg-orange-50">
       <PageHeader
-        title="Nuestros Productos Líquidos"
+        title={<span className="text-secondary">Nuestros Productos Líquidos</span>}
         description="Ofrecemos una variedad de productos líquidos de alta calidad para transporte a granel."
       />
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
