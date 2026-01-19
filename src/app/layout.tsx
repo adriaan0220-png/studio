@@ -4,8 +4,8 @@ import { Toaster } from '@/components/ui/toaster';
 import './globals.css';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.tetikotrans.net'),
-  title: 'Tetiko Trans',
+  metadataBase: new URL('https://www.ttikotrans.net'),
+  title: 'Ttiko Trans',
   description: 'Líderes en transporte de cisternas con máxima seguridad.',
 };
 

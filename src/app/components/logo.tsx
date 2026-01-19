@@ -6,7 +6,7 @@ export function Logo() {
     <Link href="/" className="flex items-center gap-2 font-semibold group">
       <Image
         src="/Dorado_Adrián_Logo.png"
-        alt="Tetiko Trans Logo"
+        alt="Ttiko Trans Logo"
         width={180}
         height={40}
         className="h-10 w-auto"
