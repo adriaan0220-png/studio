@@ -37,7 +37,7 @@ export function Footer() {
         <div className="text-sm text-muted-foreground mb-4">
             <a href="tel:+34647000000" className="hover:text-primary transition-colors">Tel.: +34 647 000 000</a>
             <span className="mx-2">|</span>
-            <a href="mailto:info@tetikotrans.com" className="hover:text-primary transition-colors">info@tetikotrans.com</a>
+            <a href="mailto:info@tetikotrans.net" className="hover:text-primary transition-colors">info@tetikotrans.net</a>
         </div>
         
         <p className="text-xs text-muted-foreground">&copy; {new Date().getFullYear()} Tetiko Trans</p>

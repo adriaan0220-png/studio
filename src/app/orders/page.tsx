@@ -147,7 +147,7 @@ export default function OrdersPage() {
                                     </div>
                                     <div className="flex items-center gap-3">
                                         <Mail className="h-5 w-5 text-muted-foreground" />
-                                        <a href="mailto:pedidos@ebtransiberica.com" className="hover:text-primary">pedidos@ebtransiberica.com</a>
+                                        <a href="mailto:pedidos@tetikotrans.net" className="hover:text-primary">pedidos@tetikotrans.net</a>
                                     </div>
                                     <Button className="w-full">Atención al cliente</Button>
                                 </CardContent>

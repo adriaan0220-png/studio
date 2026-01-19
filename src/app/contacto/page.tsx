@@ -25,10 +25,10 @@ export default function ContactoPage() {
                   enviarnos un correo.
                 </p>
                 <a
-                  href="mailto:info@tetikotrans.com"
+                  href="mailto:info@tetikotrans.net"
                   className="text-primary font-medium hover:underline"
                 >
-                  info@tetikotrans.com
+                  info@tetikotrans.net
                 </a>
               </div>
             </div>
