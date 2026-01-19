@@ -54,7 +54,7 @@ export default function NuestraFlotaPage() {
   return (
     <div className="p-8 flex-1 bg-red-50">
       <PageHeader
-        title="Nuestra Flota"
+        title={<span className="text-secondary">Nuestra Flota</span>}
         description="Moderna y especializada para el transporte seguro de líquidos."
       />
       <div className="container mx-auto px-0 space-y-12">
