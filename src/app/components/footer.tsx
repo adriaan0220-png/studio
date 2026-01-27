@@ -15,7 +15,7 @@ export function Footer() {
   }, []);
 
   return (
-    <footer className="bg-muted text-card-foreground border-t">
+    <footer className="bg-muted text-card-foreground border-t print:hidden">
       <div className="container mx-auto py-8 px-4 md:px-6 text-center">
         <p className="font-semibold text-lg">Ttiko Trans</p>
         <p className="text-muted-foreground text-sm mb-4">Transporte profesional en cisternas</p>

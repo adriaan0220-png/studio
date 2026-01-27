@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Home, ClipboardList, Droplets, Menu, Truck, Settings, Users, Mail, Newspaper, FileText, Search, UserCircle, Lock } from 'lucide-react';
+import { Home, ClipboardList, Droplets, Menu, Truck, Settings, Users, Mail, Newspaper, FileText, Search, UserCircle, Lock, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Logo } from '@/app/components/logo';
@@ -20,6 +20,7 @@ const navItems = [
   { href: '/products', label: 'Productos', icon: Droplets },
   { href: '/nuestra-flota', label: 'Nuestra Flota', icon: Truck },
   { href: '/orders', label: 'Mis Pedidos', icon: ClipboardList },
+  { href: '/documents', label: 'Documentos', icon: Download },
   { href: '/tracking', label: 'Seguimiento', icon: Search },
   { href: '/login', label: 'Área Clients', icon: UserCircle },
 ];
@@ -48,7 +49,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="flex min-h-screen w-full flex-col">
-      <header className="sticky top-0 z-40 flex h-16 items-center gap-4 border-b bg-card px-4 md:px-6">
+      <header className="sticky top-0 z-40 flex h-16 items-center gap-4 border-b bg-card px-4 md:px-6 print:hidden">
         <Logo />
         <div className="hidden md:flex flex-1 items-center justify-center">
             {navLinks('gap-6')}
