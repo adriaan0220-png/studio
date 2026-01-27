@@ -5,7 +5,7 @@ export function Logo() {
   return (
     <Link href="/" className="flex items-center gap-2 font-semibold group">
       <Image
-        src="/Dorado_Adrián_Logo.png"
+        src="/bismillah-removebg-preview.png"
         alt="Ttiko Trans Logo"
         width={180}
         height={40}
