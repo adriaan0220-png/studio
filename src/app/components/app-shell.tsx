@@ -20,7 +20,7 @@ const navItems = [
   { href: '/products', label: 'Productos', icon: Droplets },
   { href: '/nuestra-flota', label: 'Nuestra Flota', icon: Truck },
   { href: '/orders', label: 'Mis Pedidos', icon: ClipboardList },
-  { href: '/documents', label: 'Documentos', icon: Download },
+  { href: '/documents', label: 'Factures', icon: Download },
   { href: '/tracking', label: 'Seguimiento', icon: Search },
   { href: '/login', label: 'Área Clients', icon: UserCircle },
 ];

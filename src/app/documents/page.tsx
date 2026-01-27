@@ -197,7 +197,7 @@ export default function DocumentsPage() {
           <CardHeader className="flex-row gap-4 items-center">
             <AlertCircle className="h-8 w-8 text-destructive" />
             <div>
-                <CardTitle className="text-destructive">No s'han pogut carregar els documents</CardTitle>
+                <CardTitle className="text-destructive">No s'han pogut carregar les factures</CardTitle>
                 <CardDescription>{error}</CardDescription>
             </div>
           </CardHeader>
@@ -310,7 +310,7 @@ export default function DocumentsPage() {
   return (
     <div className="p-8 flex-1">
       <PageHeader
-        title="Els Meus Documents"
+        title="Les Meves Factures"
         description="Aquí pot veure i imprimir les seves factures."
       />
       {invoices.length > 0 ? (
@@ -341,7 +341,7 @@ export default function DocumentsPage() {
       ) : (
         <Card>
           <CardContent className="pt-6">
-            <p className="text-muted-foreground text-center">No s'han trobat documents.</p>
+            <p className="text-muted-foreground text-center">No s'han trobat factures.</p>
           </CardContent>
         </Card>
       )}
