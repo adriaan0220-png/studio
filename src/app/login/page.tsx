@@ -33,7 +33,7 @@ export default function LoginPage() {
 
       if (data.length > 0 && String(data[0].pasword) === password) {
         // Correct credentials
-        localStorage.setItem('userName', data[0].nom);
+        localStorage.setItem('userName', data[0].usuari);
         localStorage.setItem('userCompany', data[0].empresa);
         router.push('/dashboard');
       } else {
