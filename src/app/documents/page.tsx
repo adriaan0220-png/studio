@@ -47,7 +47,6 @@ interface GroupedInvoice {
     unitPrice: number;
     units: number;
     discount: number;
-    vatRate: number;
     netTotal: number;
   }[];
   subtotal: number;
@@ -64,19 +63,28 @@ export default function DocumentsPage() {
   const [selectedInvoice, setSelectedInvoice] = useState<GroupedInvoice | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [userName, setUserName] = useState<string | null>(null);
 
   useEffect(() => {
+    // This check only runs on the client
+    const name = localStorage.getItem('userName');
+    setUserName(name);
+  }, []);
+
+  useEffect(() => {
+    if (!userName) {
+      // If there's no user identified yet, don't fetch.
+      if (typeof window !== 'undefined' && !localStorage.getItem('userName')) {
+        setLoading(false);
+        setError("No s'ha pogut identificar l'usuari. Si us plau, iniciï sessió.");
+      }
+      return;
+    }
+
     const fetchData = async () => {
       setLoading(true);
       setError(null);
       try {
-        const userName = localStorage.getItem('userName');
-        if (!userName) {
-          setError("No s'ha pogut identificar l'usuari. Si us plau, iniciï sessió de nou.");
-          setLoading(false);
-          return;
-        }
-
         const [usersRes, docsRes] = await Promise.all([
           fetch('https://sheetdb.io/api/v1/64gi8fmqcbxx4?sheet=usuaris'),
           fetch('https://sheetdb.io/api/v1/64gi8fmqcbxx4?sheet=documents')
@@ -137,7 +145,6 @@ export default function DocumentsPage() {
               unitPrice,
               units,
               discount: discountPercentage,
-              vatRate,
               netTotal: lineNetTotal,
             };
           });
@@ -179,7 +186,7 @@ export default function DocumentsPage() {
     };
 
     fetchData();
-  }, []);
+  }, [userName]);
 
   const handlePrint = () => {
     window.print();
@@ -223,7 +230,7 @@ export default function DocumentsPage() {
             Imprimir PDF
           </Button>
         </div>
-        <Card id="zona-factura" className="p-4 sm:p-8 bg-white text-black shadow-2xl">
+        <Card id="zona-factura" className="p-4 sm:p-8 bg-white text-black shadow-2xl mx-auto max-w-4xl">
           {/* Invoice Header */}
           <header className="grid grid-cols-2 items-start mb-8">
             <div>
@@ -252,9 +259,9 @@ export default function DocumentsPage() {
               <h2 className="font-semibold text-gray-700 mb-2">Client</h2>
               <address className="text-sm text-gray-600 not-italic">
                 <p className="font-bold">{selectedInvoice.clientData?.empresa || selectedInvoice.clientName}</p>
-                <p>NIF: {selectedInvoice.clientData?.fiscalid}</p>
-                <p>{selectedInvoice.clientData?.adreca}</p>
-                <p>Tel: {selectedInvoice.clientData?.telefon}</p>
+                {selectedInvoice.clientData?.fiscalid && <p>NIF: {selectedInvoice.clientData.fiscalid}</p>}
+                {selectedInvoice.clientData?.adreca && <p>{selectedInvoice.clientData.adreca}</p>}
+                {selectedInvoice.clientData?.telefon && <p>Tel: {selectedInvoice.clientData.telefon}</p>}
               </address>
             </Card>
           </section>
@@ -263,12 +270,12 @@ export default function DocumentsPage() {
           <section className="mb-8">
             <Table>
               <TableHeader>
-                <TableRow className="bg-gray-100">
+                <TableRow className="bg-gray-100 hover:bg-gray-100">
                   <TableHead className="text-gray-700">Concepte</TableHead>
                   <TableHead className="text-right text-gray-700">P. Unitari</TableHead>
                   <TableHead className="text-right text-gray-700">Unitats</TableHead>
                   <TableHead className="text-right text-gray-700">Descompte</TableHead>
-                  <TableHead className="text-right text-gray-700">Total</TableHead>
+                  <TableHead className="text-right text-gray-700">Total Net</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -277,7 +284,7 @@ export default function DocumentsPage() {
                     <TableCell>{line.concept}</TableCell>
                     <TableCell className="text-right">{line.unitPrice.toFixed(2)} €</TableCell>
                     <TableCell className="text-right">{line.units}</TableCell>
-                    <TableCell className="text-right">{line.discount > 0 ? `${line.discount}%` : '-'}</TableCell>
+                    <TableCell className="text-right">{line.discount > 0 ? `${line.discount.toFixed(2)}%` : '-'}</TableCell>
                     <TableCell className="text-right font-medium">{line.netTotal.toFixed(2)} €</TableCell>
                   </TableRow>
                 ))}
@@ -286,21 +293,25 @@ export default function DocumentsPage() {
           </section>
 
           {/* Totals */}
-          <section className="grid grid-cols-2 gap-8 mb-8">
-            <div className="space-y-2">
-                <p><span className="font-semibold text-gray-700">Forma de pagament:</span> {selectedInvoice.paymentMethod}</p>
-            </div>
-            <div className="space-y-2 text-sm text-gray-700">
-                <div className="flex justify-between"><span>Base Imposable:</span> <span>{selectedInvoice.taxableBase.toFixed(2)} €</span></div>
-                <Separator className="bg-gray-300"/>
-                {selectedInvoice.vatBreakdown.map(vat => (
-                   <div key={vat.rate} className="flex justify-between"><span>Quota {vat.rate}% sobre {vat.base.toFixed(2)}€:</span> <span>{vat.amount.toFixed(2)} €</span></div>
-                ))}
-                <Separator className="bg-gray-300"/>
-                <div className="flex justify-between text-lg font-bold text-gray-800"><span>TOTAL FACTURA:</span> <span>{selectedInvoice.totalAmount.toFixed(2)} €</span></div>
-            </div>
+          <section className="flex justify-end mb-8">
+             <div className="w-full max-w-sm space-y-4">
+                <div className="space-y-2 text-sm text-gray-700">
+                    <div className="flex justify-between"><span>Base Imposable:</span> <span>{selectedInvoice.taxableBase.toFixed(2)} €</span></div>
+                    <Separator className="bg-gray-300"/>
+                    {selectedInvoice.vatBreakdown.map(vat => (
+                       <div key={vat.rate} className="flex justify-between"><span>Quota {vat.rate}% sobre {vat.base.toFixed(2)}€:</span> <span>{vat.amount.toFixed(2)} €</span></div>
+                    ))}
+                    <Separator className="bg-gray-300"/>
+                    <div className="flex justify-between text-lg font-bold text-gray-800"><span>TOTAL FACTURA:</span> <span>{selectedInvoice.totalAmount.toFixed(2)} €</span></div>
+                </div>
+             </div>
           </section>
-          
+            
+           {/* Payment method */}
+            <section className="mb-8">
+                 <p className="text-sm"><span className="font-semibold text-gray-700">Forma de pagament:</span> {selectedInvoice.paymentMethod}</p>
+            </section>
+
           {/* Footer */}
           <footer className="text-xs text-gray-500 border-t border-gray-200 pt-4 mt-8">
             <p>Ttiko Trans, inscrita al Registre Mercantil de Tarragona, Tom XXX, Foli XXX, Full X-XXXXX, Inscripció Xª.</p>
@@ -327,7 +338,7 @@ export default function DocumentsPage() {
                         <CardTitle>Factura Nº {invoice.invoiceNumber}</CardTitle>
                         <CardDescription>{invoice.date}</CardDescription>
                     </div>
-                    <Badge variant="default">{invoice.totalAmount.toFixed(2)} €</Badge>
+                    <Badge variant="default" className="text-base">{invoice.totalAmount.toFixed(2)} €</Badge>
                 </div>
               </CardHeader>
               <CardContent className="flex-grow">
@@ -352,5 +363,3 @@ export default function DocumentsPage() {
     </div>
   );
 }
-
-    
