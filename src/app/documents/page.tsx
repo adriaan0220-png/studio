@@ -13,6 +13,7 @@ import { Logo } from '@/app/components/logo';
 
 // --- TYPE DEFINITIONS ---
 interface DocumentLine {
+  id: string;
   num_factura: string;
   data: string;
   usuari: string;
@@ -32,6 +33,7 @@ interface User {
   fiscalid: string;
   adreca: string;
   telefon: string;
+  treballador?: string;
 }
 
 interface GroupedInvoice {
@@ -94,6 +96,7 @@ export default function DocumentsPage() {
         const filteredDocs = isAdmin ? documents : documents.filter(d => d.usuari === userName);
 
         const grouped = filteredDocs.reduce((acc, doc) => {
+          if (!doc.num_factura) return acc;
           const key = doc.num_factura;
           if (!acc[key]) {
             acc[key] = [];
@@ -111,10 +114,10 @@ export default function DocumentsPage() {
           const vatBreakdownAgg: Record<number, { base: number; amount: number }> = {};
 
           const lines = group.map(line => {
-            const unitPrice = parseFloat(line.preu_unitari.replace(',', '.')) || 0;
-            const units = parseFloat(line.unitats.replace(',', '.')) || 0;
-            const discountPercentage = parseFloat(line.dte.replace('%', '').replace(',', '.')) || 0;
-            const vatRate = parseFloat(line.iva.replace('%', '').replace(',', '.')) || 0;
+            const unitPrice = parseFloat(line.preu_unitari?.replace(',', '.')) || 0;
+            const units = parseFloat(line.unitats?.replace(',', '.')) || 0;
+            const discountPercentage = parseFloat(line.dte?.replace('%', '').replace(',', '.')) || 0;
+            const vatRate = parseFloat(line.iva?.replace('%', '').replace(',', '.')) || 0;
             
             const lineSubtotal = unitPrice * units;
             const lineDiscountAmount = lineSubtotal * (discountPercentage / 100);
@@ -311,7 +314,7 @@ export default function DocumentsPage() {
   return (
     <div className="p-8 flex-1">
       <PageHeader
-        title="Les Meves Factures"
+        title="Factures"
         description="Aquí pot veure i imprimir les seves factures."
       />
       {invoices.length > 0 ? (
@@ -321,7 +324,7 @@ export default function DocumentsPage() {
               <CardHeader>
                 <div className="flex justify-between items-start">
                     <div>
-                        <CardTitle>Factura {invoice.invoiceNumber}</CardTitle>
+                        <CardTitle>Factura Nº {invoice.invoiceNumber}</CardTitle>
                         <CardDescription>{invoice.date}</CardDescription>
                     </div>
                     <Badge variant="default">{invoice.totalAmount.toFixed(2)} €</Badge>
@@ -349,3 +352,5 @@ export default function DocumentsPage() {
     </div>
   );
 }
+
+    
