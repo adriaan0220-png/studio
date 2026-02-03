@@ -9,7 +9,7 @@ export function Logo() {
         alt="Ttiko Trans Logo"
         width={432}
         height={96}
-        className="h-24 w-auto"
+        className="h-28 w-auto"
       />
     </Link>
   );
