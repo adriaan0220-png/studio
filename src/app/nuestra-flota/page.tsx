@@ -52,14 +52,14 @@ const certifications = [
 
 export default function NuestraFlotaPage() {
   return (
-    <div className="p-8 flex-1">
+    <div className="p-8 flex-1 bg-black text-gray-200">
       <PageHeader
         title={<span className="text-secondary">Nuestra Flota</span>}
-        description="Moderna y especializada para el transporte seguro de líquidos."
+        description={<span className="text-gray-400">Moderna y especializada para el transporte seguro de líquidos.</span>}
       />
       <div className="container mx-auto px-0 space-y-12">
         
-        <p className="text-lg text-muted-foreground max-w-4xl">
+        <p className="text-lg text-gray-400 max-w-4xl">
           Disponemos de una flota moderna y especializada para el transporte seguro de líquidos alimentarios, químicos y mercancías peligrosas ADR. Todas nuestras cisternas cuentan con mantenimiento periódico, calibraciones vigentes y sistemas de trazabilidad.
         </p>
         
