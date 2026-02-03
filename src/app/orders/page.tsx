@@ -51,10 +51,14 @@ export default function OrdersPage() {
     }
   
     return (
-        <div className="p-8 flex-1">
+        <div className="p-8 flex-1 bg-secondary text-secondary-foreground">
             <PageHeader
-                title={<span className="text-secondary">Mis Pedidos</span>}
-                description="Consulte el estado y la documentación de sus envíos en tiempo real."
+                title={<span className="text-secondary-foreground">Mis Pedidos</span>}
+                description={
+                  <span className="text-secondary-foreground/80">
+                    Consulte el estado y la documentación de sus envíos en tiempo real.
+                  </span>
+                }
             />
 
             <Card className="mb-8">
