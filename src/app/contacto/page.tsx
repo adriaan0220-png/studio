@@ -1,15 +1,20 @@
 
 import { Mail, MapPin, Phone } from 'lucide-react';
-import { PageHeader } from '@/app/components/page-header';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 export default function ContactoPage() {
   return (
-    <div className="p-8 flex-1">
-      <PageHeader
-        title={<span className="text-secondary">Contacto</span>}
-        description="Póngase en contacto con nosotros para cualquier consulta."
-      />
+    <div className="p-8 flex-1 bg-secondary text-secondary-foreground">
+      <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between mb-8">
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight md:text-4xl font-headline">
+            Contacto
+          </h1>
+          <p className="mt-2 text-lg text-secondary-foreground/80">
+            Póngase en contacto con nosotros para cualquier consulta.
+          </p>
+        </div>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <Card>
           <CardHeader>
