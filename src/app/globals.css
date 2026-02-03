@@ -32,8 +32,8 @@
     --status-transit: 45 80% 50%;
     --status-maintenance: 0 80% 55%;
     --service-background: 140 75% 96%;
-    --blog-background: 340 100% 97%;
-    --blog-foreground: 340 90% 40%;
+    --blog-background: 340 100% 94%;
+    --blog-foreground: 340 90% 35%;
   }
 
   .dark {
@@ -60,8 +60,8 @@
     --status-transit: 45 70% 60%;
     --status-maintenance: 0 70% 65%;
     --service-background: 140 20% 12%;
-    --blog-background: 340 20% 12%;
-    --blog-foreground: 340 90% 85%;
+    --blog-background: 340 25% 15%;
+    --blog-foreground: 340 100% 85%;
   }
 }
 
