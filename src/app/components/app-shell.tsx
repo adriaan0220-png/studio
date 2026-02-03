@@ -20,7 +20,7 @@ const navItems = [
   { href: '/products', label: 'Productos', icon: Droplets },
   { href: '/nuestra-flota', label: 'Nuestra Flota', icon: Truck },
   { href: '/orders', label: 'Mis Pedidos', icon: ClipboardList },
-  { href: '/documents', label: 'Factures', icon: Download },
+  { href: '/documents', label: 'Facturas', icon: Download },
   { href: '/tracking', label: 'Seguimiento', icon: Search },
   { href: '/login', label: 'Área Clients', icon: UserCircle },
 ];
@@ -49,7 +49,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="flex min-h-screen w-full flex-col">
-      <header className="sticky top-0 z-40 flex h-16 items-center gap-4 border-b bg-card px-4 md:px-6 print:hidden">
+      <header className="sticky top-0 z-40 flex h-20 items-center gap-4 border-b bg-card px-4 md:px-6 print:hidden">
         <Logo />
         <div className="hidden md:flex flex-1 items-center justify-center">
             {navLinks('gap-6')}
@@ -62,7 +62,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             </Button>
           </SheetTrigger>
           <SheetContent side="left" className="flex flex-col p-0 w-[280px] bg-card">
-            <div className="flex h-16 items-center border-b px-6">
+            <div className="flex h-20 items-center border-b px-6">
               <Logo />
             </div>
             <div className="flex-1 overflow-auto py-4">

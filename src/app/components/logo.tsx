@@ -7,9 +7,9 @@ export function Logo() {
       <Image
         src="/logo sin fondo.png"
         alt="Ttiko Trans Logo"
-        width={252}
-        height={56}
-        className="h-14 w-auto"
+        width={288}
+        height={64}
+        className="h-16 w-auto"
       />
     </Link>
   );
