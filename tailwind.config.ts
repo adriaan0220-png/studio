@@ -70,6 +70,10 @@ export default {
         service: {
           background: 'hsl(var(--service-background))',
         },
+        blog: {
+          background: 'hsl(var(--blog-background))',
+          foreground: 'hsl(var(--blog-foreground))',
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
