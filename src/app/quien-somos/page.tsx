@@ -1,13 +1,19 @@
-import { PageHeader } from '@/app/components/page-header';
+
 import Image from 'next/image';
 
 export default function QuienSomosPage() {
   return (
-    <div className="p-8 flex-1">
-      <PageHeader
-        title={<span className="text-secondary">Quiénes Somos</span>}
-        description="Conozca más sobre nuestra empresa, misión y valores."
-      />
+    <div className="p-8 flex-1 bg-destructive text-destructive-foreground">
+      <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between mb-8">
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight md:text-4xl font-headline">
+            Quiénes Somos
+          </h1>
+          <p className="mt-2 text-lg text-destructive-foreground/80">
+            Conozca más sobre nuestra empresa, misión y valores.
+          </p>
+        </div>
+      </div>
       <div className="relative h-[500px] w-full overflow-hidden rounded-lg shadow-lg">
         <Image
           src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2070&auto=format&fit=crop"
