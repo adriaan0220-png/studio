@@ -32,6 +32,7 @@
     --status-available: 120 60% 40%;
     --status-transit: 45 80% 50%;
     --status-maintenance: 0 80% 55%;
+    --service-background: 140 75% 96%;
   }
 
   .dark {
@@ -57,6 +58,7 @@
     --status-available: 120 50% 60%;
     --status-transit: 45 70% 60%;
     --status-maintenance: 0 70% 65%;
+    --service-background: 140 20% 12%;
   }
 }
 
