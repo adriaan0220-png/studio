@@ -4,22 +4,20 @@ import Image from 'next/image';
 export default function HomePage() {
   return (
     <div className="p-8 flex-1">
-        <div className="relative w-full h-80 md:h-[500px] rounded-lg overflow-hidden shadow-lg group mb-8">
-           <Image
-              src="https://i0.wp.com/cisternascidegainox.com/wp-content/uploads/2019/06/todo-lo-que-debes-saber-sobre-la-conduccion-de-un-camion-cisterna-1920.jpg?fit=1920%2C1080&ssl=1"
-              alt="Camión cisterna en la carretera"
-              fill
-              className="object-cover group-hover:scale-105 transition-transform duration-500"
-              data-ai-hint="tanker highway"
-              priority
-            />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-          <div className="absolute bottom-0 p-6 md:p-12">
-            <h1 className="text-4xl md:text-6xl font-bold text-white font-headline drop-shadow-lg">Bienvenido a Ttiko Trans</h1>
-            <p className="mt-2 text-lg text-white/90 drop-shadow-md">Líderes en transporte de cisternas con máxima seguridad.</p>
+        <div className="flex flex-col items-center justify-center text-center mb-8 py-12">
+          <div className="mb-6">
+            <Image
+                src="/logo sin fondo.png"
+                alt="Ttiko Trans Logo"
+                width={540}
+                height={120}
+                priority
+              />
           </div>
+          <h1 className="text-4xl md:text-6xl font-bold text-foreground font-headline">Bienvenido a Ttiko Trans</h1>
+          <p className="mt-2 text-lg text-muted-foreground">Líderes en transporte de cisternas con máxima seguridad.</p>
         </div>
-      <div className="p-4 rounded-lg bg-card text-card-foreground">
+      <div className="p-4 rounded-lg bg-card text-card-foreground text-center">
         <p>Aquí puedes encontrar un resumen de tu actividad y accesos directos a las principales funciones.</p>
       </div>
     </div>
