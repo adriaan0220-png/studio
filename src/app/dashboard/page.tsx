@@ -35,7 +35,7 @@ export default function DashboardPage() {
   }
 
   return (
-    <div className="p-4 md:p-8 flex-1 bg-muted/20">
+    <div className="p-4 md:p-8 flex-1">
         <div className="flex justify-between items-start mb-6">
             <PageHeader
                 title={`Benvingut ${userName}`}

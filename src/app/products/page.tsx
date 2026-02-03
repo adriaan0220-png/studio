@@ -7,7 +7,7 @@ import { PageHeader } from '@/app/components/page-header';
 
 export default function ProductsPage() {
   return (
-    <div className="p-8 flex-1 bg-orange-50">
+    <div className="p-8 flex-1">
       <PageHeader
         title={<span className="text-secondary">Nuestros Productos Líquidos</span>}
         description="Ofrecemos una variedad de productos líquidos de alta calidad para transporte a granel."

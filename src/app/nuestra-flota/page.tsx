@@ -52,7 +52,7 @@ const certifications = [
 
 export default function NuestraFlotaPage() {
   return (
-    <div className="p-8 flex-1 bg-red-50">
+    <div className="p-8 flex-1">
       <PageHeader
         title={<span className="text-secondary">Nuestra Flota</span>}
         description="Moderna y especializada para el transporte seguro de líquidos."

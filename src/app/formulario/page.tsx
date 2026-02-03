@@ -56,7 +56,7 @@ export default function FormularioPage() {
   }
 
   return (
-    <div className="p-8 flex-1 bg-pink-50">
+    <div className="p-8 flex-1">
       <PageHeader
         title={<span className="text-secondary">Formulario de Contacto</span>}
         description="Rellene el siguiente formulario para enviarnos un mensaje."

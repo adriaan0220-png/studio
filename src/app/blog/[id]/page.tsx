@@ -17,7 +17,7 @@ export default function BlogPostPage({ params }: { params: { id: string } }) {
   }
 
   return (
-    <div className="p-8 flex-1 bg-background">
+    <div className="p-8 flex-1">
       <div className="container mx-auto">
         <div className="relative h-96 w-full overflow-hidden rounded-lg shadow-lg mb-8">
             {post.imageUrl && (

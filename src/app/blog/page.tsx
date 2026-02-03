@@ -6,7 +6,7 @@ import { blogPosts } from '@/app/lib/blog-data';
 
 export default function BlogPage() {
   return (
-    <div className="p-8 flex-1 bg-yellow-50">
+    <div className="p-8 flex-1">
       <div className="relative py-8 px-4 md:px-6">
         <Image
           src="https://www.cisternashnosfajardo.com/wp-content/uploads/2018/11/SLIDE-1-800x400.jpg"

@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function QuienSomosPage() {
   return (
-    <div className="p-8 flex-1 bg-indigo-50">
+    <div className="p-8 flex-1">
       <PageHeader
         title={<span className="text-secondary">Quiénes Somos</span>}
         description="Conozca más sobre nuestra empresa, misión y valores."

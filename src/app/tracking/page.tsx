@@ -105,7 +105,7 @@ export default function TrackingPage() {
   };
 
   return (
-    <div className="p-8 flex-1 bg-gray-50">
+    <div className="p-8 flex-1">
       <PageHeader
         title={<span className="text-secondary">Localiza tu envío</span>}
         description="Introduce tu código de seguimiento para ver el estado actual de tu envío."

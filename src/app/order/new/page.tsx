@@ -64,7 +64,7 @@ function OrderFormSkeleton() {
 
 export default function NewOrderPage() {
   return (
-    <div className="p-8 flex-1 bg-gray-50">
+    <div className="p-8 flex-1">
       <PageHeader
         title="Confirme Su Pedido"
         description="Por favor, revise su solicitud de transporte y proporcione la información de contacto."
