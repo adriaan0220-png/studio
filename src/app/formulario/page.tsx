@@ -56,10 +56,10 @@ export default function FormularioPage() {
   }
 
   return (
-    <div className="p-8 flex-1">
+    <div className="p-8 flex-1 bg-form-background">
       <PageHeader
-        title={<span className="text-secondary">Formulario de Contacto</span>}
-        description="Rellene el siguiente formulario para enviarnos un mensaje."
+        title={<span className="text-form-foreground">Formulario de Contacto</span>}
+        description={<span className="text-form-foreground/80">Rellene el siguiente formulario para enviarnos un mensaje.</span>}
       />
       <div className="flex justify-center">
         <Card className="w-full max-w-2xl">

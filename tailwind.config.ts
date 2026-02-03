@@ -74,6 +74,10 @@ export default {
           background: 'hsl(var(--blog-background))',
           foreground: 'hsl(var(--blog-foreground))',
         },
+        form: {
+          background: 'hsl(var(--form-background))',
+          foreground: 'hsl(var(--form-foreground))',
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

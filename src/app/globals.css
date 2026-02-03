@@ -33,7 +33,9 @@
     --status-maintenance: 0 80% 55%;
     --service-background: 140 75% 96%;
     --blog-background: 340 100% 94%;
-    --blog-foreground: 340 90% 35%;
+    --blog-foreground: 340 70% 50%;
+    --form-background: 210 100% 96%;
+    --form-foreground: 210 80% 35%;
   }
 
   .dark {
@@ -62,6 +64,8 @@
     --service-background: 140 20% 12%;
     --blog-background: 340 25% 15%;
     --blog-foreground: 340 100% 85%;
+    --form-background: 210 25% 15%;
+    --form-foreground: 210 100% 85%;
   }
 }
 
