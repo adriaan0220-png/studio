@@ -41,7 +41,7 @@ const ServiceCard = ({
       </CardHeader>
       <CardContent className="grid md:grid-cols-2 gap-6">
         <div>
-          <h4 className="font-semibold mb-2 text-card-foreground">Características técnicas:</h4>
+          <h4 className="font-semibold mb-2 text-card-foreground">Característiques tècniques:</h4>
           <ul className="space-y-2">
             {features.map((feature, index) => (
               <li key={index} className="flex items-start gap-2">
@@ -70,21 +70,21 @@ const ServiceCard = ({
 export default function ServiciosPage() {
   const servicios = [
     {
-      title: 'Cisternas Alimentarias Inox AISI-316L (REF: TET-ALM/316-1)',
+      title: 'Cisternes Alimentàries Inox AISI-316L (REF: TET-ALM/316-1)',
       description:
-        'Servicio de transporte en cisterna de productos líquidos alimentarios a granel, con cumplimiento Reglamento (CE) 852/2004 y protocolos de limpieza CIP certificado.',
+        'Servei de transport en cisterna de productes líquids alimentaris a granel, amb compliment del Reglament (CE) 852/2004 i protocols de neteja CIP certificat.',
       features: [
-        'Material: Acero inoxidable sanitario AISI 316L (resistente a ácidos alimentarios).',
-        'Capacidad: Entre 28.500 y 32.000 litros.',
-        'Divisiones: 1–3 compartimentos herméticos.',
-        'Sistema de sellado: Válvulas DN80 y DN100 certificadas.',
-        'Control temperatura: +5ºC / +65ºC (según producto).',
-        'Certificaciones: ATP, ISO 22000, HACCP.',
+        'Material: Acer inoxidable sanitari AISI 316L (resistent a àcids alimentaris).',
+        'Capacitat: Entre 28.500 i 32.000 litres.',
+        'Divisions: 1–3 compartiments hermètics.',
+        'Sistema de segellat: Vàlvules DN80 i DN100 certificades.',
+        'Control de temperatura: +5ºC / +65ºC (segons producte).',
+        'Certificacions: ATP, ISO 22000, HACCP.',
       ],
       logistics: [
-        'Limpieza CIP documental (certificado descargable PDF).',
-        'Trazabilidad lote / cisterna / cliente.',
-        'Gestión POD digital y seguimiento GPS 24/7.',
+        'Neteja CIP documental (certificat descarregable en PDF).',
+        'Traçabilitat lot / cisterna / client.',
+        'Gestió POD digital i seguiment GPS 24/7.',
       ],
       imageId: 'stainless-tanker-new',
     },
@@ -93,8 +93,8 @@ export default function ServiciosPage() {
   return (
     <div className="p-8 flex-1 bg-service-background">
       <PageHeader
-        title={<span className="text-chart-1">Nuestros Servicios</span>}
-        description="Descubra la gama de servicios de transporte especializado que ofrecemos."
+        title={<span className="text-chart-1">Els Nostres Serveis</span>}
+        description="Descobreixi la gamma de serveis de transport especialitzat que oferim."
       />
       <div className="space-y-8">
         {servicios.map((service) => (

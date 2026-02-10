@@ -66,8 +66,8 @@ export default function NewOrderPage() {
   return (
     <div className="p-8 flex-1">
       <PageHeader
-        title="Confirme Su Pedido"
-        description="Por favor, revise su solicitud de transporte y proporcione la información de contacto."
+        title="Confirmi la Seva Comanda"
+        description="Si us plau, revisi la seva sol·licitud de transport i proporcioni la informació de contacte."
       />
       <React.Suspense fallback={<OrderFormSkeleton />}>
         <OrderFormComponent />

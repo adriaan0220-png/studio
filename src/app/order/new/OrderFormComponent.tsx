@@ -23,8 +23,8 @@ export default function OrderFormComponent() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     toast({
-      title: '¡Pedido Realizado!',
-      description: 'Su pedido ha sido enviado con éxito. Nos pondremos en contacto con usted en breve.',
+      title: 'Comanda Realitzada!',
+      description: 'La seva comanda s\'ha enviat amb èxit. Ens posarem en contacte amb vós ben aviat.',
     });
     router.push('/orders');
   };
@@ -33,51 +33,51 @@ export default function OrderFormComponent() {
     <div className="grid md:grid-cols-2 gap-8 items-start">
       <Card>
         <CardHeader>
-          <CardTitle>Resumen del Pedido</CardTitle>
-          <CardDescription>Detalles de su envío.</CardDescription>
+          <CardTitle>Resum de la Comanda</CardTitle>
+          <CardDescription>Detalls del seu enviament.</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="flex justify-between items-center">
-            <span className="text-muted-foreground">Producto</span>
+            <span className="text-muted-foreground">Producte</span>
             <span className="font-medium text-right">{productType || 'N/A'}</span>
           </div>
           <div className="flex justify-between items-center">
-            <span className="text-muted-foreground">Cantidad</span>
-            <span className="font-medium text-right">{quantity ? `${Number(quantity).toLocaleString()} Litros` : 'N/A'}</span>
+            <span className="text-muted-foreground">Quantitat</span>
+            <span className="font-medium text-right">{quantity ? `${Number(quantity).toLocaleString()} Litres` : 'N/A'}</span>
           </div>
           <div className="flex justify-between items-center">
-            <span className="text-muted-foreground">Lugar de Entrega</span>
+            <span className="text-muted-foreground">Lloc d'Entrega</span>
             <span className="font-medium text-right">{deliveryLocation || 'N/A'}</span>
           </div>
           <Separator />
           <div className="flex justify-between items-center text-lg">
-            <span className="font-semibold">Costo Estimado</span>
+            <span className="font-semibold">Cost Estimat</span>
             <span className="font-bold text-primary">€{estimatedCost ? Number(estimatedCost).toLocaleString() : 'N/A'}</span>
           </div>
         </CardContent>
       </Card>
       <Card>
         <CardHeader>
-          <CardTitle>Información de Contacto</CardTitle>
-          <CardDescription>Usaremos esto para ponernos en contacto sobre su pedido.</CardDescription>
+          <CardTitle>Informació de Contacte</CardTitle>
+          <CardDescription>Farem servir això per posar-nos en contacte sobre la seva comanda.</CardDescription>
         </CardHeader>
         <form onSubmit={handleSubmit}>
           <CardContent className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="name">Nombre Completo</Label>
-              <Input id="name" placeholder="Juan Pérez" required />
+              <Label htmlFor="name">Nom Complet</Label>
+              <Input id="name" placeholder="Joan Pérez" required />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="email">Dirección de Correo Electrónico</Label>
-              <Input id="email" type="email" placeholder="juan.perez@example.com" required />
+              <Label htmlFor="email">Adreça de Correu Electrònic</Label>
+              <Input id="email" type="email" placeholder="joan.perez@exemple.com" required />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="company">Nombre de la Empresa (Opcional)</Label>
-              <Input id="company" placeholder="Industrias Pérez" />
+              <Label htmlFor="company">Nom de l'Empresa (Opcional)</Label>
+              <Input id="company" placeholder="Indústries Pérez" />
             </div>
           </CardContent>
           <CardFooter>
-            <Button type="submit" className="w-full">Confirmar Pedido</Button>
+            <Button type="submit" className="w-full">Confirmar Comanda</Button>
           </CardFooter>
         </form>
       </Card>

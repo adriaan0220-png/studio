@@ -3,7 +3,7 @@
   "placeholderImages": [
     {
       "id": "product-isopropanol",
-      "description": "Una botella de alcohol isopropílico.",
+      "description": "Una ampolla d'alcohol isopropílic.",
       "imageUrl": "https://alcoholdelimpieza.com/wp-content/uploads/2022/11/Alcohol-Isopropilico-Isopropanol.-998.-Envase-100-mL.webp",
       "imageHint": "alcohol bottle"
     },
@@ -15,7 +15,7 @@
     },
     {
       "id": "product-glycerin",
-      "description": "Una botella de glicerina.",
+      "description": "Una ampolla de glicerina.",
       "imageUrl": "https://ibassets.com.br/ib.item.image.large/l-73d7aa34b9c84d10b0051655f2424a28.png",
       "imageHint": "glycerin bottle"
     },
@@ -39,37 +39,37 @@
     },
     {
       "id": "hero-image",
-      "description": "Un camión cisterna blanco en una carretera al atardecer.",
+      "description": "Un camió cisterna blanc en una carretera al capvespre.",
       "imageUrl": "https://images.unsplash.com/photo-1571708343135-c57656a81d13?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "imageHint": "tanker highway"
     },
     {
       "id": "food-grade-tanker",
-      "description": "Camión cisterna de acero inoxidable en una instalación de procesamiento de alimentos.",
+      "description": "Camió cisterna d'acer inoxidable en una instal·lació de processament d'aliments.",
       "imageUrl": "https://images.unsplash.com/photo-1628136437618-842c676949c2?q=80&w=2070&auto=format&fit=crop",
       "imageHint": "stainless tanker"
     },
     {
       "id": "stainless-tanker-new",
-      "description": "Un camión cisterna en la carretera",
+      "description": "Un camió cisterna a la carretera",
       "imageUrl": "https://static.wixstatic.com/media/187b42_cbeb2dfc53954ad6979c0dc88ac2271d~mv2.jpg",
       "imageHint": "modern tanker"
     },
     {
       "id": "product-adr-chemical",
-      "description": "Un camión cisterna para productos químicos en una carretera.",
+      "description": "Un camió cisterna per a productes químics en una carretera.",
       "imageUrl": "https://www.cisternashnosfajardo.com/wp-content/uploads/2018/11/SLIDE-1-800x400.jpg",
       "imageHint": "chemical tanker"
     },
     {
       "id": "product-multimodal",
-      "description": "Una imagen para la logística multimodal.",
+      "description": "Una imatge per a la logística multimodal.",
       "imageUrl": "https://lexlatin.com/sites/default/files/2023-08/boletin_gestion_290823-2.jpg",
       "imageHint": "logistics management"
     },
     {
       "id": "ship-container",
-      "description": "Un buque portacontenedores en el mar, representando el transporte marítimo.",
+      "description": "Un vaixell portacontenidors al mar, representant el transport marítim.",
       "imageUrl": "https://images.unsplash.com/photo-1611252372293-1a3b51197176?q=80&w=2070&auto=format&fit=crop",
       "imageHint": "container ship"
     }

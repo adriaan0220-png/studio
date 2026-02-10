@@ -12,8 +12,8 @@ export default function BlogPage() {
           title={<span className="text-blog-foreground">Blog</span>}
           description={
             <span className="text-blog-foreground/80">
-              Noticias, artículos y actualizaciones de la industria del
-              transporte.
+              Notícies, articles i actualitzacions de la indústria del
+              transport.
             </span>
           }
         />

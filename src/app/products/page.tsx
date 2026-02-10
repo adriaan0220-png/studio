@@ -9,8 +9,8 @@ export default function ProductsPage() {
   return (
     <div className="p-8 flex-1">
       <PageHeader
-        title={<span className="text-secondary">Nuestros Productos Líquidos</span>}
-        description="Ofrecemos una variedad de productos líquidos de alta calidad para transporte a granel."
+        title={<span className="text-secondary">Els Nostres Productes Líquids</span>}
+        description="Oferim una varietat de productes líquids d'alta qualitat per a transport a granel."
       />
       <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
         {products.map((product) => (

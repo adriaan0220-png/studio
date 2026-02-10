@@ -26,7 +26,7 @@ export default function LoginPage() {
     try {
       const response = await fetch(`https://sheetdb.io/api/v1/64gi8fmqcbxx4/search?usuari=${usuario}&sheet=usuaris`);
       if (!response.ok) {
-        throw new Error('No se pudo conectar con el servidor.');
+        throw new Error('No s\'ha pogut connectar amb el servidor.');
       }
       
       const data: any[] = await response.json();
@@ -38,10 +38,10 @@ export default function LoginPage() {
         router.push('/dashboard');
       } else {
         // Incorrect credentials
-        setError('Dades incorrectes. Verifiqui el seu usuari i contrasenya.');
+        setError('Dades incorrectes. Verifiqueu el vostre usuari i contrasenya.');
       }
     } catch (err) {
-      setError('Hi ha hagut un problema amb la connexió. Si us plau, intenti-ho de nou més tard.');
+      setError('Hi ha hagut un problema amb la connexió. Si us plau, intenteu-ho de nou més tard.');
       console.error(err);
     } finally {
       setIsLoading(false);
@@ -52,7 +52,7 @@ export default function LoginPage() {
     <div className="p-8 flex-1">
       <PageHeader
         title={<span className="text-secondary">Àrea de Clients</span>}
-        description="Accedeixi al seu panell per a gestionar els seus enviaments."
+        description="Accedeixi al seu panell per gestionar els seus enviaments."
       />
       <div className="flex justify-center">
         <Card className="w-full max-w-md">

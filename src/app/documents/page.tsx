@@ -76,7 +76,7 @@ export default function DocumentsPage() {
       // If there's no user identified yet, don't fetch.
       if (typeof window !== 'undefined' && !localStorage.getItem('userName')) {
         setLoading(false);
-        setError("No s'ha pogut identificar l'usuari. Si us plau, iniciï sessió.");
+        setError("No s'ha pogut identificar l'usuari. Si us plau, inicieu sessió.");
       }
       return;
     }
@@ -223,7 +223,7 @@ export default function DocumentsPage() {
         <div className="flex justify-between items-center mb-8 print:hidden">
           <Button variant="outline" onClick={() => setSelectedInvoice(null)}>
             <ArrowLeft className="mr-2 h-4 w-4" />
-            Tornar al llistat
+            Tornar a la llista
           </Button>
           <Button onClick={handlePrint}>
             <Printer className="mr-2 h-4 w-4" />
@@ -245,7 +245,7 @@ export default function DocumentsPage() {
             <div className="text-right">
               <h1 className="text-3xl font-bold text-gray-800">FACTURA</h1>
               <p className="text-gray-600 mt-2">
-                <span className="font-semibold">Nº:</span> {selectedInvoice.invoiceNumber}
+                <span className="font-semibold">Núm.:</span> {selectedInvoice.invoiceNumber}
               </p>
               <p className="text-gray-600">
                 <span className="font-semibold">Data:</span> {selectedInvoice.date}
@@ -315,7 +315,7 @@ export default function DocumentsPage() {
           {/* Footer */}
           <footer className="text-xs text-gray-500 border-t border-gray-200 pt-4 mt-8">
             <p>Ttiko Trans, inscrita al Registre Mercantil de Tarragona, Tom XXX, Foli XXX, Full X-XXXXX, Inscripció Xª.</p>
-            <p>De conformitat amb el que estableix la normativa vigent en Protecció de Dades de Caràcter Personal, l'informem que les seves dades seran incorporades a sistema de tractament titularitat de Ttiko Trans per a la gestió administrativa i comercial de la relació contractual.</p>
+            <p>De conformitat amb el que estableix la normativa vigent en Protecció de Dades de Caràcter Personal, l'informem que les seves dades seran incorporades al sistema de tractament titularitat de Ttiko Trans per a la gestió administrativa i comercial de la relació contractual.</p>
           </footer>
         </Card>
       </div>
@@ -326,7 +326,7 @@ export default function DocumentsPage() {
     <div className="p-8 flex-1">
       <PageHeader
         title="Factures"
-        description="Aquí pot veure i imprimir les seves factures."
+        description="Aquí podeu veure i imprimir les vostres factures."
       />
       {invoices.length > 0 ? (
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -335,7 +335,7 @@ export default function DocumentsPage() {
               <CardHeader>
                 <div className="flex justify-between items-start">
                     <div>
-                        <CardTitle>Factura Nº {invoice.invoiceNumber}</CardTitle>
+                        <CardTitle>Factura núm. {invoice.invoiceNumber}</CardTitle>
                         <CardDescription>{invoice.date}</CardDescription>
                     </div>
                     <Badge variant="default" className="text-base">{invoice.totalAmount.toFixed(2)} €</Badge>

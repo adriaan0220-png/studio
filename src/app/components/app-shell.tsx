@@ -11,18 +11,18 @@ import { cn } from '@/lib/utils';
 import { Footer } from './footer';
 
 const navItems = [
-  { href: '/', label: 'Inicio', icon: Home },
-  { href: '/servicios', label: 'Servicios', icon: Settings },
-  { href: '/quien-somos', label: 'Quiénes Somos', icon: Users },
-  { href: '/contacto', label: 'Contacto', icon: Mail },
+  { href: '/', label: 'Inici', icon: Home },
+  { href: '/servicios', label: 'Serveis', icon: Settings },
+  { href: '/quien-somos', label: 'Qui som', icon: Users },
+  { href: '/contacto', label: 'Contacte', icon: Mail },
   { href: '/blog', label: 'Blog', icon: Newspaper },
-  { href: '/formulario', label: 'Formulario', icon: FileText },
-  { href: '/products', label: 'Productos', icon: Droplets },
-  { href: '/nuestra-flota', label: 'Nuestra Flota', icon: Truck },
-  { href: '/orders', label: 'Mis Pedidos', icon: ClipboardList },
-  { href: '/documents', label: 'Facturas', icon: Download },
-  { href: '/tracking', label: 'Seguimiento', icon: Search },
-  { href: '/login', label: 'Área Clients', icon: UserCircle },
+  { href: '/formulario', label: 'Formulari', icon: FileText },
+  { href: '/products', label: 'Productes', icon: Droplets },
+  { href: '/nuestra-flota', label: 'La Nostra Flota', icon: Truck },
+  { href: '/orders', label: 'Les Meves Comandes', icon: ClipboardList },
+  { href: '/documents', label: 'Factures', icon: Download },
+  { href: '/tracking', label: 'Seguiment', icon: Search },
+  { href: '/login', label: 'Àrea Clients', icon: UserCircle },
 ];
 
 export function AppShell({ children }: { children: React.ReactNode }) {
@@ -58,7 +58,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
           <SheetTrigger asChild>
             <Button variant="outline" size="icon" className="shrink-0 md:hidden ml-auto">
               <Menu className="h-5 w-5" />
-              <span className="sr-only">Alternar menú de navegación</span>
+              <span className="sr-only">Alterna el menú de navegació</span>
             </Button>
           </SheetTrigger>
           <SheetContent side="left" className="flex flex-col p-0 w-[280px] bg-card">

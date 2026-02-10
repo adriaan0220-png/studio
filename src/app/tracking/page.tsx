@@ -16,37 +16,37 @@ interface ShipmentData {
   destination: string;
   eta: string;
   location: string;
-  status: 'EN ALMACEN' | 'EN TRANSITO' | 'ENTREGADO';
+  status: 'AL MAGATZEM' | 'EN TRÀNSIT' | 'LLIURAT';
   client: string;
 }
 
 const StatusBar = ({ status }: { status: ShipmentData['status'] }) => {
     const statusConfig: Record<ShipmentData['status'], { progress: number; label: string }> = {
-    'EN ALMACEN': {
+    'AL MAGATZEM': {
       progress: 10,
-      label: 'En Almacén',
+      label: 'Al Magatzem',
     },
-    'EN TRANSITO': {
+    'EN TRÀNSIT': {
       progress: 50,
-      label: 'En Tránsito',
+      label: 'En Trànsit',
     },
-    'ENTREGADO': {
+    'LLIURAT': {
       progress: 100,
-      label: 'Entregado',
+      label: 'Lliurat',
     },
   };
 
-  const currentStatus = statusConfig[status] || statusConfig['EN ALMACEN'];
+  const currentStatus = statusConfig[status] || statusConfig['AL MAGATZEM'];
 
   return (
     <div className="w-full space-y-2">
        <div className="flex justify-between text-sm font-medium">
-        <span>En Almacén</span>
-        <span>En Tránsito</span>
-        <span>Entregado</span>
+        <span>Al Magatzem</span>
+        <span>En Trànsit</span>
+        <span>Lliurat</span>
       </div>
       <Progress value={currentStatus.progress} className="w-full [&>div]:bg-primary" />
-       <p className="text-center font-semibold mt-2">Estado: {currentStatus.label}</p>
+       <p className="text-center font-semibold mt-2">Estat: {currentStatus.label}</p>
     </div>
   );
 };
@@ -60,7 +60,7 @@ export default function TrackingPage() {
 
   const handleSearch = async () => {
     if (!trackingCode) {
-      setError('Por favor, introduzca un código de seguimiento.');
+      setError('Si us plau, introdueixi un codi de seguiment.');
       return;
     }
     
@@ -73,7 +73,7 @@ export default function TrackingPage() {
       
       const response = await fetch(apiUrl);
       if (!response.ok) {
-        throw new Error('No se ha podido conectar con el servidor.');
+        throw new Error('No s\'ha pogut connectar amb el servidor.');
       }
       const data: any[] = await response.json();
 
@@ -82,11 +82,11 @@ export default function TrackingPage() {
         let normalizedStatus: ShipmentData['status'];
 
         if (rawStatus.includes('CIRCULA') || rawStatus.includes('TRANSITO')) {
-          normalizedStatus = 'EN TRANSITO';
+          normalizedStatus = 'EN TRÀNSIT';
         } else if (rawStatus.includes('LLIURAT') || rawStatus.includes('ENTREGADO')) {
-          normalizedStatus = 'ENTREGADO';
+          normalizedStatus = 'LLIURAT';
         } else {
-          normalizedStatus = 'EN ALMACEN';
+          normalizedStatus = 'AL MAGATZEM';
         }
 
         setShipmentData({
@@ -94,7 +94,7 @@ export default function TrackingPage() {
             status: normalizedStatus
         });
       } else {
-        setError('Código no encontrado. Por favor, verifique el código y vuelva a intentarlo.');
+        setError('Codi no trobat. Si us plau, verifiqui el codi i torni a intentar-ho.');
       }
     } catch (err) {
       setError('Ha habido un problema con su solicitud.');
@@ -107,8 +107,8 @@ export default function TrackingPage() {
   return (
     <div className="p-8 flex-1">
       <PageHeader
-        title={<span className="text-secondary">Localiza tu envío</span>}
-        description="Introduce tu código de seguimiento para ver el estado actual de tu envío."
+        title={<span className="text-secondary">Localitzi el seu enviament</span>}
+        description="Introdueixi el seu codi de seguiment per veure l'estat actual del seu enviament."
       />
 
       <div className="flex justify-center">
@@ -117,13 +117,13 @@ export default function TrackingPage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Input
                 type="text"
-                placeholder="Ej: TTI-123"
+                placeholder="Ex: TTI-123"
                 value={trackingCode}
                 onChange={(e) => setTrackingCode(e.target.value)}
                 className="flex-grow text-base"
               />
               <Button onClick={handleSearch} disabled={isLoading} className="w-full sm:w-auto">
-                {isLoading ? 'Buscando...' : 'Buscar'}
+                {isLoading ? 'Cercant...' : 'Cercar'}
               </Button>
             </div>
           </CardHeader>
@@ -139,17 +139,17 @@ export default function TrackingPage() {
             {shipmentData && (
               <Card className="mt-6 shadow-md">
                 <CardHeader>
-                  <CardTitle>Resultados del Envío</CardTitle>
-                  <CardDescription>Código: {shipmentData.tracking_code}</CardDescription>
+                  <CardTitle>Resultats de l'Enviament</CardTitle>
+                  <CardDescription>Codi: {shipmentData.tracking_code}</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
                     <div>
-                        <h3 className="font-semibold mb-4">Estado del envío</h3>
+                        <h3 className="font-semibold mb-4">Estat de l'enviament</h3>
                         <StatusBar status={shipmentData.status} />
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
                         <div className="space-y-1">
-                            <p className="text-sm font-medium text-muted-foreground">Cliente</p>
+                            <p className="text-sm font-medium text-muted-foreground">Client</p>
                             <p className="text-lg font-semibold flex items-center gap-2"><User className="h-5 w-5 text-muted-foreground" />{shipmentData.client}</p>
                         </div>
                         <div className="space-y-1">
@@ -157,15 +157,15 @@ export default function TrackingPage() {
                             <p className="text-lg font-semibold">{shipmentData.origin}</p>
                         </div>
                         <div className="space-y-1">
-                            <p className="text-sm font-medium text-muted-foreground">Destino</p>
+                            <p className="text-sm font-medium text-muted-foreground">Destí</p>
                             <p className="text-lg font-semibold">{shipmentData.destination}</p>
                         </div>
                         <div className="space-y-1">
-                            <p className="text-sm font-medium text-muted-foreground">Fecha prevista (ETA)</p>
+                            <p className="text-sm font-medium text-muted-foreground">Data prevista (ETA)</p>
                             <p className="text-lg font-semibold">{shipmentData.eta}</p>
                         </div>
                          <div className="space-y-1">
-                            <p className="text-sm font-medium text-muted-foreground">Ubicación Actual</p>
+                            <p className="text-sm font-medium text-muted-foreground">Ubicació Actual</p>
                             <p className="text-lg font-semibold">{shipmentData.location}</p>
                         </div>
                     </div>

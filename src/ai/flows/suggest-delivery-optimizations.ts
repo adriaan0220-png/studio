@@ -13,10 +13,10 @@ import {z} from 'genkit';
 const SuggestDeliveryOptimizationsInputSchema = z.object({
   deliveryLocation: z
     .string()
-    .describe('The desired delivery location for the goods.'),
-  productType: z.string().describe('The type of liquid product being delivered.'),
-  truckType: z.string().describe('The type of truck being used for delivery.'),
-  currentCost: z.number().describe('The current estimated cost of delivery.'),
+    .describe('La ubicació de lliurament desitjada per a la mercaderia.'),
+  productType: z.string().describe('El tipus de producte líquid que es lliura.'),
+  truckType: z.string().describe('El tipus de camió utilitzat per al lliurament.'),
+  currentCost: z.number().describe('El cost estimat actual del lliurament.'),
 });
 export type SuggestDeliveryOptimizationsInput = z.infer<
   typeof SuggestDeliveryOptimizationsInputSchema
@@ -26,7 +26,7 @@ const SuggestDeliveryOptimizationsOutputSchema = z.object({
   optimizations: z
     .string()
     .describe(
-      'A list of suggestions for optimizing the delivery, considering factors such as truck availability and route efficiency, to reduce costs.'
+      "Una llista de suggeriments per optimitzar el lliurament, considerant factors com la disponibilitat de camions i l'eficiència de la ruta, per reduir costos."
     ),
 });
 export type SuggestDeliveryOptimizationsOutput = z.infer<
@@ -43,7 +43,16 @@ const prompt = ai.definePrompt({
   name: 'suggestDeliveryOptimizationsPrompt',
   input: {schema: SuggestDeliveryOptimizationsInputSchema},
   output: {schema: SuggestDeliveryOptimizationsOutputSchema},
-  prompt: `You are an expert in logistics and transportation cost optimization. Based on the delivery location, product type, truck type, and current cost, suggest ways to optimize the delivery to reduce costs.\n\nDelivery Location: {{{deliveryLocation}}}\nProduct Type: {{{productType}}}\nTruck Type: {{{truckType}}}\nCurrent Cost: {{{currentCost}}}\n\nConsider factors such as truck availability, route efficiency, fuel costs, and potential discounts. Provide specific, actionable suggestions.\n\nOptimizations:`,
+  prompt: `Ets un expert en logística i optimització de costos de transport. Basant-te en la ubicació de lliurament, el tipus de producte, el tipus de camió i el cost actual, suggereix maneres d'optimitzar el lliurament per reduir costos.
+
+Ubicació de lliurament: {{{deliveryLocation}}}
+Tipus de producte: {{{productType}}}
+Tipus de camió: {{{truckType}}}
+Cost actual: {{{currentCost}}}
+
+Considera factors com la disponibilitat de camions, l'eficiència de la ruta, els costos de combustible i els possibles descomptes. Proporciona suggeriments específics i accionables.
+
+Optimitzacions:`,
 });
 
 const suggestDeliveryOptimizationsFlow = ai.defineFlow(

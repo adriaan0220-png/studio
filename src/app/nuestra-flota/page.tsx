@@ -7,60 +7,60 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const tankerTypes = [
   {
-    title: 'Alimentarias AISI 316L',
+    title: 'Alimentàries AISI 316L',
     imageUrl: 'https://tse1.mm.bing.net/th/id/OIP.thmWS8Km2_zlZimGhClpvgHaFL?pid=Api&P=0&h=180',
     imageHint: 'stainless tanker',
     icons: [
       { icon: Thermometer, label: 'Control de Temperatura' },
-      { icon: Droplets, label: 'Certificado CIP' },
+      { icon: Droplets, label: 'Certificat CIP' },
     ],
   },
   {
-    title: 'ADR Químicas Clase 3 y 8',
+    title: 'ADR Químiques Classe 3 i 8',
     imageUrl: 'https://www.cisternashnosfajardo.com/wp-content/uploads/2018/11/SLIDE-1-800x400.jpg',
     imageHint: 'ADR truck',
     icons: [
       { icon: ShieldCheck, label: 'ADR' },
-      { icon: Zap, label: 'Clase 3 y 8' },
+      { icon: Zap, label: 'Classe 3 i 8' },
     ],
   },
   {
-    title: 'Multimodales Isotank',
+    title: 'Multimodals Isotanc',
     imageUrl: 'https://eng.spectransgarant.ru/services/tank-containers-02.jpg',
     imageHint: 'isotank container',
     icons: [
-      { icon: Anchor, label: 'Marítimo' },
+      { icon: Anchor, label: 'Marítim' },
       { icon: Route, label: 'Carretera' },
     ],
   },
 ];
 
 const securityFeatures = [
-    'Trazabilidad GPS 24/7',
-    'Sellado documental CIP',
+    'Traçabilitat GPS 24/7',
+    'Segellat documental CIP',
     'Control de temperatura',
-    'Conductores con certificación ADR Cisternas',
-    'Planes de emergencia y derrames',
+    'Conductors amb certificació ADR Cisternes',
+    'Plans d\'emergència i vessaments',
 ];
 
 const certifications = [
-    { name: 'ISO 22000', description: 'Seguridad alimentaria' },
-    { name: 'ADR', description: 'Transporte de mercancías peligrosas' },
-    { name: 'HACCP', description: 'Gestión sanitaria' },
-    { name: 'ATP', description: 'Mercancías perecederas' },
+    { name: 'ISO 22000', description: 'Seguretat alimentària' },
+    { name: 'ADR', description: 'Transport de mercaderies perilloses' },
+    { name: 'HACCP', description: 'Gestió sanitària' },
+    { name: 'ATP', description: 'Mercaderies peribles' },
 ]
 
 export default function NuestraFlotaPage() {
   return (
     <div className="p-8 flex-1 bg-black text-gray-200">
       <PageHeader
-        title={<span className="text-secondary">Nuestra Flota</span>}
-        description={<span className="text-gray-400">Moderna y especializada para el transporte seguro de líquidos.</span>}
+        title={<span className="text-secondary">La Nostra Flota</span>}
+        description={<span className="text-gray-400">Moderna i especialitzada per al transport segur de líquids.</span>}
       />
       <div className="container mx-auto px-0 space-y-12">
         
         <p className="text-lg text-gray-400 max-w-4xl">
-          Disponemos de una flota moderna y especializada para el transporte seguro de líquidos alimentarios, químicos y mercancías peligrosas ADR. Todas nuestras cisternas cuentan con mantenimiento periódico, calibraciones vigentes y sistemas de trazabilidad.
+          Disposem d'una flota moderna i especialitzada per al transport segur de líquids alimentaris, químics i mercaderies perilloses ADR. Totes les nostres cisternes compten amb manteniment periòdic, calibratges vigents i sistemes de traçabilitat.
         </p>
         
         {/* Datos técnicos */}
@@ -69,19 +69,19 @@ export default function NuestraFlotaPage() {
             <Card className="shadow-md">
               <CardHeader>
                 <CardTitle className="text-4xl font-bold text-primary">62</CardTitle>
-                <CardDescription>Unidades Operativas</CardDescription>
+                <CardDescription>Unitats Operatives</CardDescription>
               </CardHeader>
             </Card>
             <Card className="shadow-md">
               <CardHeader>
                 <CardTitle className="text-4xl font-bold text-primary">1,8M</CardTitle>
-                <CardDescription>Litros de Capacidad Total</CardDescription>
+                <CardDescription>Litres de Capacitat Total</CardDescription>
               </CardHeader>
             </Card>
             <Card className="shadow-md">
               <CardHeader>
                 <CardTitle className="text-4xl font-bold text-primary">2024</CardTitle>
-                <CardDescription>Última Renovación de Flota</CardDescription>
+                <CardDescription>Darrera Renovació de Flota</CardDescription>
               </CardHeader>
             </Card>
           </div>
@@ -89,7 +89,7 @@ export default function NuestraFlotaPage() {
 
         {/* Tipos de Cisternas */}
         <section>
-          <h2 className="text-3xl font-bold font-headline mb-6">Tipos de Cisternas</h2>
+          <h2 className="text-3xl font-bold font-headline mb-6">Tipus de Cisternes</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {tankerTypes.map((tanker) => {
               const image = tanker.imageUrl ? { imageUrl: tanker.imageUrl, imageHint: tanker.imageHint } : PlaceHolderImages.find(img => img.id === (tanker as any).imageId);
@@ -120,7 +120,7 @@ export default function NuestraFlotaPage() {
                     </ul>
                   </CardContent>
                   <div className="p-6 pt-0">
-                    <Button className="w-full">Solicitar Información</Button>
+                    <Button className="w-full">Sol·licitar Informació</Button>
                   </div>
                 </Card>
               )
@@ -131,7 +131,7 @@ export default function NuestraFlotaPage() {
         <div className="grid md:grid-cols-2 gap-12">
             {/* Sistemas de Seguridad */}
             <section>
-                <h2 className="text-3xl font-bold font-headline mb-6">Sistemas de Seguridad</h2>
+                <h2 className="text-3xl font-bold font-headline mb-6">Sistemes de Seguretat</h2>
                 <Card>
                     <CardContent className="pt-6">
                         <ul className="space-y-4">
@@ -148,7 +148,7 @@ export default function NuestraFlotaPage() {
 
             {/* Certificaciones */}
             <section>
-                <h2 className="text-3xl font-bold font-headline mb-6">Certificaciones</h2>
+                <h2 className="text-3xl font-bold font-headline mb-6">Certificacions</h2>
                  <Card>
                     <CardContent className="pt-6">
                         <ul className="space-y-4">

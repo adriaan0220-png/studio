@@ -14,19 +14,19 @@ import {z} from 'genkit';
 const EstimateTransportCostInputSchema = z.object({
   deliveryLocation: z
     .string()
-    .describe('The desired delivery location for the liquid product order.'),
-  productType: z.string().describe('The type of liquid product being transported.'),
-  quantity: z.number().describe('The quantity of the liquid product being transported.'),
+    .describe("La ubicació de lliurament desitjada per a la comanda de producte líquid."),
+  productType: z.string().describe('El tipus de producte líquid que es transporta.'),
+  quantity: z.number().describe('La quantitat de producte líquid que es transporta.'),
 });
 export type EstimateTransportCostInput = z.infer<typeof EstimateTransportCostInputSchema>;
 
 const EstimateTransportCostOutputSchema = z.object({
   estimatedCost: z
     .number()
-    .describe('The estimated transportation cost in Euros for the liquid product order.'),
+    .describe("El cost de transport estimat en euros per a la comanda de producte líquid."),
   breakdown: z
     .string()
-    .describe('A breakdown of the factors contributing to the estimated cost.'),
+    .describe('Un desglossament dels factors que contribueixen al cost estimat.'),
 });
 export type EstimateTransportCostOutput = z.infer<typeof EstimateTransportCostOutputSchema>;
 
@@ -40,18 +40,18 @@ const estimateTransportCostPrompt = ai.definePrompt({
   name: 'estimateTransportCostPrompt',
   input: {schema: EstimateTransportCostInputSchema},
   output: {schema: EstimateTransportCostOutputSchema},
-  prompt: `You are a transportation cost estimator for Ttiko Trans, a liquid product transportation company.
+  prompt: `Ets un estimador de costos de transport per a Ttiko Trans, una empresa de transport de productes líquids.
 
-  Given the delivery location, product type, and quantity, estimate the transportation cost in Euros.
-  Consider factors such as distance, fuel costs, truck availability, and any other relevant factors.
-  Provide a breakdown of the factors contributing to the estimated cost.
+  Donada la ubicació de lliurament, el tipus de producte i la quantitat, estima el cost de transport en euros.
+  Considera factors com la distància, els costos de combustible, la disponibilitat de camions i qualsevol altre factor rellevant.
+  Proporciona un desglossament dels factors que contribueixen al cost estimat.
 
-  Delivery Location: {{{deliveryLocation}}}
-  Product Type: {{{productType}}}
-  Quantity: {{{quantity}}}
+  Ubicació de lliurament: {{{deliveryLocation}}}
+  Tipus de producte: {{{productType}}}
+  Quantitat: {{{quantity}}}
 
-  Respond with the estimated cost and a detailed breakdown.
-  Ensure the estimatedCost is in Euros.
+  Respon amb el cost estimat i un desglossament detallat.
+  Assegura't que l'estimatedCost sigui en euros.
   `,
 });
 

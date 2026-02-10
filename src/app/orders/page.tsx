@@ -12,12 +12,12 @@ import { CheckCircle, Clock, Download, FileText, HelpCircle, List, Locate, Ancho
 
 const OrderStatus = ({ status }: { status: string }) => {
     const statuses = [
-        { name: 'Carga confirmada', icon: CheckCircle },
-        { name: 'En tránsito', icon: Truck },
-        { name: 'ETA — llegada prevista', icon: Clock },
-        { name: 'En descarga', icon: Anchor },
+        { name: 'Càrrega confirmada', icon: CheckCircle },
+        { name: 'En trànsit', icon: Truck },
+        { name: 'ETA — arribada prevista', icon: Clock },
+        { name: 'En descàrrega', icon: Anchor },
         { name: 'POD disponible', icon: FileText },
-        { name: 'Incidencia documentada', icon: HelpCircle },
+        { name: 'Incidència documentada', icon: HelpCircle },
     ];
 
     const currentIndex = statuses.findIndex(s => s.name === status);
@@ -53,33 +53,33 @@ export default function OrdersPage() {
     return (
         <div className="p-8 flex-1 bg-secondary text-secondary-foreground">
             <PageHeader
-                title={<span className="text-secondary-foreground">Mis Pedidos</span>}
+                title={<span className="text-secondary-foreground">Les Meves Comandes</span>}
                 description={
                   <span className="text-secondary-foreground/80">
-                    Consulte el estado y la documentación de sus envíos en tiempo real.
+                    Consulteu l'estat i la documentació dels vostres enviaments en temps real.
                   </span>
                 }
             />
 
             <Card className="mb-8">
                 <CardHeader>
-                    <CardTitle>Buscar Pedido</CardTitle>
+                    <CardTitle>Cercar Comanda</CardTitle>
                 </CardHeader>
                 <CardContent>
                     <form onSubmit={handleSearch} className="grid sm:grid-cols-3 md:grid-cols-4 gap-4 items-end">
                         <div className="space-y-2">
-                            <Label htmlFor="order-number">Número de pedido</Label>
-                            <Input id="order-number" placeholder="Ej: 2024-07-123" />
+                            <Label htmlFor="order-number">Número de comanda</Label>
+                            <Input id="order-number" placeholder="Ex: 2024-07-123" />
                         </div>
                         <div className="space-y-2">
-                            <Label htmlFor="internal-ref">Referencia interna</Label>
-                            <Input id="internal-ref" placeholder="Su referencia" />
+                            <Label htmlFor="internal-ref">Referència interna</Label>
+                            <Input id="internal-ref" placeholder="La vostra referència" />
                         </div>
                         <div className="space-y-2">
-                            <Label htmlFor="load-date">Fecha de carga</Label>
+                            <Label htmlFor="load-date">Data de càrrega</Label>
                             <Input id="load-date" type="date" />
                         </div>
-                        <Button type="submit" className="w-full sm:w-auto md:self-end">Consultar estado</Button>
+                        <Button type="submit" className="w-full sm:w-auto md:self-end">Consultar estat</Button>
                     </form>
                 </CardContent>
             </Card>
@@ -88,11 +88,11 @@ export default function OrdersPage() {
                 <div className="space-y-8">
                     <Card>
                         <CardHeader>
-                            <CardTitle>Estado del Envío: 2024-07-123</CardTitle>
-                            <CardDescription>ETA — llegada prevista: 15/07/2024 14:00h</CardDescription>
+                            <CardTitle>Estat de l'Enviament: 2024-07-123</CardTitle>
+                            <CardDescription>ETA — arribada prevista: 15/07/2024 14:00h</CardDescription>
                         </CardHeader>
                         <CardContent>
-                            <OrderStatus status="En tránsito" />
+                            <OrderStatus status="En trànsit" />
                         </CardContent>
                     </Card>
 
@@ -100,28 +100,28 @@ export default function OrdersPage() {
                         <div className="md:col-span-2 space-y-8">
                             <Card>
                                 <CardHeader>
-                                    <CardTitle>Información del Transporte</CardTitle>
+                                    <CardTitle>Informació del Transport</CardTitle>
                                 </CardHeader>
                                 <CardContent className="grid sm:grid-cols-2 gap-4">
                                     <p><strong className="text-muted-foreground">Matrícula:</strong> 1234-XYZ</p>
-                                    <p><strong className="text-muted-foreground">Código de cisterna:</strong> CIST-042</p>
-                                    <p><strong className="text-muted-foreground">Producto:</strong> Glicerina</p>
-                                    <p><strong className="text-muted-foreground">Clase ADR:</strong> No aplica</p>
-                                    <p><strong className="text-muted-foreground">Capacidad:</strong> 32,000 L</p>
-                                    <p><strong className="text-muted-foreground">Planta de carga:</strong> Tarragona</p>
-                                    <p><strong className="text-muted-foreground">Destino:</strong> Marsella</p>
+                                    <p><strong className="text-muted-foreground">Codi de cisterna:</strong> CIST-042</p>
+                                    <p><strong className="text-muted-foreground">Producte:</strong> Glicerina</p>
+                                    <p><strong className="text-muted-foreground">Classe ADR:</strong> No aplica</p>
+                                    <p><strong className="text-muted-foreground">Capacitat:</strong> 32,000 L</p>
+                                    <p><strong className="text-muted-foreground">Planta de càrrega:</strong> Tarragona</p>
+                                    <p><strong className="text-muted-foreground">Destí:</strong> Marsella</p>
                                 </CardContent>
                             </Card>
 
                              <Card>
                                 <CardHeader>
-                                    <CardTitle>Seguimiento</CardTitle>
+                                    <CardTitle>Seguiment</CardTitle>
                                 </CardHeader>
                                 <CardContent>
                                     <ul className="space-y-3">
                                         <li className="flex items-center gap-3"><Locate className="h-5 w-5 text-primary" /> GPS 24/7</li>
-                                        <li className="flex items-center gap-3"><Clock className="h-5 w-5 text-primary" /> Actualización automática de estado</li>
-                                        <li className="flex items-center gap-3"><List className="h-5 w-5 text-primary" /> Historial de pedidos</li>
+                                        <li className="flex items-center gap-3"><Clock className="h-5 w-5 text-primary" /> Actualització automàtica d'estat</li>
+                                        <li className="flex items-center gap-3"><List className="h-5 w-5 text-primary" /> Historial de comandes</li>
                                     </ul>
                                 </CardContent>
                             </Card>
@@ -130,7 +130,7 @@ export default function OrdersPage() {
                         <div className="space-y-8">
                              <Card>
                                 <CardHeader>
-                                    <CardTitle>Documentación</CardTitle>
+                                    <CardTitle>Documentació</CardTitle>
                                 </CardHeader>
                                 <CardContent className="space-y-3">
                                     <Button variant="outline" className="w-full justify-start gap-2"><Download className="h-4 w-4" /> CMR</Button>
@@ -142,7 +142,7 @@ export default function OrdersPage() {
 
                             <Card>
                                 <CardHeader>
-                                    <CardTitle>Contacto</CardTitle>
+                                    <CardTitle>Contacte</CardTitle>
                                 </CardHeader>
                                 <CardContent className="space-y-4">
                                      <div className="flex items-center gap-3">
@@ -153,7 +153,7 @@ export default function OrdersPage() {
                                         <Mail className="h-5 w-5 text-muted-foreground" />
                                         <a href="mailto:pedidos@ttikotrans.net" className="hover:text-primary">pedidos@ttikotrans.net</a>
                                     </div>
-                                    <Button className="w-full">Atención al cliente</Button>
+                                    <Button className="w-full">Atenció al client</Button>
                                 </CardContent>
                             </Card>
                         </div>

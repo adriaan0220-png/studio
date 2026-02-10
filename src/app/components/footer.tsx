@@ -18,17 +18,17 @@ export function Footer() {
     <footer className="bg-muted text-card-foreground border-t print:hidden">
       <div className="container mx-auto py-8 px-4 md:px-6 text-center">
         <p className="font-semibold text-lg">Ttiko Trans</p>
-        <p className="text-muted-foreground text-sm mb-4">Transporte profesional en cisternas</p>
+        <p className="text-muted-foreground text-sm mb-4">Transport professional en cisternes</p>
         
         <div className="flex justify-center gap-4 md:gap-6 mb-4 text-sm">
           <Link href="/aviso-legal" className="text-muted-foreground hover:text-primary transition-colors">
-            Aviso Legal
+            Avís Legal
           </Link>
           <Link href="/politica-de-privacidad" className="text-muted-foreground hover:text-primary transition-colors">
-            Política de Privacidad
+            Política de Privacitat
           </Link>
           <Link href="/politica-de-cookies" className="text-muted-foreground hover:text-primary transition-colors">
-            Política de Cookies
+            Política de Galetes
           </Link>
         </div>
         

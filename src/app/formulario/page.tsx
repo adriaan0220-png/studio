@@ -31,8 +31,8 @@ export default function FormularioPage() {
 
       if (response.ok) {
         toast({
-          title: '¡Mensaje Enviado!',
-          description: 'Gracias por contactarnos. Nos pondremos en contacto con usted en breve.',
+          title: 'Missatge Enviat!',
+          description: 'Gràcies per contactar-nos. Ens posarem en contacte amb vós ben aviat.',
         });
         (event.target as HTMLFormElement).reset();
       } else {
@@ -41,14 +41,14 @@ export default function FormularioPage() {
             const errorMessage = data["errors"].map((error: any) => error["message"]).join(", ");
             throw new Error(errorMessage);
         } else {
-            throw new Error('Hubo un problema al enviar el formulario.');
+            throw new Error('Hi ha hagut un problema en enviar el formulari.');
         }
       }
     } catch (error: any) {
       toast({
         variant: "destructive",
-        title: 'Error al enviar',
-        description: error.message || 'No se pudo enviar el mensaje. Por favor, inténtelo de nuevo más tarde.',
+        title: 'Error en l\'enviament',
+        description: error.message || 'No s\'ha pogut enviar el missatge. Si us plau, intenti-ho de nou més tard.',
       });
     } finally {
       setIsSubmitting(false);
@@ -58,41 +58,41 @@ export default function FormularioPage() {
   return (
     <div className="p-8 flex-1 bg-form-background">
       <PageHeader
-        title={<span className="text-form-foreground">Formulario de Contacto</span>}
-        description={<span className="text-form-foreground/80">Rellene el siguiente formulario para enviarnos un mensaje.</span>}
+        title={<span className="text-form-foreground">Formulari de Contacte</span>}
+        description={<span className="text-form-foreground/80">Ompliu el següent formulari per enviar-nos un missatge.</span>}
       />
       <div className="flex justify-center">
         <Card className="w-full max-w-2xl">
             <form onSubmit={handleSubmit}>
                 <CardHeader>
-                    <CardTitle>Envíenos un mensaje</CardTitle>
+                    <CardTitle>Envieu-nos un missatge</CardTitle>
                     <CardDescription>
-                    Complete los campos a continuación y nos pondremos en contacto con usted lo antes posible.
+                    Completeu els camps a continuació i ens posarem en contacte amb vós el més aviat possible.
                     </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="space-y-2">
-                            <Label htmlFor="name">Nombre</Label>
-                            <Input id="name" name="name" placeholder="Su nombre" required />
+                            <Label htmlFor="name">Nom</Label>
+                            <Input id="name" name="name" placeholder="El seu nom" required />
                         </div>
                         <div className="space-y-2">
-                            <Label htmlFor="email">Correo electrónico</Label>
-                            <Input id="email" type="email" name="email" placeholder="su@email.com" required />
+                            <Label htmlFor="email">Correu electrònic</Label>
+                            <Input id="email" type="email" name="email" placeholder="el.seu@correu.com" required />
                         </div>
                     </div>
                     <div className="space-y-2">
-                        <Label htmlFor="subject">Asunto</Label>
-                        <Input id="subject" name="subject" placeholder="Asunto de su mensaje" required />
+                        <Label htmlFor="subject">Assumpte</Label>
+                        <Input id="subject" name="subject" placeholder="Assumpte del seu missatge" required />
                     </div>
                     <div className="space-y-2">
-                        <Label htmlFor="message">Mensaje</Label>
-                        <Textarea id="message" name="message" placeholder="Escriba su mensaje aquí..." required rows={5} />
+                        <Label htmlFor="message">Missatge</Label>
+                        <Textarea id="message" name="message" placeholder="Escrigui el seu missatge aquí..." required rows={5} />
                     </div>
                 </CardContent>
                 <CardFooter>
                     <Button type="submit" className="w-full" disabled={isSubmitting}>
-                        {isSubmitting ? 'Enviando...' : 'Enviar Mensaje'}
+                        {isSubmitting ? 'Enviant...' : 'Enviar Missatge'}
                     </Button>
                 </CardFooter>
             </form>

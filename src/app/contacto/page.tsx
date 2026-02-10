@@ -8,26 +8,25 @@ export default function ContactoPage() {
       <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between mb-8">
         <div>
           <h1 className="text-3xl font-bold tracking-tight md:text-4xl font-headline">
-            Contacto
+            Contacte
           </h1>
           <p className="mt-2 text-lg text-secondary-foreground/80">
-            Póngase en contacto con nosotros para cualquier consulta.
+            Poseu-vos en contacte amb nosaltres per a qualsevol consulta.
           </p>
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <Card>
           <CardHeader>
-            <CardTitle>Información de Contacto</CardTitle>
+            <CardTitle>Informació de Contacte</CardTitle>
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="flex items-start gap-4">
               <Mail className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
               <div>
-                <h3 className="font-semibold text-card-foreground">Correo Electrónico</h3>
+                <h3 className="font-semibold text-card-foreground">Correu Electrònic</h3>
                 <p className="text-muted-foreground">
-                  Para consultas generales, presupuestos o soporte, no dude en
-                  enviarnos un correo.
+                  Per a consultes generals, pressupostos o suport, no dubti en enviar-nos un correu.
                 </p>
                 <a
                   href="mailto:info@ttikotrans.net"
@@ -40,9 +39,9 @@ export default function ContactoPage() {
             <div className="flex items-start gap-4">
               <Phone className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
               <div>
-                <h3 className="font-semibold text-card-foreground">Teléfono</h3>
+                <h3 className="font-semibold text-card-foreground">Telèfon</h3>
                 <p className="text-muted-foreground">
-                  Llámenos para una atención más directa.
+                  Truqui'ns per a una atenció més directa.
                 </p>
                 <a
                   href="tel:+34647000000"
@@ -55,7 +54,7 @@ export default function ContactoPage() {
             <div className="flex items-start gap-4">
               <MapPin className="h-6 w-6 text-primary mt-1 flex-shrink-0" />
               <div>
-                <h3 className="font-semibold text-card-foreground">Dirección física</h3>
+                <h3 className="font-semibold text-card-foreground">Adreça física</h3>
                 <address className="text-muted-foreground not-italic">
                   Ttiko Trans<br />
                   Polígono Industrial Logístic Sud<br />
