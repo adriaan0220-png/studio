@@ -7,7 +7,7 @@ export default function QuienSomosPage() {
       <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between mb-8">
         <div>
           <h1 className="text-3xl font-bold tracking-tight md:text-4xl font-headline">
-            Qui som
+            Qui som?
           </h1>
           <p className="mt-2 text-lg text-destructive-foreground/80">
             Conegui més sobre la nostra empresa, missió i valors.

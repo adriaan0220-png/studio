@@ -13,7 +13,7 @@ import { Footer } from './footer';
 const navItems = [
   { href: '/', label: 'Inici', icon: Home },
   { href: '/servicios', label: 'Serveis', icon: Settings },
-  { href: '/quien-somos', label: 'Qui som', icon: Users },
+  { href: '/quien-somos', label: 'Qui som?', icon: Users },
   { href: '/contacto', label: 'Contacte', icon: Mail },
   { href: '/blog', label: 'Blog', icon: Newspaper },
   { href: '/formulario', label: 'Formulari', icon: FileText },
