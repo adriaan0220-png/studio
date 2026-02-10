@@ -3,17 +3,26 @@
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Home, ClipboardList, Droplets, Menu, Truck, Settings, Users, Mail, Newspaper, FileText, Search, UserCircle, Lock, Download } from 'lucide-react';
+import { Home, ClipboardList, Droplets, Menu, Truck, Settings, Users, Mail, Newspaper, FileText, Search, UserCircle, Download, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import { Logo } from '@/app/components/logo';
 import { cn } from '@/lib/utils';
 import { Footer } from './footer';
 
-const navItems = [
+const mainNavItems = [
   { href: '/', label: 'Inici', icon: Home },
   { href: '/servicios', label: 'Serveis', icon: Settings },
   { href: '/quien-somos', label: 'Qui som?', icon: Users },
+];
+
+const moreNavItems = [
   { href: '/contacto', label: 'Contacte', icon: Mail },
   { href: '/blog', label: 'Blog', icon: Newspaper },
   { href: '/formulario', label: 'Formulari', icon: FileText },
@@ -25,34 +34,47 @@ const navItems = [
   { href: '/login', label: 'Àrea Clients', icon: UserCircle },
 ];
 
+const allNavItems = [...mainNavItems, ...moreNavItems];
+
+
 export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const [isSheetOpen, setIsSheetOpen] = React.useState(false);
-
-  const navLinks = (className?: string, closeSheet?: () => void) => (
-    <nav className={cn('flex items-center gap-4 text-sm font-medium', className)}>
-      {navItems.map(({ href, label }) => (
-        <Link
-          key={href}
-          href={href}
-          onClick={closeSheet}
-          className={cn(
-            'transition-colors hover:text-primary',
-            pathname === href ? 'text-primary' : 'text-muted-foreground'
-          )}
-        >
-          {label}
-        </Link>
-      ))}
-    </nav>
-  );
 
   return (
     <div className="flex min-h-screen w-full flex-col">
       <header className="sticky top-0 z-40 flex h-32 items-center gap-4 border-b bg-card px-4 md:px-6 print:hidden">
         <Logo />
         <div className="hidden md:flex flex-1 items-center justify-center">
-            {navLinks('gap-6')}
+            <nav className='flex items-center gap-6 text-sm font-medium'>
+              {mainNavItems.map(({ href, label }) => (
+                  <Link
+                      key={href}
+                      href={href}
+                      className={cn(
+                          'transition-colors hover:text-primary',
+                          pathname === href ? 'text-primary' : 'text-muted-foreground'
+                      )}
+                  >
+                      {label}
+                  </Link>
+              ))}
+              <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                      <Button variant="ghost" className="flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-primary data-[state=open]:text-primary focus-visible:ring-0">
+                          Més
+                          <ChevronDown className="h-4 w-4" />
+                      </Button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent align="start">
+                      {moreNavItems.map(({ href, label }) => (
+                          <DropdownMenuItem key={href} asChild>
+                              <Link href={href} className={cn(pathname === href ? 'text-primary' : '')}>{label}</Link>
+                          </DropdownMenuItem>
+                      ))}
+                  </DropdownMenuContent>
+              </DropdownMenu>
+            </nav>
         </div>
         <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
           <SheetTrigger asChild>
@@ -67,7 +89,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             </div>
             <div className="flex-1 overflow-auto py-4">
               <nav className="grid gap-2 px-4 text-base font-medium">
-              {navItems.map(({ href, label, icon: Icon }) => (
+              {allNavItems.map(({ href, label, icon: Icon }) => (
                 <Link
                   key={href}
                   href={href}
