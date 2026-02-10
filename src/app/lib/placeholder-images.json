@@ -9,7 +9,7 @@
     },
     {
       "id": "product-chemical",
-      "description": "Close-up of a chemical laboratory with flasks, suggesting chemical transport.",
+      "description": "Primer pla d'un laboratori químic amb matrassos, suggerint transport químic.",
       "imageUrl": "https://images.unsplash.com/photo-1532094349884-543bc11b234d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjaGVtaWNhbCUyMGxhYnxlbnwwfHx8fDE3NjM1ODA0MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "chemical lab"
     },
@@ -21,19 +21,19 @@
     },
     {
       "id": "truck-standard",
-      "description": "A standard tanker truck on a highway.",
+      "description": "Un camió cisterna estàndard en una autopista.",
       "imageUrl": "https://images.unsplash.com/photo-1654452519639-a77d0fb31025?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHx0YW5rZXIlMjB0cnVja3xlbnwwfHx8fDE3NjM1MzAxMzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "tanker truck"
     },
     {
       "id": "truck-large",
-      "description": "A large capacity tanker truck at a depot.",
+      "description": "Un camió cisterna de gran capacitat en un dipòsit.",
       "imageUrl": "https://images.unsplash.com/photo-1758549834256-6a6ac8e2724b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxsYXJnZSUyMHRydWNrfGVufDB8fHx8MTc2MzU4MDQxNHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "large truck"
     },
     {
       "id": "truck-specialized",
-      "description": "A specialized chemical transport truck with safety labels.",
+      "description": "Un camió especialitzat per al transport de productes químics amb etiquetes de seguretat.",
       "imageUrl": "https://images.unsplash.com/photo-1589002771170-9692b81b05da?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjaGVtaWNhbCUyMHRhbmtlcnxlbnwwfHx8fDE3NjQ2NjIyNDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "chemical truck"
     },

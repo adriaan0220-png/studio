@@ -97,7 +97,7 @@ export default function TrackingPage() {
         setError('Codi no trobat. Si us plau, verifiqui el codi i torni a intentar-ho.');
       }
     } catch (err) {
-      setError('Ha habido un problema con su solicitud.');
+      setError('Hi ha hagut un problema amb la vostra sol·licitud.');
       console.error(err);
     } finally {
       setIsLoading(false);

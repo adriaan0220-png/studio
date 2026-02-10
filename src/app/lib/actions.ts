@@ -9,7 +9,7 @@ export async function estimateTransportCost(input: EstimateTransportCostInput) {
     return { data };
   } catch (e: any) {
     console.error(e);
-    return { error: e.message || 'An unknown error occurred while estimating the cost.' };
+    return { error: e.message || 'S\'ha produït un error desconegut en estimar el cost.' };
   }
 }
 
@@ -19,6 +19,6 @@ export async function suggestDeliveryOptimizations(input: SuggestDeliveryOptimiz
     return { data };
   } catch (e: any) {
     console.error(e);
-    return { error: e.message || 'An unknown error occurred while generating suggestions.' };
+    return { error: e.message || 'S\'ha produït un error desconegut en generar els suggeriments.' };
   }
 }

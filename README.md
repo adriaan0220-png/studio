@@ -1,5 +1,5 @@
 # Firebase Studio
 
-This is a NextJS starter in Firebase Studio.
+Aquest és un projecte d'inici de NextJS a Firebase Studio.
 
-To get started, take a look at src/app/page.tsx.
+Per començar, fes una ullada a src/app/page.tsx.
